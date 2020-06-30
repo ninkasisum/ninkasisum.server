@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BeerApp</title>
+
+  <link rel="shortcit icon" href="/assets/beer-logo.svg">
+  <link rel="stylesheet" href="/styles/home-screen.css">
+  <link rel="stylesheet" href="/styles/main.css">
+
+  <script src="https://kit.fontawesome.com/506ff2e5ed.js" crossorigin="anonymous"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Lato:wght@100;300;400;700&family=Roboto:wght@300;400;700&family=Shadows+Into+Light&display=swap"
+    rel="stylesheet">
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+</head>
+
+<body>
+  <div class="home-screen">
+    <nav>
+      <div class="logo">
+        <span class="iconify" data-inline="false" data-icon="noto-v1:clinking-beer-mugs"
+          style="font-size: 74px;"></span>
+        <h1>BeerApp</h1>
+      </div>
+
+      <ul class="menu">
+        <li><a href="" class="feed active"><i class="fas fa-home"></i>Feed</a></li>
+        <li><a href="" class="cardapio"><i class="fas fa-user-alt"></i>Perfil</a></li>
+        <li><a href="" class="horario"><i class="fas fa-bell"></i>Notificações</a></li>
+        <li><a href="" class="contato"><i class="fas fa-shopping-cart"></i>Shop</a></li>
+      </ul>
+
+      <div class="user">
+        <img src="/assets/user2.png" alt="Foto do usuário">
+        <h3>Tobias</h3>
+        <i class="fas fa-caret-down"></i>
+      </div>
+    </nav>
+
+    <div class="content">
+      <div class="user-card">
+        <header>
+          <img src="/assets/user2.png" alt="Foto do usuário">
+          <h3>Tobias</h3>
+          <h4>Niterói - RJ</h4>
+          <hr>
+        </header>
+
+        <ul class="user-information">
+          <li><a href="">Nível: 1</a></li>
+          <li><a href="">Pontos: 0</a></li>
+          <li><a href="">Seguidores: 0</a></li>
+          <li><a href="">Tipo: Nenhum</a></li>
+        </ul>
+      </div>
+      <div class="feed-content">
+        <div class="text-field">
+          <div class="icon-write">
+            <span class="iconify write" data-inline="false" data-icon="jam:write"></span>
+            <textarea name="mensagem" id="mensage" cols="50" maxlength="195" rows="4"
+              placeholder="Qual cerveja você está tomando hoje?" required></textarea>
+          </div>
+          <hr>
+          <div class="footer">
+            <span class="iconify" data-icon="ant-design:camera-outlined" data-inline="false"></span>
+            <input class="btn btn-large btn-primary pull-right" type="submit" id="posting" value="Publicar" />
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="login-screen"></div>
+  <script src="scripts/index.js"></script>
+
+</body>
+
+</html>

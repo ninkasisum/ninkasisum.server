@@ -1,0 +1,14 @@
+html{
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    
+}
+body{  
+    margin: 0;
+    background-color: #F2F3F5;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-decoration: none;
+}

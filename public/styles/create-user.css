@@ -1,0 +1,368 @@
+.background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/assets/background.jpg);
+    width: 100vw;
+    height: 100vh;
+    background-size: 100%;
+}
+.filter-background{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+
+    background: rgba(23, 23, 23, 0.8);
+    z-index: 1;
+}
+.container{
+    position: relative;
+    display: flex;
+    width: 767px;
+    height: 562px;
+    background-color: white;
+    border-radius: 15px;
+    z-index: 10;
+    justify-content: space-between;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.content {
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.content::before {
+    content: "";
+    position: absolute;
+    background-color: #004131;
+    width: 45%;
+    height: 100%;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+header{
+    position: absolute;
+    width: 76px;
+    height: 59px;
+    right: 5%;
+    top: 5%;  
+}
+.first-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    text-align: center;
+    width: 45%;
+}
+.second-column{
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 11px 11px 0;
+}
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+.title-primary {
+    color: #fff;
+    margin-bottom: 40px;
+}
+.title-secondary {
+    color: #007457;
+}
+.description {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 30px;
+}
+.description-primary {
+    color: rgba(255, 255, 255, 0.849);
+    width: 252px;
+    height: 38px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+}
+.description-secondary {
+    color: #1d1d1db0;
+    width: 252px;
+    height: 38px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 19px;
+    text-align: center;
+}
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 50px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 156px;
+    align-self: center;
+    border: none;
+    margin-top: 1rem;
+    border-radius: 15px;
+    outline: none;
+}
+.btn-primary {
+    background-color: transparent;
+    border: 1px solid #fff;
+    transition: background-color .5s;
+}
+.btn-primary:hover {
+    background-color: #fff;
+    color: #58af9b;
+}
+.btn-secondary {
+    background-color: #008161;
+    border: 1px solid #008161;
+    transition: background-color .5s;
+    text-decoration: none;
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+.btn-secondary:hover {
+    background-color: #fff;
+    border: 1px solid #008161;
+    color: #008161;
+}
+.first-column a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.first-column a img{
+    width: 35px;
+    margin-right: 5px;
+}
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#facebook img{
+    width: 25px;
+    margin-right: 5px;
+}
+#google img{
+    width: 30px;
+    margin-right: 5px;
+}
+.first-content{
+    display: flex;
+}
+.first-content .second-column {
+    z-index: 11;
+}
+.second-content{
+    display: none;
+}
+.second-content .first-column{
+    order: 2;
+    z-index: -1;
+}
+.second-content .second-column{
+    order: 1;
+    z-index: -1;
+}
+.modal-container.sign-in-js .first-content .first-column {
+    z-index: -1;
+}
+.modal-container.sign-in-js .second-content .second-column {
+    z-index: 11;
+}
+.modal-container.sign-in-js .second-content .first-column {
+    z-index: 13;
+}
+.modal-container.sign-in-js .content::before {
+    left: 60%;
+    border-radius: 0 13px 13px 0!important;
+    animation: slidein 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+
+    z-index: 12;
+}
+
+.modal-container.sign-up-js .content::before {
+    animation: slideout 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+
+    z-index: 12;
+}
+
+.modal-container.sign-up-js .second-content .first-column,
+.modal-container.sign-up-js .second-content .second-column {
+    z-index: -1;
+}
+
+.modal-container.sign-up-js .first-content .second-column {
+    z-index: 11;
+}
+
+.modal-container.sign-up-js .first-content .first-column {
+    z-index: 13;    
+}
+.modal-container.sign-in-js .first-content .second-column {
+    z-index: -1;
+    position: relative;
+    animation: deslocamentoEsq 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+}
+
+.modal-container.sign-up-js .second-content .second-column {
+    position: relative;
+    z-index: -1;
+    animation: deslocamentoDir 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+}
+.first-content::before{
+    border-radius: 14px 0 0 14px!important;
+}
+@keyframes deslocamentoEsq {
+
+    from {
+        left: 0;
+        opacity: 1;
+        z-index: 12;
+    }
+
+    25% {
+        left: -80px;
+        opacity: .5;
+        /* z-index: 12; NÃO HÁ NECESSIDADE */
+    }
+
+    50% {
+        left: -100px;
+        opacity: .2;
+        /* z-index: 12; NÃO HÁ NECESSIDADE */
+    }
+
+    to {
+        left: -110px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+
+@keyframes deslocamentoDir {
+
+    from {
+        left: 0;
+        z-index: 12;
+    }
+
+    25% {
+        left: 80px;
+        /* z-index: 12;  NÃO HÁ NECESSIDADE*/
+    }
+
+    50% {
+        left: 100px;
+        /* z-index: 12; NÃO HÁ NECESSIDADE*/
+        /* background-color: yellow;  Exemplo que dei no vídeo*/
+    }
+
+    to {
+        left: 110px;
+        z-index: -1;
+    }
+}
+
+
+/*ANIMAÇÃO CSS*/
+
+@keyframes slidein {
+
+    from {
+        left: 0;
+        width: 40%;
+    }
+
+    25% {
+        left: 5%;
+        width: 50%;
+    }
+
+    50% {
+        left: 25%;
+        width: 60%;
+    }
+
+    75% {
+        left: 45%;
+        width: 50%;
+    }
+
+    to {
+        left: 60%;
+        width: 40%;
+    }
+}
+
+@keyframes slideout {
+
+    from {
+        left: 60%;
+        width: 40%;
+    }
+
+    25% {
+        left: 45%;
+        width: 50%;
+    }
+
+    50% {
+        left: 25%;
+        width: 60%;
+    }
+
+    75% {
+        left: 5%;
+        width: 50%;
+    }
+
+    to {
+        left: 0;
+        width: 40%;
+    }
+}
+.g-signin2{
+    border-radius: 8px;
+}
+.abcRioButtonContentWrapper span{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: #111111c2;
+}
+.abcRioButtonContentWrapper{
+    border-radius: 8px;
+    width: 200px;
+}
+/*.apple-login{
+    padding: 6px;
+    width: 220px;
+    height: 50px;
+    cursor: pointer;
+}*/

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeerApp - Login</title>
+
+    <link rel="shortcit icon" href="/assets/beer-logo.svg">
+    <link rel="stylesheet" href="/styles/create-user.css">
+    <link rel="stylesheet" href="/styles/main.css">
+
+    <script src="https://kit.fontawesome.com/506ff2e5ed.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Lato:wght@100;300;400;700&family=Roboto:wght@300;400;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js?onload=onLoadCallback" async></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <script src="https://apis.google.com/js/api:client.js"></script>
+    <script>
+        var googleUser = {};
+        var startApp = function() {
+            gapi.load('auth2', function(){
+            // Retrieve the singleton for the GoogleAuth library and set up the client.
+            auth2 = gapi.auth2.init({
+                client_id: '120993756585-ng9oe5vhbim8ilbb6epgb6588pi53kl2.apps.googleusercontent.com',
+                cookiepolicy: 'single_host_origin',
+                // Request scopes in addition to 'profile' and 'email'
+                //scope: 'additional_scope'
+            });
+            attachSignin(document.getElementById('customBtn'));
+            });
+        };
+
+        function attachSignin(element) {
+            console.log(element.id);
+            auth2.attachClickHandler(element, {},
+                function(googleUser) {
+                document.getElementById('name').innerText = "Signed in: " +
+                    googleUser.getBasicProfile().getName();
+                }, function(error) {
+                alert(JSON.stringify(error, undefined, 2));
+                });
+        }
+        </script>
+        <style type="text/css">
+            #customBtn {
+            display: inline-block;
+            background: white;
+            color: #444;
+            width: 190px;
+            border-radius: 5px;
+            border: thin solid #888;
+            box-shadow: 1px 1px 1px grey;
+            white-space: nowrap;
+            }
+            #customBtn:hover {
+            cursor: pointer;
+            }
+            span.label {
+            font-family: serif;
+            font-weight: normal;
+            }
+            span.icon {
+            background: url('/identity/sign-in/g-normal.png') transparent 5px 50% no-repeat;
+            display: inline-block;
+            vertical-align: middle;
+            width: 42px;
+            height: 42px;
+            }
+            span.buttonText {
+            display: inline-block;
+            vertical-align: middle;
+            padding-left: 42px;
+            padding-right: 42px;
+            font-size: 14px;
+            font-weight: bold;
+            /* Use the Roboto font that is loaded in the <head> */
+            font-family: 'Roboto', sans-serif;
+            }
+        </style>
+
+</head>
+<body>
+
+    <div id = "fb-root" > </div> <script assíncrono adia crossorigin = "anônimo" src = "https://connect.facebook.net/pt_PT/sdk.js#xfbml=1&version=v7.0&appId= 274401163831368 & autoLogAppEvents = 1 " nonce = " we2nEoEL " > </script>
+
+    <div class="background">
+        <div class="filter-background"></div>
+        <div id="modal-cadastro" class="modal-container">
+            <div class="container">
+
+                <div class="content first-content">
+                    <div class="first-column">
+                        <h2 class="title title-primary">Bem-vindo!</h2>
+                        <p class="description description-primary">Faça o cadastro e comece sua jornada com a gente</p>
+                        <button id="signup" class="btn btn-primary">Sign-up</button>
+                    </div>
+    
+                    <div class="second-column">
+                        <header>
+                            <img src="/assets/logo-frame.png" alt="">            
+                       </header>
+        
+                       <div class ="login">
+                            <h2 class="title title-secondary">Fazer Login</h2>
+                            <p class="description description-secondary">Sincronize com sua conta para logar</p>
+                            <script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
+                                                                     
+                            <div id="gSignInWrapper">
+                                <span class="label">Sign in with:</span>
+                                <div id="customBtn" class="customGPlusSignIn">
+                                  <span class="icon"></span>
+                                  <span class="buttonText">Google</span>
+                                </div>
+                              </div>
+                            <div id="name"></div>
+                            <div class = "botão de login do fb" data-size = "médio" tipo de botão de dados = "login_with" layout de dados = "padrão" data-auto-logout-link = link "falso" data-use-continue -as = "true" data-width = "" > </div>
+                
+                       </div>
+                                   
+                    </div>              
+                </div> <!--first-content-->                     
+            </div>
+        </div>
+        
+    </div>
+    <script src="/scripts/index.js"></script>
+    <script>startApp()</script>
+</body>
+</html>
