@@ -1,4 +1,4 @@
-//Autenticar Google Account
+/*//Autenticar Google Account
 function onSignIn(googleUser) {
     // Useful data for your client-side scripts:
     var profile = googleUser.getBasicProfile();
@@ -12,4 +12,26 @@ function onSignIn(googleUser) {
     // The ID token you need to pass to your backend:
     var id_token = googleUser.getAuthResponse().id_token;
     console.log("ID Token: " + id_token);
-}
+}*/
+//nav active
+const active_feed = document.querySelector('.feed')
+const active_line =  document.querySelector('.line')
+active_feed.classList.add('active')
+active_line.classList.add('active')
+
+//likezinho show mlk
+const like = document.querySelector('.fa-heart')
+var button_like = Boolean(false)
+
+like.addEventListener('click', ()=>{  
+    if(!button_like){
+        like.classList.remove('far')
+        like.classList.add('fas')
+        button_like = true
+    }  
+    else{
+        like.classList.add('far')
+        like.classList.remove('fas')
+        button_like = false
+    } 
+})

@@ -158,6 +158,7 @@ nav{
 .feed-content{
     position: absolute;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     width: 593px;
     left: 50%;
@@ -202,10 +203,11 @@ nav{
 }
 .text-field hr{
     position: absolute;
-    left: 50%;
+    left: 44%;
     transform: translateX(-50%);
     margin: 0;
-    width: 390px;
+    width: 400px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 .footer{
     display: flex;
@@ -242,12 +244,12 @@ nav{
     color: rgba(0, 0, 0, 0.5);
     font-weight: 600;
 }
-.feed{
+.feed, .perfil, .shop, .notificacao{
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted black;  
 }
-.feed .tooltiptext {
+.feed .tooltiptext, .perfil .tooltiptext, .shop .tooltiptext, .notificacao .tooltiptext{
     visibility: hidden;
     width: 70px;
     background-color: rgba(0, 0, 0, 0.658);
@@ -264,97 +266,17 @@ nav{
     bottom: -50px;
     z-index: 1;
   }
-  .feed:hover .tooltiptext {
+  .feed:hover .tooltiptext, .perfil:hover .tooltiptext, .notificacao:hover .tooltiptext, .shop:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
-}
-
-.perfil{
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
-}
-.perfil .tooltiptext {
-    visibility: hidden;
-    width: 70px;
-    background-color: rgba(0, 0, 0, 0.658);
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    opacity: 0;
-    font-weight: 400;
-    transition: opacity 1s;
-   
-    /* Position the tooltip */
-    position: absolute;
-    bottom: -50px;
-    z-index: 1;
-  }
-.perfil:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-}
-
-.notificacao{
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
 }
 .notificacao .tooltiptext {
-    visibility: hidden;
     width: 120px;
-    background-color: rgba(0, 0, 0, 0.658);
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    opacity: 0;
-    font-weight: 400;
-    transition: opacity 1s;
-   
-    /* Position the tooltip */
-    position: absolute;
-    bottom: -50px;
-    z-index: 1;
-  }
-.notificacao:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
 }
-
-.shop{
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
-}
-.shop .tooltiptext {
-    visibility: hidden;
-    width: 70px;
-    background-color: rgba(0, 0, 0, 0.658);
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    opacity: 0;
-    font-weight: 400;
-    transition: opacity 1s;
-   
-    /* Position the tooltip */
-    position: absolute;
-    bottom: -50px;
-    z-index: 1;
-  }
-.shop:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-}
-
 .dropdown {
     position: relative;
     display: inline-block;
   }
-  
 .dropdown-content {
     display: none;
     position: absolute;
@@ -366,12 +288,10 @@ nav{
     opacity: 0;
     transition: opacity 1s;
   }
-  
 .dropdown:hover .dropdown-content {
     display: block;
     opacity: 1;
 }
-
 .fa-caret-down:before {
     content: "\f0d7";
     background-color: rgba(0, 0, 0, 0.315);
@@ -381,7 +301,96 @@ nav{
 }
 .dropdown-menu{
     list-style: none;
+    padding: 0;
 }
 .dropdown-menu a{
     text-decoration: none;
+}
+.post-content{
+    position: relative;
+    margin-top: 20px;
+    width: 523px;
+    height: 154px;
+    background: #FFFFFF;
+    border-radius: 8px;
+}
+.post-content header{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.post-author{
+    display: flex;
+    align-items: center;
+}
+.post-author h3{
+    color: rgba(0, 0, 0, 0.904);
+    margin-right: 3px;
+}
+.post-author h4{
+    color: rgba(0, 0, 0, 0.76);
+}
+.post-content img{
+    width: 50px;
+    height: 50px;   
+    margin: 15px;
+    margin-right: 3px;
+    margin-bottom: 0;
+}
+.post h2{
+    font-family: Roboto;
+    margin: 0;
+    margin-bottom: 15px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.post-content hr{
+    border: 1px solid rgba(43, 43, 43, 0.137);
+    width: 400px;
+}
+.interation{
+    margin-left: 60px;
+}
+.interation i{
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.7);
+    margin-right: 10px;
+    cursor: pointer;
+}
+.fa-heart, .fa-comment-alt, .fa-retweet{
+    position: relative;
+    display: inline-block;
+}
+.fa-heart .tooltiptext, .fa-comment-alt .tooltiptext, .fa-retweet .tooltiptext {
+    visibility: hidden;
+    width: 70px;
+    background-color: rgba(0, 0, 0, 0.658);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    opacity: 0;
+    font-weight: 400;
+    transition: opacity 1s;
+   
+    /* Position the tooltip */
+    position: absolute;
+    bottom: -50px;
+    left: 1px;
+    z-index: 1;
+  }
+.fa-heart:hover .tooltiptext, .fa-comment-alt:hover .tooltiptext, .fa-retweet:hover .tooltiptext{
+    visibility: visible;
+    opacity: 1;
+}
+.fa-comment-alt .tooltiptext, .fa-retweet .tooltiptext{
+    width: 120px;
 }
