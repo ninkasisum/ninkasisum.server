@@ -6,8 +6,8 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(express.static(path.join(__dirname, 'public/')));
-app.get('/', (req, res) => res.sendFile(__dirname + 'views\\pages\\index.html'));
-app.get('/login', (req, res) => res.sendFile(__dirname + 'views\\pages\\login.html'));
+app.use(express.static(path.join(__dirname, '/public')));
+app.get('/', (req, res) => res.sendFile(__dirname + '/views/pages/index.html'));
+app.get('/login', (req, res) => res.sendFile(__dirname + '/views/pages/login.html'));
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
