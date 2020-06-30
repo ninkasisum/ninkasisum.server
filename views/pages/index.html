@@ -28,16 +28,26 @@
       </div>
 
       <ul class="menu">
-        <li><a href="" class="feed active"><i class="fas fa-home"></i>Feed</a></li>
-        <li><a href="" class="cardapio"><i class="fas fa-user-alt"></i>Perfil</a></li>
-        <li><a href="" class="horario"><i class="fas fa-bell"></i>Notificações</a></li>
-        <li><a href="" class="contato"><i class="fas fa-shopping-cart"></i>Shop</a></li>
+        <li><a href="" class="feed active" alt="Feed"><i class="fas fa-home"></i><span class="tooltiptext">Feed</span></a><div class="line active"></div></li>
+        <li><a href="" class="perfil" alt="Perfil"><i class="fas fa-user-alt"></i><span class="tooltiptext">Perfil</span></a><div class="line"></div></li>
+        <li><a href="" class="notificacao" alt="Notificações"><i class="fas fa-bell"></i><span class="tooltiptext">Notificações</span></a><div class="line"></div></li>
+        <li><a href="" class="shop" alt="Shop"><i class="fas fa-shopping-cart"></i><span class="tooltiptext">Shop</span></a><div class="line"></div></li>
       </ul>
 
       <div class="user">
         <img src="/assets/user2.png" alt="Foto do usuário">
         <h3>Tobias</h3>
-        <i class="fas fa-caret-down"></i>
+        <div class="dropdown">
+          <i class="fas fa-caret-down"></i>
+          <div class="dropdown-content">
+            <ul class = "dropdown-menu">
+              <li><a href=""><i class="fas fa-cog"></i>Configurações</a></li>
+              <li><a href="">Adicionar Amigos</a></li>
+
+            </ul>
+          </div>
+        </div> 
+
       </div>
     </nav>
 
@@ -69,6 +79,9 @@
             <span class="iconify" data-icon="ant-design:camera-outlined" data-inline="false"></span>
             <input class="btn btn-large btn-primary pull-right" type="submit" id="posting" value="Publicar" />
           </div>
+
+        </div>
+        <div class="post-content">
 
         </div>
       </div>

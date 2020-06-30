@@ -177,176 +177,6 @@ header{
 .first-content .second-column {
     z-index: 11;
 }
-.second-content{
-    display: none;
-}
-.second-content .first-column{
-    order: 2;
-    z-index: -1;
-}
-.second-content .second-column{
-    order: 1;
-    z-index: -1;
-}
-.modal-container.sign-in-js .first-content .first-column {
-    z-index: -1;
-}
-.modal-container.sign-in-js .second-content .second-column {
-    z-index: 11;
-}
-.modal-container.sign-in-js .second-content .first-column {
-    z-index: 13;
-}
-.modal-container.sign-in-js .content::before {
-    left: 60%;
-    border-radius: 0 13px 13px 0!important;
-    animation: slidein 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
-
-    z-index: 12;
-}
-
-.modal-container.sign-up-js .content::before {
-    animation: slideout 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
-
-    z-index: 12;
-}
-
-.modal-container.sign-up-js .second-content .first-column,
-.modal-container.sign-up-js .second-content .second-column {
-    z-index: -1;
-}
-
-.modal-container.sign-up-js .first-content .second-column {
-    z-index: 11;
-}
-
-.modal-container.sign-up-js .first-content .first-column {
-    z-index: 13;    
-}
-.modal-container.sign-in-js .first-content .second-column {
-    z-index: -1;
-    position: relative;
-    animation: deslocamentoEsq 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
-}
-
-.modal-container.sign-up-js .second-content .second-column {
-    position: relative;
-    z-index: -1;
-    animation: deslocamentoDir 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
-}
-.first-content::before{
-    border-radius: 14px 0 0 14px!important;
-}
-@keyframes deslocamentoEsq {
-
-    from {
-        left: 0;
-        opacity: 1;
-        z-index: 12;
-    }
-
-    25% {
-        left: -80px;
-        opacity: .5;
-        /* z-index: 12; NÃO HÁ NECESSIDADE */
-    }
-
-    50% {
-        left: -100px;
-        opacity: .2;
-        /* z-index: 12; NÃO HÁ NECESSIDADE */
-    }
-
-    to {
-        left: -110px;
-        opacity: 0;
-        z-index: -1;
-    }
-}
-
-
-@keyframes deslocamentoDir {
-
-    from {
-        left: 0;
-        z-index: 12;
-    }
-
-    25% {
-        left: 80px;
-        /* z-index: 12;  NÃO HÁ NECESSIDADE*/
-    }
-
-    50% {
-        left: 100px;
-        /* z-index: 12; NÃO HÁ NECESSIDADE*/
-        /* background-color: yellow;  Exemplo que dei no vídeo*/
-    }
-
-    to {
-        left: 110px;
-        z-index: -1;
-    }
-}
-
-
-/*ANIMAÇÃO CSS*/
-
-@keyframes slidein {
-
-    from {
-        left: 0;
-        width: 40%;
-    }
-
-    25% {
-        left: 5%;
-        width: 50%;
-    }
-
-    50% {
-        left: 25%;
-        width: 60%;
-    }
-
-    75% {
-        left: 45%;
-        width: 50%;
-    }
-
-    to {
-        left: 60%;
-        width: 40%;
-    }
-}
-
-@keyframes slideout {
-
-    from {
-        left: 60%;
-        width: 40%;
-    }
-
-    25% {
-        left: 45%;
-        width: 50%;
-    }
-
-    50% {
-        left: 25%;
-        width: 60%;
-    }
-
-    75% {
-        left: 5%;
-        width: 50%;
-    }
-
-    to {
-        left: 0;
-        width: 40%;
-    }
-}
 .g-signin2{
     border-radius: 8px;
 }
@@ -366,3 +196,30 @@ header{
     height: 50px;
     cursor: pointer;
 }*/
+.customGPlusSignIn{
+    height: 40px;
+    position: relative;
+    transition: 400ms;
+}
+.customGPlusSignIn:hover{
+    transform: translateY(-3px);
+}
+.customGPlusSignIn i{
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-35%, -50%);
+}
+.fa-google {
+    background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+.buttonText{
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-65%, -50%);
+}
