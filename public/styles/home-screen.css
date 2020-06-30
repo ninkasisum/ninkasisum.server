@@ -280,7 +280,7 @@ nav{
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #222222d0;
+    background-color: #ebebeb;
     min-width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
     padding: 12px 16px;
@@ -393,4 +393,38 @@ nav{
 }
 .fa-comment-alt .tooltiptext, .fa-retweet .tooltiptext{
     width: 120px;
+}
+.dropdown-menu i{
+    font-size: 18px;
+    color: black;
+}
+.dropdown-menu a{
+    color: rgba(20, 20, 20, 0.822);
+    font-size: 18px;
+    font-weight: 600;
+}
+.fa-users{
+    width: 18px;
+    height: 18px;
+}
+.dropdown-menu li{
+    margin-top: 30px;
+}
+.fa-users:before, .fa-cog:before, .fa-sign-out-alt::before{
+    background-color: rgba(105, 105, 105, 0.315);
+    border-radius: 100%;
+    padding: 8px;
+}
+.fa-cog{
+    margin-right: 14px;
+}
+.fa-users{
+    font-size: 16px;
+    margin-right: 28px;
+}
+.fa-users:before{
+    padding: 8px 6px;
+}
+.fa-sign-out-alt{
+    margin-right: 16px;
 }
