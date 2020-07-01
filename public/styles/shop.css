@@ -238,3 +238,13 @@ nav{
 .dropdown-menu li:hover{
     padding: 6px;
 }
+.ze-logo{
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    transition: 400ms;
+    cursor: pointer;
+}
+.ze-logo:hover{
+    transform: translate(-3px, -5px);
+}

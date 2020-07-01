@@ -68,9 +68,16 @@
       <div class="user-card">
         <header>
           <img src="/assets/user2.png" alt="Foto do usuário">
-          <h3>Tobias</h3>
+          <h3 id="user-name"></h3>
           <h4>Niterói - RJ</h4>
           <hr>
+
+          <script>
+            let userName = user.getBasicProfile().getName();
+            console.log(user.getBasicProfile().getName());
+            document.getElementById('user-name').innerHTML = userName;
+          </script>
+
         </header>
 
         <ul class="user-information">
@@ -88,11 +95,12 @@
               placeholder="Qual cerveja você está tomando hoje?" required></textarea>
           </div>
           <hr>
-          <div class="footer">
-            <span class="iconify" data-icon="ant-design:camera-outlined" data-inline="false"></span>
-            <input class="btn btn-large btn-primary pull-right" type="submit" id="posting" value="Publicar" />
+          <div class="footer"> 
+            <input type="file" id="upload" class="upload" accept="image/x-png,image/gif,image/jpeg">
+            <span class="iconify" data-icon="ant-design:camera-outlined" data-inline="false"></span>           
+            <input class="btn btn-large btn-primary pull-right" type="submit" id="posting" value="Publicar" />                
           </div>
-
+          
         </div>
         <div class="post-content">
           <div class="post">
