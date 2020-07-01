@@ -7,7 +7,21 @@ const PORT = process.env.PORT || 5000;
 
 const app = express();
 
-const loggedUsers = {}; // change this to memory storage
+function sessionHandlerBuilder(){
+    const memory = new Object();
+    return {
+        addUser(cookie, user)
+        {
+            memory[cookie] = user;
+        },
+        getUser(cookie)
+        {
+            return memory[cookie];
+        }
+    };
+    
+}
+const sessionHandler = sessionHandlerBuilder();
 
 app.use(redirect());
 app.use(express.static(path.join(__dirname, '/public')));
@@ -15,25 +29,24 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-    const file = (loggedUsers[req.headers.cookie])? 'index': 'login';
+    console.log(`COOKIE: ${req.headers.cookie}`);
     res.setHeader("Content-Type", "text/html")
-    res.sendFile(__dirname + `/views/pages/${file}.html`);
+    res.sendFile(`${__dirname}/views/pages/index.html`);
 });
 
 app.get('/login', (req, res) => {
     res.setHeader("Content-Type", "text/html")
-    res.sendFile(__dirname + '/views/pages/login.html')
+    res.sendFile(`${__dirname}/views/pages/login.html`)
 });
 app.get('/shop', (req, res) => {
-    const file = (loggedUsers[req.headers.cookie])? 'shop': 'login';
     res.setHeader("Content-Type", "text/html")
-    res.sendFile(__dirname + `/views/pages/${file}.html`);
+    res.sendFile(`${__dirname}/views/pages/shop.html`);
 });
 
 app.post('/api/login', (req, res) => {
     const user = req.body;
     const cookie = user['Ea'];
-    loggedUsers[cookie] = user;
+    sessionHandler.addUser(cookie, user);
     res.setHeader('Set-Cookie', cookie);
     res.redirect(`https://${req.host}`);
 });
