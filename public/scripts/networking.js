@@ -1,9 +1,12 @@
 function createGist(url, opts) {
-    fetch(url, {
-        method: 'POST',
-        body: JSON.stringify(opts)
-    }).then(response => {
+    const method = 'POST'
+    const body = JSON.stringify(opts);
 
+    const headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    headers.append("Content-Length", body.length.toString());
+    
+    fetch(url, {method,headers,body}).then(response => {
 
         // HTTP 301 response
         if (response.redirected) {
