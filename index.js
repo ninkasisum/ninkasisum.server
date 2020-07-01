@@ -6,32 +6,19 @@ const path = require('path');
 const PORT = process.env.PORT || 5000;
 
 const app = express();
-
-function sessionHandlerBuilder(){
-    const memory = new Object();
-    return {
-        addUser(cookie, user)
-        {
-            memory[cookie] = user;
-        },
-        getUser(cookie)
-        {
-            return memory[cookie];
-        }
-    };
-    
-}
-const sessionHandler = sessionHandlerBuilder();
+let session;
 
 app.use(redirect());
+app.use(session({secret: '123456',saveUninitialized: true,resave: true}));
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-    console.log(`COOKIE: ${req.headers.cookie}`);
+    session = req.session;
+    const path = (session.id)? 'index': 'login';
     res.setHeader("Content-Type", "text/html")
-    res.sendFile(`${__dirname}/views/pages/index.html`);
+    res.sendFile(`${__dirname}/views/pages/${path}.html`);
 });
 
 app.get('/login', (req, res) => {
@@ -39,15 +26,14 @@ app.get('/login', (req, res) => {
     res.sendFile(`${__dirname}/views/pages/login.html`)
 });
 app.get('/shop', (req, res) => {
+    session = req.session;
+    const path = (session.id)? 'shop': 'login';
     res.setHeader("Content-Type", "text/html")
-    res.sendFile(`${__dirname}/views/pages/shop.html`);
+    res.sendFile(`${__dirname}/views/pages/${path}.html`);
 });
 
 app.post('/api/login', (req, res) => {
-    const user = req.body;
-    const cookie = user['Ea'];
-    sessionHandler.addUser(cookie, user);
-    res.setHeader('Set-Cookie', `ninkasisum=${cookie}; HttpOnly;`);
+    session.id = res.body['Ea'];
     res.redirect(`https://${req.host}`);
 });
 
