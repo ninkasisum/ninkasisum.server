@@ -185,8 +185,6 @@ nav{
 }
 .text-field textarea{
     width: 430px;
-    min-height: 120px;
-    max-height: auto;
     resize: none;
     overflow: hidden;
 
@@ -194,12 +192,11 @@ nav{
     font-weight: normal;
     border: none;
     outline: none;
-    resize: none; 
 
     font-size: 18px;
     line-height: 21px;
     color: black;
-    margin-top: 22px
+    margin-top: 22px;
 }
 .text-field hr{
     position: absolute;
