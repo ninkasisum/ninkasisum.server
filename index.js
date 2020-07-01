@@ -1,5 +1,6 @@
 const express = require('express');
 const session = require('express-session');
+const bodyParser = require('body-parser');
 const path = require('path');
 const PORT = process.env.PORT || 5000;
 
@@ -7,6 +8,11 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, '/public')));
 
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+
+app.use(bodyParser.json());
 app.use(session({
     key: '123456',
     secret: 'qwerty',
@@ -24,7 +30,7 @@ const loggedUsers = {};
 app.post('/api/login', (req, res) => {
     if (typeof loggedUsers[req.session['ninkaCookie']] !== 'object') {
 
-        const body = JSON.parse(req.body);
+        const body = req.body
         const cookie = body['Ea'];
         loggedUsers[cookie] = body;
         req.session['ninkaCookie'] = cookie;
