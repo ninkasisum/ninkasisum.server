@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 app.get('/', (req, res) => {
     sess = req.session;
-    const path = (sess['ninka'])? 'index': 'login';
+    const path = (sessionUsers[sess['ninka']])? 'index': 'login';
     res.setHeader("Content-Type", "text/html")
     res.sendFile(`${__dirname}/views/pages/${path}.html`);
 });
@@ -28,7 +28,7 @@ app.get('/login', (req, res) => {
 });
 app.get('/shop', (req, res) => {
     sess = req.session;
-    const path = (sess['ninka'])? 'shop': 'login';
+    const path = (sessionUsers[sess['ninka']])? 'shop': 'login';
     res.setHeader("Content-Type", "text/html")
     res.sendFile(`${__dirname}/views/pages/${path}.html`);
 });
