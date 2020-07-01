@@ -71,7 +71,7 @@ function resize() {
     text.style.height = 'auto';
     textArea.style.height = 'auto';
     text.style.height = text.scrollHeight + 'px';
-    textArea.style.height = (text.scrollHeight + 110) +'px';
+    textArea.style.height = (text.scrollHeight + 100) +'px';
 }
 
 ['change', 'cut', 'paste', 'drop', 'keydown'].forEach((e) => {

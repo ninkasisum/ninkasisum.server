@@ -214,8 +214,10 @@ nav{
 }
 .footer svg{
     cursor: pointer;
-    position: absolute;
-    top: 115px;
+    position: relative;
+    bottom: 15px;
+    right: 140px;
+    z-index: 1;
 }
 .footer .btn{
     width: 109px;
