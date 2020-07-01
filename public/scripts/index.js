@@ -56,3 +56,9 @@ like.addEventListener('click', ()=>{
         button_like = false
     } 
 })
+
+const logout = document.getElementById('logout')
+
+logout.addEventListener("click", ()=>{
+    createGist(`${window.location.origin}/api/logout`)
+})
