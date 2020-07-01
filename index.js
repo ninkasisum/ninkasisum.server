@@ -46,7 +46,7 @@ app.get('/api/user', (req,res)=>  {
     }))
 })
 
-app.post('api/logout', (req,res)=>{
+app.post('/api/logout', (req,res)=>{
     sessionUsers[req.session['ninka']] = null;
     req.session.destroy()
     res.redirect(`https://${req.host}`);
