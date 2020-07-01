@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 5000;
 
 const app = express();
 let sess;
+const sessionUsers = {};
 
 var jsonParser = bodyParser.json();
 
@@ -32,9 +33,19 @@ app.get('/shop', (req, res) => {
     res.sendFile(`${__dirname}/views/pages/${path}.html`);
 });
 
-app.post('/api/login', jsonParser,  (req, res) => {
-    req.session['ninka'] = req.body['Ea']
+app.post('/api/login', jsonParser,  (req, res) => {  
+    const user = req.body
+    sessionUsers[user['Ea']] = user; 
+    req.session['ninka'] = user['Ea']
     res.redirect(`https://${req.host}`);
 });
+
+app.get('/api/user', (req,res)=>  {
+    const id = req.session['ninka']
+    res.json(JSON.stringify({
+        id,
+        user: sessionUsers[id]
+    }))
+})
 
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
