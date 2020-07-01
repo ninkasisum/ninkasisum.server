@@ -73,9 +73,12 @@
           <hr>
 
           <script>
-            let userName = user.getBasicProfile().getName();
-            console.log(user.getBasicProfile().getName());
-            document.getElementById('user-name').innerHTML = userName;
+            var onSuccess = function(user) {
+              console.log('Signed in as ' + user.getBasicProfile().getName());
+              let userName = user.getBasicProfile().getName();
+              document.getElementById('user-name').innerHTML = userName;
+            };
+            
           </script>
 
         </header>
