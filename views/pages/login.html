@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/styles/create-user.css">
     <link rel="stylesheet" href="/styles/main.css">
 
+    <script src="scripts/networking.js"></script>
     <script src="https://kit.fontawesome.com/506ff2e5ed.js" crossorigin="anonymous"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Lato:wght@100;300;400;700&family=Roboto:wght@300;400;700&family=Shadows+Into+Light&display=swap"
@@ -20,12 +21,6 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
     <script src="https://apis.google.com/js/api:client.js"></script>
     <script>
-        function createGist(opts) {           
-            return fetch( window.location.origin + '/api/login', {
-                method: 'post',
-                body: JSON.stringify(opts)
-            });
-        }
         var googleUser = {};
         var startApp = function () {
             gapi.load('auth2', function () {
