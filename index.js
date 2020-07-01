@@ -21,19 +21,20 @@ app.get('/', (req, res) => {
     {
         res.setHeader("Content-Type", "text/html");
         res.sendFile(__dirname + '/views/pages/index.html');
-    } else res.sendFile(__dirname + '/views/pages/login.html');
+    } else res.redirect('/login');
 });
 
 app.get('/login', (req, res) => {
     res.setHeader("Content-Type", "text/html")
     res.sendFile(__dirname + '/views/pages/login.html')
 });
+
 app.get('/shop', (req, res) => {
     if (req.cookies['ninkasisum'])
     {
         res.setHeader("Content-Type", "text/html")
         res.sendFile(__dirname + '/views/pages/shop.html')
-    } else res.sendFile(__dirname + '/views/pages/login.html');
+    } res.redirect('/login');
 });
 
 app.post('/api/login', (req, res) => {
