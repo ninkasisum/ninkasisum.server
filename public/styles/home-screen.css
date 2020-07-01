@@ -154,10 +154,7 @@ nav{
 .user-card li{
     margin-bottom: 15px;
 }
-.user-card a{
-    text-decoration: none;
-}
-.user-information a{
+.user-information p{
     color: black;
 }
 .feed-content{
