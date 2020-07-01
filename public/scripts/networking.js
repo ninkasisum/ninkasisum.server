@@ -1,5 +1,3 @@
-const { response } = require("express");
-
 function createGist(url, opts) {
     const method = 'POST'
     const body = JSON.stringify(opts);
