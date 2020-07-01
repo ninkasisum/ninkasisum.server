@@ -47,7 +47,7 @@ app.post('/api/login', (req, res) => {
     const user = req.body;
     const cookie = user['Ea'];
     sessionHandler.addUser(cookie, user);
-    res.setHeader('Set-Cookie', cookie);
+    res.setHeader('Set-Cookie', `ninkasisum=${cookie}; HttpOnly;`);
     res.redirect(`https://${req.host}`);
 });
 
