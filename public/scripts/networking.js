@@ -7,7 +7,7 @@ function createGist(url, opts) {
 
         params.headers = new Headers();
         params.headers.append('Content-Type', 'application/json');
-        params.headers.append("Content-Length", body.length.toString());
+        params.headers.append("Content-Length", params.body.length.toString());
 
         params.credentials = 'include'
     } 
