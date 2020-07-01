@@ -169,7 +169,7 @@ nav{
     background: #FFFFFF;
     border-radius: 8px;
     width: 523px;
-    height: 220px;
+    height: 180px;
     left: 35px;
     top: 43px;
 }
@@ -215,7 +215,7 @@ nav{
 .footer svg{
     cursor: pointer;
     position: absolute;
-    top: 145px;
+    top: 115px;
 }
 .footer .btn{
     width: 109px;
