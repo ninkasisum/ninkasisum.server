@@ -43,7 +43,7 @@ app.post('/api/login', (req, res) => {
         req.session['ninkaCookie'] = cookie;
     }
 
-    res.redirect('/');
+    res.redirect(req.host);
 });
 
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
