@@ -9,6 +9,7 @@ const app = express();
 let sess;
 
 var jsonParser = bodyParser.json();
+
 app.use(redirect());
 app.use(session({secret: '123456',saveUninitialized: true,resave: true}));
 app.use(express.static(path.join(__dirname, '/public')));
