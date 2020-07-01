@@ -1,6 +1,7 @@
 function createGist(url, opts) {
-    const method = 'POST'
-    const params = {};
+    const params = {
+        method: 'POST'
+    };
 
     if(opts){
         params.body = JSON.stringify(opts);
