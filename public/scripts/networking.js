@@ -1,14 +1,18 @@
 function createGist(url, opts) {
     const method = 'POST'
-    const body = JSON.stringify(opts);
+    const params = {};
 
-    const headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-    headers.append("Content-Length", body.length.toString());
+    if(opts){
+        params.body = JSON.stringify(opts);
 
-    const credentials = 'include'
+        params.headers = new Headers();
+        params.headers.append('Content-Type', 'application/json');
+        params.headers.append("Content-Length", body.length.toString());
 
-    fetch(url, {method,headers,body, credentials}).then(response => {
+        params.credentials = 'include'
+    } 
+
+    fetch(url, params).then(response => {
 
         // HTTP 301 response
         if (response.redirected) {
