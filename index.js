@@ -1,12 +1,15 @@
 const express = require('express');
 const session = require('express-session');
 const bodyParser = require('body-parser');
+const redirect = require('heroku-ssl-redirect');
 const path = require('path');
 const PORT = process.env.PORT || 5000;
 
 const app = express();
 
 app.use(express.static(path.join(__dirname, '/public')));
+
+app.use(redirect());
 
 app.use((req, res, next) => {
     if (req.hostname !== 'localhost' && req.get('X-Forwarded-Proto') !== 'https') {
