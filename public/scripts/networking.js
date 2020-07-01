@@ -29,7 +29,7 @@ function loadUserData(){
             const userPhoto = document.getElementById('user-photo')
     
             userName.innerText = user['Qt']['zW']  
-            userPhoto.innerText =   user['Qt']['cL']
+            userPhoto.src =  user['Qt']['cL']
         })
     }).catch((err)=>{console.log(JSON.stringify(err))})
 }
