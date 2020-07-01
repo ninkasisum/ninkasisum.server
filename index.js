@@ -33,9 +33,19 @@ app.use(session({
     }
 }));
 
-app.get('/', (req, res) => res.sendFile(__dirname + '/views/pages/index.html'));
-app.get('/login', (req, res) => res.sendFile(__dirname + '/views/pages/login.html'));
-app.get('/shop', (req, res) => res.sendFile(__dirname + '/views/pages/shop.html'));
+app.get('/', (req, res) => {
+    res.setHeader("Content-Type", "text/html")
+    res.sendFile(__dirname + '/views/pages/index.html')
+});
+
+app.get('/login', (req, res) => {
+    res.setHeader("Content-Type", "text/html")
+    res.sendFile(__dirname + '/views/pages/login.html')
+});
+app.get('/shop', (req, res) => {
+    res.setHeader("Content-Type", "text/html")
+    res.sendFile(__dirname + '/views/pages/shop.html')
+});
 
 const loggedUsers = {};
 app.post('/api/login', (req, res) => {
