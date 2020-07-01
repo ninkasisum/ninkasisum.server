@@ -444,3 +444,6 @@ input[type='file'] {
     z-index: 100;
     cursor: pointer!important;
 }
+#user-foto{
+    border-radius: 50%;
+}
