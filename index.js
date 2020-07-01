@@ -16,8 +16,7 @@ app.use(session({secret: '123456',saveUninitialized: true,resave: true}));
 app.use(express.static(path.join(__dirname, '/public')));
 
 app.get('/', (req, res) => {
-    sess = req.session;
-    const path = (sess['ninka'])? 'index': 'login';
+    const path = (req.session['ninka'])? 'index': 'login';
     res.setHeader("Content-Type", "text/html")
     res.sendFile(`${__dirname}/views/pages/${path}.html`);
 });
@@ -27,8 +26,7 @@ app.get('/login', (req, res) => {
     res.sendFile(`${__dirname}/views/pages/login.html`)
 });
 app.get('/shop', (req, res) => {
-    sess = req.session;
-    const path = (sess['ninka'])? 'shop': 'login';
+    const path = (req.session['ninka'])? 'shop': 'login';
     res.setHeader("Content-Type", "text/html")
     res.sendFile(`${__dirname}/views/pages/${path}.html`);
 });
@@ -48,7 +46,7 @@ app.get('/api/user', (req,res)=>  {
     }))
 })
 
-app.post('api/logout', (req,res)=>{
+app.post('/api/logout', (req,res)=>{
     sessionUsers[req.session['ninka']] = null;
     req.session.destroy()
     res.redirect(`https://${req.host}`);
