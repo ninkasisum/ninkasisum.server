@@ -52,6 +52,11 @@ nav{
     margin-left: 5%;
     font-size: 15px;
 }
+.logo img{
+    width: 150px;
+    margin-top: 10px;
+    margin-left: 200px;
+}
 .logo h1{
     margin-left: 5px;
     font-style: normal;
