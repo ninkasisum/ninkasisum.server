@@ -23,10 +23,11 @@ function loadUserData(){
     let user;
     
     fetch(`${window.location.origin}/api/user`, {method: 'GET'}).then((response)=> {
-        const user = response.user;
-        const userName = document.getElementById('user-name')
-
-        userName.innerText = user['Qt']['zW']
-
+        response.json().then(data => {
+            const user = JSON.parse(data).user;
+            const userName = document.getElementById('user-name')
+    
+            userName.innerText = user['Qt']['zW']    
+        })
     }).catch((err)=>{console.log(JSON.stringify(err))})
 }
