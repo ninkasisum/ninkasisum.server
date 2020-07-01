@@ -16,10 +16,11 @@
     href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Lato:wght@100;300;400;700&family=Roboto:wght@300;400;700&family=Shadows+Into+Light&display=swap"
     rel="stylesheet">
   <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+  
 
 </head>
 
-<body>
+<body onload="loadUserData()">
   <div class="home-screen">
     <nav>
       <div class="logo">
@@ -69,17 +70,9 @@
         <header>
           <img src="/assets/user2.png" alt="Foto do usuário">
           <h3 id="user-name"></h3>
+          
           <h4>Niterói - RJ</h4>
           <hr>
-
-          <script>
-            var onSuccess = function(user) {
-              console.log('Signed in as ' + user.getBasicProfile().getName());
-              let userName = user.getBasicProfile().getName();
-              document.getElementById('user-name').innerHTML = userName;
-            };
-            
-          </script>
 
         </header>
 

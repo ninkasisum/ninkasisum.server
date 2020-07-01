@@ -1,3 +1,5 @@
+const { response } = require("express");
+
 function createGist(url, opts) {
     const method = 'POST'
     const body = JSON.stringify(opts);
@@ -17,4 +19,16 @@ function createGist(url, opts) {
     }).catch(function (err) {
         console.info(err + " url: " + url);
     });
+}
+
+function loadUserData(){
+    let user;
+    
+    fetch(`${window.location.origin}/api/user`, {method: 'GET'}).then((response)=> {
+        const user = response.user;
+        const userName = document.getElementById('user-name')
+
+        userName.innerText = user['Qt']['zW']
+
+    }).catch((err)=>{console.log(JSON.stringify(err))})
 }
