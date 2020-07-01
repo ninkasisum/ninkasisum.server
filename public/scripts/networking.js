@@ -26,8 +26,10 @@ function loadUserData(){
         response.json().then(data => {
             const user = JSON.parse(data).user;
             const userName = document.getElementById('user-name')
+            const userPhoto = document.getElementById('user-photo')
     
-            userName.innerText = user['Qt']['zW']    
+            userName.innerText = user['Qt']['zW']  
+            userPhoto.innerText =   user['Qt']['cL']
         })
     }).catch((err)=>{console.log(JSON.stringify(err))})
 }
