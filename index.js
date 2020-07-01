@@ -32,7 +32,7 @@ app.get('/shop', (req, res) => {
 });
 
 app.post('/api/login', jsonParser,  (req, res) => {
-    sess['ninka'] = req.body['Ea'];
+    req.session['ninka'] = req.body['Ea']
     res.redirect(`https://${req.host}`);
 });
 
