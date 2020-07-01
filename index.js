@@ -8,6 +8,13 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, '/public')));
 
+app.use((req, res, next) => {
+    if (req.hostname !== 'localhost' && req.get('X-Forwarded-Proto') !== 'https') {
+      return res.redirect(`https://${req.hostname}${req.url}`)
+    }
+    return next()
+  })
+
 app.use(bodyParser.urlencoded({
     extended: true
 }));
