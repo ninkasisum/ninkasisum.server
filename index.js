@@ -6,7 +6,7 @@ const path = require('path');
 const PORT = process.env.PORT || 5000;
 
 const app = express();
-let session;
+let sess;
 
 app.use(redirect());
 app.use(session({secret: '123456',saveUninitialized: true,resave: true}));
@@ -15,8 +15,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-    session = req.session;
-    const path = (session.id)? 'index': 'login';
+    sess = req.session;
+    const path = (sess.id)? 'index': 'login';
     res.setHeader("Content-Type", "text/html")
     res.sendFile(`${__dirname}/views/pages/${path}.html`);
 });
@@ -26,14 +26,14 @@ app.get('/login', (req, res) => {
     res.sendFile(`${__dirname}/views/pages/login.html`)
 });
 app.get('/shop', (req, res) => {
-    session = req.session;
-    const path = (session.id)? 'shop': 'login';
+    sess = req.session;
+    const path = (sess.id)? 'shop': 'login';
     res.setHeader("Content-Type", "text/html")
     res.sendFile(`${__dirname}/views/pages/${path}.html`);
 });
 
 app.post('/api/login', (req, res) => {
-    session.id = res.body['Ea'];
+    sess.id = res.body['Ea'];
     res.redirect(`https://${req.host}`);
 });
 
