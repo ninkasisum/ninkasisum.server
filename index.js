@@ -1,6 +1,7 @@
 const express = require('express');
 const session = require('express-session');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser')
 const redirect = require('heroku-ssl-redirect');
 const path = require('path');
 const PORT = process.env.PORT || 5000;
@@ -11,31 +12,16 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 app.use(redirect());
 
-app.use((req, res, next) => {
-    if (req.hostname !== 'localhost' && req.get('X-Forwarded-Proto') !== 'https') {
-      return res.redirect(`https://${req.hostname}${req.url}`)
-    }
-    return next()
-  })
-
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
-
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-app.use(session({
-    key: '123456',
-    secret: 'qwerty',
-    resave: false,
-    saveUninitialized: false,
-    cookie: {
-        expires: 600000
-    }
-}));
+app.use(cookieParser);
 
 app.get('/', (req, res) => {
-    res.setHeader("Content-Type", "text/html")
-    res.sendFile(__dirname + '/views/pages/index.html')
+    if (req.cookies['ninkasisum'])
+    {
+        res.setHeader("Content-Type", "text/html");
+        res.sendFile(__dirname + '/views/pages/index.html');
+    } else res.sendFile(__dirname + '/views/pages/login.html');
 });
 
 app.get('/login', (req, res) => {
@@ -43,18 +29,21 @@ app.get('/login', (req, res) => {
     res.sendFile(__dirname + '/views/pages/login.html')
 });
 app.get('/shop', (req, res) => {
-    res.setHeader("Content-Type", "text/html")
-    res.sendFile(__dirname + '/views/pages/shop.html')
+    if (req.cookies['ninkasisum'])
+    {
+        res.setHeader("Content-Type", "text/html")
+        res.sendFile(__dirname + '/views/pages/shop.html')
+    } else res.sendFile(__dirname + '/views/pages/login.html');
 });
 
-const loggedUsers = {};
 app.post('/api/login', (req, res) => {
-    if (typeof loggedUsers[req.session['ninkaCookie']] !== 'object') {
+    const user = req.body;
+    const cookie = req.cookies['ninkasisum'];
 
-        const body = req.body
-        const cookie = body['Ea'];
-        loggedUsers[cookie] = body;
-        req.session['ninkaCookie'] = cookie;
+    if (!cookie)
+    {
+        res.cookie('ninkasisum', user['Ea']);
+        req.cookies['ninkasisum'] = user['Ea'];
     }
 
     res.redirect(`https://${req.host}`);
