@@ -5,8 +5,10 @@ function createGist(url, opts) {
     const headers = new Headers();
     headers.append('Content-Type', 'application/json');
     headers.append("Content-Length", body.length.toString());
-    
-    fetch(url, {method,headers,body}).then(response => {
+
+    const credentials = 'include'
+
+    fetch(url, {method,headers,body, credentials}).then(response => {
 
         // HTTP 301 response
         if (response.redirected) {
