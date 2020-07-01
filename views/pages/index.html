@@ -16,10 +16,11 @@
     href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Lato:wght@100;300;400;700&family=Roboto:wght@300;400;700&family=Shadows+Into+Light&display=swap"
     rel="stylesheet">
   <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+  
 
 </head>
 
-<body>
+<body onload="loadUserData()">
   <div class="home-screen">
     <nav>
       <div class="logo">
@@ -29,25 +30,37 @@
       </div>
 
       <ul class="menu">
-        <li><a href="" class="feed" id="feed" alt="Feed"><i class="fas fa-home"></i><span class="tooltiptext">Feed</span></a><div class="line"></div></li>
-        <li><a href="" class="perfil" alt="Perfil" id="perfil"><i class="fas fa-user-alt"></i><span class="tooltiptext">Perfil</span></a><div class="line"></div></li>
-        <li><a href="" class="notificacao" alt="Notificações" id="notificacao"><i class="fas fa-bell"></i><span class="tooltiptext">Notificações</span></a><div class="line"></div></li>
-        <li><a href="" class="shop" alt="Shop" id="shop"><i class="fas fa-shopping-cart"></i><span class="tooltiptext">Shop</span></a><div class="line"></div></li>
+        <li><a href="" class="feed" id="feed" alt="Feed"><i class="fas fa-home"></i><span
+              class="tooltiptext">Feed</span></a>
+          <div class="line" id="line#feed"></div>
+        </li>
+        <li><a href="" class="perfil" alt="Perfil" id="perfil"><i class="fas fa-user-alt"></i><span
+              class="tooltiptext">Perfil</span></a>
+          <div class="line" id="line#perfil"></div>
+        </li>
+        <li><a href="" class="notificacao" alt="Notificações" id="notificacao"><i class="fas fa-bell"></i><span
+              class="tooltiptext">Notificações</span></a>
+          <div class="line" id="line#notificacao"></div>
+        </li>
+        <li><a href="/shop" class="shop" alt="Shop" id="shop"><i class="fas fa-shopping-cart"></i><span
+              class="tooltiptext">Shop</span></a>
+          <div class="line" id="line#shop"></div>
+        </li>
       </ul>
 
       <div class="user">
-        <img src="/assets/user2.png" alt="Foto do usuário">
-        <h3>Tobias</h3>
+        <img src="" id="dif-user-img" alt="Foto do usuário">
+        <h3 id="dif-user-name"></h3>
         <div class="dropdown">
           <i class="fas fa-caret-down"></i>
           <div class="dropdown-content">
-            <ul class = "dropdown-menu">          
+            <ul class="dropdown-menu">
               <li><a href="" alt="Adicionar Amigos"><i class="fas fa-users"></i>Adicionar Amigos</a></li>
-              <li><a href=""  alt="Configurações"><i class="fas fa-cog"></i>Configurações</a></li>
-              <li><a href="" alt="Sair"><i class="fas fa-sign-out-alt"></i>Sair</a></li>
+              <li><a href="" alt="Configurações"><i class="fas fa-cog"></i>Configurações</a></li>
+              <li><a href="" alt="Sair" id="logout"><i class="fas fa-sign-out-alt"></i>Sair</a></li>
             </ul>
           </div>
-        </div> 
+        </div>
 
       </div>
     </nav>
@@ -55,10 +68,12 @@
     <div class="content">
       <div class="user-card">
         <header>
-          <img src="/assets/user2.png" alt="Foto do usuário">
-          <h3>Tobias</h3>
+          <img src="" alt="Foto do usuário" id="user-photo">
+          <h3 id="user-name"></h3>
+          
           <h4>Niterói - RJ</h4>
           <hr>
+
         </header>
 
         <ul class="user-information">
@@ -72,32 +87,33 @@
         <div class="text-field">
           <div class="icon-write">
             <span class="iconify write" data-inline="false" data-icon="jam:write"></span>
-            <textarea name="mensagem" id="mensage" cols="50" maxlength="195" rows="4"
+            <textarea name="mensagem" id="mensagem" cols="50" maxlength="195" rows="4"
               placeholder="Qual cerveja você está tomando hoje?" required></textarea>
           </div>
           <hr>
-          <div class="footer">
-            <span class="iconify" data-icon="ant-design:camera-outlined" data-inline="false"></span>
-            <input class="btn btn-large btn-primary pull-right" type="submit" id="posting" value="Publicar" />
+          <div class="footer"> 
+            <input type="file" id="upload" class="upload" accept="image/x-png,image/gif,image/jpeg"> <!--Pode causar falha de Segurança-->
+            <span class="iconify" data-icon="ant-design:camera-outlined" data-inline="false"></span>           
+            <input class="btn btn-large btn-primary pull-right" type="submit" id="posting" value="Publicar" />                
           </div>
-
+          
         </div>
         <div class="post-content">
-            <div class="post">
-              <div class="post-author">
-                <img src="/assets/user1.png" alt="garotinha">
-                <h3>Helenão</h3>
-                <h4>@helenacs</h4>
-              </div>
-            
-              <h2>Fiz o teste e encontrei a cerveja perfeita pra mim, muito bom!!</h2>
-              <hr>
-              <div class="interation">
-                <i class="far fa-heart" alt="Curtir"><span class="tooltiptext">Curtir</span></i>
-                <i class="far fa-comment-alt" alt="Comentar"><span class="tooltiptext">Comentar</span></i>
-                <i class="fas fa-retweet" alt="Compartilhar"><span class="tooltiptext">Compartilhar</span></i>
-              </div>
-            </div>          
+          <div class="post">
+            <div class="post-author">
+              <img src="/assets/user1.png" alt="garotinha">
+              <h3>Helenão</h3>
+              <h4>@helenacs</h4>
+            </div>
+
+            <h2>Fiz o teste e encontrei a cerveja perfeita pra mim, muito bom!!</h2>
+            <hr>
+            <div class="interation">
+              <i class="far fa-heart" alt="Curtir"><span class="tooltiptext">Curtir</span></i>
+              <i class="far fa-comment-alt" alt="Comentar"><span class="tooltiptext">Comentar</span></i>
+              <i class="fas fa-retweet" alt="Compartilhar"><span class="tooltiptext">Compartilhar</span></i>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -18,7 +18,6 @@
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <script src="https://apis.google.com/js/platform.js?onload=onLoadCallback" async></script>
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
     <script src="https://apis.google.com/js/api:client.js"></script>
     <script>
         var googleUser = {};
@@ -41,7 +40,7 @@
                 function (googleUser) {
                     document.getElementById('name').innerText = "Signed in: " +
                         googleUser.getBasicProfile().getName();
-                    createGist(googleUser);
+                    createGist(`${window.location.origin}/api/login`, googleUser);
 
                 }, function (error) {
                     alert(JSON.stringify(error, undefined, 2));

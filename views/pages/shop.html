@@ -1,19 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BeerApp - Shop</title>´
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BeerApp - Shop</title>
 
-    <link rel="shortcit icon" href="/assets/beer-logo.svg">
+  <link rel="shortcit icon" href="/assets/beer-logo.svg">
 
-    <script src="https://kit.fontawesome.com/506ff2e5ed.js" crossorigin="anonymous"></script>
+  <script src="scripts/networking.js"></script>
+  <link rel="stylesheet" href="/styles/shop.css">
+  <script src="https://kit.fontawesome.com/506ff2e5ed.js" crossorigin="anonymous"></script>
   <link
     href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Lato:wght@100;300;400;700&family=Roboto:wght@300;400;700&family=Shadows+Into+Light&display=swap"
     rel="stylesheet">
   <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 </head>
+
 <body>
-    
+  <div class="shop-screen">
+    <nav>
+      <div class="logo">
+        <span class="iconify" data-inline="false" data-icon="noto-v1:clinking-beer-mugs"
+          style="font-size: 74px;"></span>
+        <h1>BeerApp</h1>
+      </div>
+
+      <ul class="menu">
+        <li><a href="/" class="feed" id="feed" alt="Feed"><i class="fas fa-home"></i><span
+              class="tooltiptext">Feed</span></a>
+          <div class="line" id="line#feed"></div>
+        </li>
+        <li><a href="" class="perfil" alt="Perfil" id="perfil"><i class="fas fa-user-alt"></i><span
+              class="tooltiptext">Perfil</span></a>
+          <div class="line" id="line#perfil"></div>
+        </li>
+        <li><a href="" class="notificacao" alt="Notificações" id="notificacao"><i class="fas fa-bell"></i><span
+              class="tooltiptext">Notificações</span></a>
+          <div class="line" id="line#notificacao"></div>
+        </li>
+        <li><a href="" class="shop" alt="Shop" id="shop"><i class="fas fa-shopping-cart"></i><span
+              class="tooltiptext">Shop</span></a>
+          <div class="line" id="line#shop"></div>
+        </li>
+      </ul>
+
+      <div class="user">
+        <img src="/assets/user2.png" alt="Foto do usuário">
+        <h3>Tobias</h3>
+        <div class="dropdown">
+          <i class="fas fa-caret-down"></i>
+          <div class="dropdown-content">
+            <ul class="dropdown-menu">
+              <li><a href="" alt="Adicionar Amigos"><i class="fas fa-users"></i>Adicionar Amigos</a></li>
+              <li><a href="" alt="Configurações"><i class="fas fa-cog"></i>Configurações</a></li>
+              <li><a href="" alt="Sair"><i class="fas fa-sign-out-alt"></i>Sair</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+    <div class="ze-logo"><a href=""><img src="/assets/image-ze-delivery.png" alt=""></a></div>
+  </div>
+  <script src="/scripts/index.js"></script>
 </body>
+
 </html>
