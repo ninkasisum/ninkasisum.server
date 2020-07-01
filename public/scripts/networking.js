@@ -32,8 +32,10 @@ function loadUserData(){
             const user = JSON.parse(data).user;
             const userName = document.getElementById('user-name')
             const userPhoto = document.getElementById('user-photo')
+            const difUserName = document.getElementById('dif-user-name')
     
-            userName.innerText = user['Qt']['zW']  
+            userName.innerText = user['Qt']['zW']
+            difUserName.innerText = user['Qt']['zW']  
             userPhoto.src =  user['Qt']['cL']
         })
     }).catch((err)=>{console.log(JSON.stringify(err))})

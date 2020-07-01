@@ -50,7 +50,7 @@
 
       <div class="user">
         <img src="/assets/user2.png" alt="Foto do usuário">
-        <h3>Tobias</h3>
+        <h3 id="dif-user-name"></h3>
         <div class="dropdown">
           <i class="fas fa-caret-down"></i>
           <div class="dropdown-content">
@@ -92,7 +92,7 @@
           </div>
           <hr>
           <div class="footer"> 
-            <input type="file" id="upload" class="upload" accept="image/x-png,image/gif,image/jpeg">
+            <input type="file" id="upload" class="upload" accept="image/x-png,image/gif,image/jpeg"> <!--Pode causar falha de Segurança-->
             <span class="iconify" data-icon="ant-design:camera-outlined" data-inline="false"></span>           
             <input class="btn btn-large btn-primary pull-right" type="submit" id="posting" value="Publicar" />                
           </div>
