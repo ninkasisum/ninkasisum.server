@@ -129,13 +129,12 @@ nav{
     width: 134px;
     height: 131px;
 }
-.user-card h3, h4{
+.user-card h3{
     color: black;
     margin: 0;
-}
-.user-card h3{
     font-size: 24px;
     line-height: 28px;
+    margin-top: 15px;
 }
 .user-card h4{
     font-size: 13px;
@@ -147,6 +146,7 @@ nav{
 }
 .user-card hr{
     width: 200px;
+    margin-top: 20px;
 }
 .user-card ul{
     padding-left: 50px;
