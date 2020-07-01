@@ -8,11 +8,10 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 let sess;
 
+var jsonParser = bodyParser.json();
 app.use(redirect());
 app.use(session({secret: '123456',saveUninitialized: true,resave: true}));
 app.use(express.static(path.join(__dirname, '/public')));
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
     sess = req.session;
@@ -32,8 +31,8 @@ app.get('/shop', (req, res) => {
     res.sendFile(`${__dirname}/views/pages/${path}.html`);
 });
 
-app.post('/api/login', (req, res) => {
-    sess.id = res.body['Ea'];
+app.post('/api/login', jsonParser,  (req, res) => {
+    sess.id = req.body['Ea'];
     res.redirect(`https://${req.host}`);
 });
 
