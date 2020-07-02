@@ -106,6 +106,8 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
 }
 .user i{
     font-size: 18px;
