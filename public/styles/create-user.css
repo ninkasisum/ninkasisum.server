@@ -246,7 +246,7 @@ header{
 .form {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 110%;
 }
 .form input {  
     height: 35px;
@@ -309,5 +309,8 @@ label{
     justify-content: center;
 }
 .login-content.none{
+    display: none;
+}
+.sign-content.none{
     display: none;
 }
