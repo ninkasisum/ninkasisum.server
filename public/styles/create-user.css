@@ -54,6 +54,9 @@ header{
     justify-content: space-around;
     width: 430px;
 }
+header img{
+    width: 150px;
+}
 .first-column{
     display: flex;
     flex-direction: column;
@@ -106,21 +109,7 @@ header{
     text-align: center;
 }
 .btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: capitalize;
-    color: #fff;
-    font-size: 14px;
-    padding: 10px 50px;
-    cursor: pointer;
-    font-weight: bold;
-    width: 156px;
-    align-self: center;
-    border: none;
-    margin-top: 1rem;
-    border-radius: 15px;
-    outline: none;
+    
 }
 .btn-primary {
     background-color: transparent;
@@ -222,6 +211,7 @@ header{
 .content-type h3{
     margin-right: 10px;
     color: #606060;
+    cursor: pointer;
 }
 .content-type h3.active{
     color: #005365;
@@ -241,7 +231,8 @@ header{
     width: 150px;
     align-self: center;
     border: none;
-    margin-top: 1rem;
+    justify-content: center;
+    outline: none;
 }
 .btn-second {
     background-color: #58af9b;
