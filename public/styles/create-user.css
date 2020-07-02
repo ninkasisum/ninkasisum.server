@@ -321,3 +321,6 @@ label{
 .title-secondary.dif{
     margin-top: 33px;
 }
+#gSignInWrapper{
+    opacity: 0;
+}
