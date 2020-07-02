@@ -308,3 +308,6 @@ label{
     align-items: center;
     justify-content: center;
 }
+.login-content.none{
+    z-index: -1;
+}

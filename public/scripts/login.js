@@ -1,5 +1,7 @@
 const loginButton = document.getElementById('login')
 const signButton = document.getElementById('sign-up')
+const loginDisplay = document.getElementById('login-content')
+
 
 console.log(loginButton)
 console.log(signButton)
@@ -14,5 +16,6 @@ signButton.addEventListener('click', ()=>{
     signButton.classList.remove('active')
     signButton.classList.add('active')
     loginButton.classList.remove('active')
+    loginDisplay.classList.add('none')
     console.log('clicou sign')
 })
