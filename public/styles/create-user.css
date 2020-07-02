@@ -143,7 +143,7 @@ header{
     width: 35px;
     margin-right: 5px;
 }
-.login-content{
+.login-content, .sign-content{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -308,9 +308,6 @@ label{
     align-items: center;
     justify-content: center;
 }
-.login-content.none{
-    display: none;
-}
-.sign-content.none{
+.login-content.none, .sign-content.none{
     display: none;
 }
