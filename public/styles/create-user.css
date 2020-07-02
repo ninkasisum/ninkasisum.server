@@ -51,7 +51,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 500px;
+    width: 430px;
 }
 .first-column{
     display: flex;
@@ -221,7 +221,6 @@ header{
 }
 .content-type h3{
     margin-right: 10px;
-    width: 60px;
 }
 .form input{
     display: flex;
