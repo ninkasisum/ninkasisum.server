@@ -16,11 +16,11 @@
     "express": "^4.15.2",
     "express-session": "^1.17.1",
     "heroku-ssl-redirect": "0.0.4",
+    "mongodb-memory-server": "^6.6.1",
     "mongoose": "^5.9.21"
   },
   "devDependencies": {
     "got": "^11.3.0",
-    "mongodb-memory-server": "^6.6.1",
     "tape": "^4.7.0"
   },
   "repository": {
