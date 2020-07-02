@@ -216,3 +216,13 @@ header{
     left: 65%;
     transform: translate(-65%, -50%);
 }
+.content-type{
+    display: flex;
+    color: black;
+}
+.content-type h3{
+    margin-right: 10px;
+}
+.form input{
+    display: flex;
+}
