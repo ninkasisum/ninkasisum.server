@@ -107,6 +107,7 @@ header{
     font-size: 15px;
     line-height: 19px;
     text-align: center;
+    margin-bottom: 0;
 }
 .btn-primary {
     background-color: transparent;
