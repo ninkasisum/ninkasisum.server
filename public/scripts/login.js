@@ -1,3 +1,4 @@
+//login e sign button
 const loginButton = document.getElementById('login')
 const signButton = document.getElementById('sign-up')
 const loginDisplay = document.getElementById('login-content')
@@ -18,3 +19,27 @@ signButton.addEventListener('click', ()=>{
     loginDisplay.classList.add('none')
     signDisplay.classList.remove('none') 
 })
+
+//marcara para cnpj
+const masks = {
+    cnpj (value) {
+        return value
+        .replace(/\D/g, '') 
+        .replace(/(\d{2})(\d)/, '$1.$2')
+        .replace(/(\d{3})(\d)/, '$1.$2')
+        .replace(/(\d{3})(\d)/, '$1.$2')
+
+        .replace(/(\d{3})(\d{1,2})/, '$1-$2')
+        
+        .replace(/(-\d{2})\d+?$/, '$1') //limitar o campo para qnt de numeros do cpf
+    }
+}
+
+document.querySelectorAll('input').forEach(($input) => {
+    const field = $input.dataset.js
+
+    $input.addEventListener('input', (e) => {
+        e.target.value = masks[field](e.target.value)
+
+    }, false)
+}) 
