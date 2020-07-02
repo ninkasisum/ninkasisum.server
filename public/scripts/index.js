@@ -1,3 +1,26 @@
+function load() {
+    const config = {
+        "user-name": {
+            prop: 'innerText',
+            path: ['Qt', 'zW']
+        },
+        "user-photo": {
+            prop: 'src',
+            path: ['Qt', 'cL']
+        },
+        "dif-user-name": {
+            prop: 'innerText',
+            path: ['Qt', 'zW']
+        },
+        "dif-user-img": {
+            prop: 'src',
+            path: ['Qt', 'cL']
+        }
+    }
+
+    loadUserData(config);
+}
+
 //likezinho show mlk
 const like = document.querySelector('.fa-heart')
 var button_like = false

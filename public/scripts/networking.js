@@ -24,21 +24,35 @@ function createGist(url, opts) {
     });
 }
 
-function loadUserData(){
+function loadUserData(config){
     let user;
     
     fetch(`${window.location.origin}/api/user`, {method: 'GET'}).then((response)=> {
         response.json().then(data => {
             const user = JSON.parse(data).user;
-            const userName = document.getElementById('user-name')
-            const userPhoto = document.getElementById('user-photo')
-            const difUserName = document.getElementById('dif-user-name')
-            const difUserImg = document.getElementById('dif-user-img')
-    
-            userName.innerText = user['Qt']['zW']
-            difUserName.innerText = user['Qt']['zW']
-            userPhoto.src =  user['Qt']['cL']
-            difUserImg.src =  user['Qt']['cL']
+
+            const keys = Object.keys(config);
+            keys.forEach((key) => {
+                const element  = document.getElementById(e);
+                const prop = config[key].prop;
+                const path = config[key].path;
+
+                let value = user;
+                path.forEach((p) => {
+                    value = value[p];
+                })
+
+                element[prop] = value;
+            })
         })
     }).catch((err)=>{console.log(JSON.stringify(err))})
 }
+
+// const userName = document.getElementById('user-name')
+// userName.innerText = user['Qt']['zW']
+// const userPhoto = document.getElementById('user-photo')
+// userPhoto.src =  user['Qt']['cL']
+// const difUserName = document.getElementById('dif-user-name')
+// difUserName.innerText = user['Qt']['zW']
+// const difUserImg = document.getElementById('dif-user-img')
+// difUserImg.src =  user['Qt']['cL']
