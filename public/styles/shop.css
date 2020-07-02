@@ -4,7 +4,7 @@ body{
 nav{
     display: flex;
     align-items: center;
-    background: #283e4a;
+    background: #1f3d33;
     
     width: 100vw;
     height: 75px;
@@ -43,7 +43,7 @@ nav{
     border: 0;
     outline: none;
     font-size: 18px;
-    margin-right: 40px;  
+    margin-right: 40px;
 }
 .menu li i{
     font-size: 30px;
@@ -54,6 +54,11 @@ nav{
     align-items: center;
     margin-left: 5%;
     font-size: 15px;
+}
+.logo img{
+    width: 150px;
+    margin-top: 10px;
+    margin-left: 200px;
 }
 .logo h1{
     margin-left: 5px;
@@ -92,8 +97,8 @@ nav{
     right: 15%;
 }
 .user img{
-    width: 60px;
-    height: 64px;
+    width: 50px;
+    height: 54px;
 }
 .user h3{
     width: 70px;
@@ -101,41 +106,10 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-family: 'Roboto', sans-serif;
 }
 .user i{
     font-size: 18px;
     color: white;
-}
-.fa-heart, .fa-comment-alt, .fa-retweet{
-    position: relative;
-    display: inline-block;
-}
-.fa-heart .tooltiptext, .fa-comment-alt .tooltiptext, .fa-retweet .tooltiptext {
-    visibility: hidden;
-    width: 70px;
-    background-color: rgba(0, 0, 0, 0.658);
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    opacity: 0;
-    font-weight: 400;
-    transition: opacity 1s;
-   
-    /* Position the tooltip */
-    position: absolute;
-    bottom: -50px;
-    left: 1px;
-    z-index: 1;
-  }
-.fa-heart:hover .tooltiptext, .fa-comment-alt:hover .tooltiptext, .fa-retweet:hover .tooltiptext{
-    visibility: visible;
-    opacity: 1;
-}
-.fa-comment-alt .tooltiptext, .fa-retweet .tooltiptext{
-    width: 120px;
 }
 .dropdown-menu i{
     font-size: 18px;
@@ -172,7 +146,6 @@ nav{
 .fa-sign-out-alt{
     margin-right: 16px;
 }
-
 .feed, .perfil, .shop, .notificacao{
     position: relative;
     display: inline-block;
