@@ -253,7 +253,7 @@ header{
 .form {
     display: flex;
     flex-direction: column;
-    width: 55%;
+    width: 90%;
 }
 .form input {  
     height: 35px;
@@ -270,6 +270,7 @@ input:-webkit-autofill
     display: flex;
     align-items: center;
     margin: 8px;
+    background-color: #ecf0f1;
 }
 .label-input p{
     background-color: whitesmoke;
@@ -299,3 +300,8 @@ label{
     justify-content: center;
     text-align: center;
 }
+.password {
+    color: #34495e;
+    font-size: 14px;
+    margin: 15px 0;
+    text-align: center;
