@@ -226,3 +226,54 @@ header{
 .form input{
     display: flex;
 }
+.btn {
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 10px;
+    padding: 10px 50px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 150px;
+    align-self: center;
+    border: none;
+    margin-top: 1rem;
+}
+.btn-second {
+    background-color: #58af9b;
+    border: 1px solid #58af9b;
+    transition: background-color .5s;
+    text-decoration: none;
+}
+.btn-second:hover {
+    background-color: #fff;
+    border: 1px solid #58af9b;
+    color: #58af9b;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+.form input {
+    height: 20px;
+    width: 100%;
+    border: none;
+    background-color: #ecf0f1;
+}
+
+input:-webkit-autofill 
+{    
+    -webkit-text-fill-color: #000 !important;
+}
+.label-input {
+    display: flex;
+    align-items: center;
+    margin: 8px;
+}
+.label-input p{
+    background-color: whitesmoke;
+    color: whitesmoke;
+    height: 20px;
+    height: 56px;
+}
