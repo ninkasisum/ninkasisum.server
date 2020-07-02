@@ -311,3 +311,9 @@ label{
 .login-content.none, .sign-content.none{
     display: none;
 }
+.btn-second.dif{
+    margin-top: 1em;
+}
+.title-secondary.dif{
+    margin-top: 14px;
+}
