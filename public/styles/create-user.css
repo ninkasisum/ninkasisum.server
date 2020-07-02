@@ -143,7 +143,7 @@ header{
     width: 35px;
     margin-right: 5px;
 }
-.body-content{
+.login-content{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -302,12 +302,12 @@ label{
 .logo-login{
     width: 150px;
 }
-.login-content{
+.form-content{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 .login-content.none{
-    z-index: -1;
+    display: none;
 }
