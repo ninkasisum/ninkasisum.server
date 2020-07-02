@@ -221,3 +221,7 @@ nav{
 .ze-logo:hover{
     transform: translate(-3px, -5px);
 }
+
+#dif-user-img{
+    border-radius: 50%;
+}
