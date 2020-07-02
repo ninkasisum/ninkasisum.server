@@ -5,10 +5,11 @@ const sessionController = require('../controllers/sessionController');
 
 router.get('/', (req, res) => {
     sessionController.find(req.session['ninka'])
-        .then(({user, err}) => {
-            const path = (user)? 'index':'login';
-            res.setHeader("Content-Type", "text/html")
-            res.sendFile(`${__dirname}/views/pages/${path}.html`);
+        .then((response) => {
+            const path = (response)? 'index':'login';
+            res.setHeader("Content-Type", "text/html");
+            const fullpath = __dirname.replace("/routes", "");
+            res.sendFile(`${fullpath}/views/pages/${path}.html`);
         });
 });
 

@@ -9,10 +9,7 @@ module.exports = {
     },
 
     async find(id) {
-        if (!id)
-            throw new Error('Missing session id');
-
-        sessionModel.findById(id, (err, res) => {
+        await sessionModel.findById(id, (err, res) => {
             return {res, err};
         })
     },
