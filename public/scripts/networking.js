@@ -33,7 +33,7 @@ function loadUserData(config){
 
             const keys = Object.keys(config);
             keys.forEach((key) => {
-                const element  = document.getElementById(e);
+                const element  = document.getElementById(key);
                 const prop = config[key].prop;
                 const path = config[key].path;
 
