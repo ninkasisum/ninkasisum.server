@@ -1,5 +1,5 @@
 const loginButton = document.getElementById('login')
-const signButton = document.getElementById('sign-in')
+const signButton = document.getElementById('sign-up')
 
 console.log(loginButton)
 console.log(signButton)
