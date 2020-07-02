@@ -107,7 +107,7 @@ header{
     font-size: 15px;
     line-height: 19px;
     text-align: center;
-    margin-bottom: 0;
+    margin-bottom: 0 auto;
 }
 .btn-primary {
     background-color: transparent;
@@ -312,11 +312,12 @@ label{
     display: none;
 }
 .btn-second.dif{
-    margin-top: 1em;
+    margin-top: 29px;
 }
 .title-secondary.dift{
     margin-bottom: 11px;
+    margin-top: 13px;
 }
 .title-secondary.dif{
-    margin-top: 14px;
+    margin-top: 33px;
 }
