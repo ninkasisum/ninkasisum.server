@@ -207,7 +207,7 @@ header{
     display: flex;
 }
 .content-type h3{
-    margin-right: 10px;
+    margin-right: 15px;
     color: #606060;
     cursor: pointer;
 }
