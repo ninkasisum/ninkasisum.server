@@ -217,10 +217,13 @@ header{
 }
 .content-type{
     display: flex;
-    color: black;
 }
 .content-type h3{
     margin-right: 10px;
+    color: #606060;
+}
+.content-type h3.active{
+    color: #005365;
 }
 .form input{
     display: flex;
