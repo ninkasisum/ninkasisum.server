@@ -255,8 +255,8 @@ header{
     flex-direction: column;
     width: 55%;
 }
-.form input {
-    height: 20px;
+.form input {  
+    height: 35px;
     width: 100%;
     border: none;
     background-color: #ecf0f1;
@@ -276,4 +276,26 @@ input:-webkit-autofill
     color: whitesmoke;
     height: 20px;
     height: 56px;
+}
+.icon-modify {
+    color: #7f8c8d;
+    padding: 0 5px;
+}
+
+form select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+label{
+    display: flex;
+    margin-bottom: 7px;
+}
+
+#modal-cadastro form label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
