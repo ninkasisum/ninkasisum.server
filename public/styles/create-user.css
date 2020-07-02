@@ -48,11 +48,10 @@
     border-bottom-left-radius: 12px;
 }
 header{
-    position: absolute;
-    width: 76px;
-    height: 59px;
-    right: 5%;
-    top: 5%;  
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 500px;
 }
 .first-column{
     display: flex;
@@ -222,9 +221,11 @@ header{
 }
 .content-type h3{
     margin-right: 10px;
+    width: 60px;
 }
 .form input{
     display: flex;
+    outline: none;
 }
 .btn {
     border-radius: 15px;
@@ -305,3 +306,4 @@ label{
     font-size: 14px;
     margin: 15px 0;
     text-align: center;
+}
