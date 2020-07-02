@@ -143,7 +143,7 @@ header{
     width: 35px;
     margin-right: 5px;
 }
-.login{
+.body-content{
     display: flex;
     flex-direction: column;
     align-items: center;
