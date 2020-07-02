@@ -7,6 +7,7 @@ console.log(loginDisplay)
 loginButton.addEventListener('click', ()=>{
     loginButton.classList.remove('active')
     loginButton.classList.add('active')
+    loginDisplay.classList.remove('none')
     signButton.classList.remove('active')
     console.log('clicou login')
 })
