@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const getPagesPath = require('../utils/path')
 router.use(express.json());
 
 const session = require('express-session');

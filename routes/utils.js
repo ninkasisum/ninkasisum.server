@@ -1,10 +1,12 @@
 module.exports = {
+
     _path: null,
     buildPath() {
         const operator = (__dirname.includes('/'))?'/':'\\';
         const paths = __dirname.split(operator);
         paths.pop() // pop the router directory
-        ['views', 'pages'].forEach(p => {
+        const dirs = ['views', 'pages'];
+        dirs.forEach(p => {
             paths.push(p);
         });
         this._path = paths.join(operator) + operator;
