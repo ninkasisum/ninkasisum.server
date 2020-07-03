@@ -60,6 +60,7 @@ module.exports = {
 
                 if (found) 
                 {
+                    req.session['ninkasisum'] = null;
                     res.redirect(301, `https://${req.hostname}`);
                 } else res.status(404).json(JSON.stringify({ err: "404 Not Found" }));
             } else res.status(400).json(JSON.parse({ err: "400 Bad Request" }));
