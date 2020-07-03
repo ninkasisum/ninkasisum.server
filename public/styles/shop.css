@@ -213,6 +213,9 @@ nav{
 .dropdown-menu li:hover{
     padding: 6px;
 }
+.shop-screen{
+    height: 100vh;
+}
 .ze-logo{
     position: fixed;
     bottom: 30px;
@@ -232,20 +235,25 @@ nav{
     
 }
 .shop-cards{
-    flex: 3;
+    flex: 4;
 }
 .filter{
     flex: 1;
-    background-color: rgb(179, 179, 179);
 }
 .marcas-filter{
     background-color: white;
     height: 200px;
     border-radius: 15px;
+    width: 90%;
 }
 .tamanho-filter{
     background-color: white;
     height: 200px;
     border-radius: 15px;
+    width: 90%;
 }
+.filter-content{
+    height: 75px;
+}
+
 
