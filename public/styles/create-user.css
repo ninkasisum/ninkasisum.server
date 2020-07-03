@@ -44,15 +44,18 @@
     background-color: #183227;
     width: 45%;
     height: 100%;
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    right: 0;
 }
 header{
-    position: absolute;
-    width: 76px;
-    height: 59px;
-    right: 5%;
-    top: 5%;  
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 430px;
+}
+.login-logo{
+    width: 150px;
 }
 .first-column{
     display: flex;
@@ -77,7 +80,7 @@ header{
 }
 .title-primary {
     color: #fff;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 .title-secondary {
     color: #007457;
@@ -92,7 +95,7 @@ header{
     width: 252px;
     height: 38px;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 19px;
     text-align: center;
 }
@@ -104,23 +107,7 @@ header{
     font-size: 15px;
     line-height: 19px;
     text-align: center;
-}
-.btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: capitalize;
-    color: #fff;
-    font-size: 14px;
-    padding: 10px 50px;
-    cursor: pointer;
-    font-weight: bold;
-    width: 156px;
-    align-self: center;
-    border: none;
-    margin-top: 1rem;
-    border-radius: 15px;
-    outline: none;
+    margin-bottom: 0 auto;
 }
 .btn-primary {
     background-color: transparent;
@@ -156,7 +143,7 @@ header{
     width: 35px;
     margin-right: 5px;
 }
-.login{
+.login-content, .sign-content{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -215,4 +202,125 @@ header{
     top: 50%;
     left: 65%;
     transform: translate(-65%, -50%);
+}
+.content-type{
+    display: flex;
+}
+.content-type h3{
+    margin-right: 15px;
+    color: #606060;
+    cursor: pointer;
+}
+.content-type h3.active{
+    color: #005365;
+}
+.form input{
+    display: flex;
+    outline: none;
+}
+.btn {
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 10px;
+    padding: 10px 50px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 150px;
+    align-self: center;
+    border: none;
+    justify-content: center;
+    outline: none;
+}
+.btn-second {
+    background-color: #58af9b;
+    border: 1px solid #58af9b;
+    transition: background-color .5s;
+    text-decoration: none;
+}
+.btn-second:hover {
+    background-color: #fff;
+    border: 1px solid #58af9b;
+    color: #58af9b;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 110%;
+}
+.form input {  
+    height: 35px;
+    width: 100%;
+    border: none;
+    background-color: #ecf0f1;
+}
+
+input:-webkit-autofill 
+{    
+    -webkit-text-fill-color: #000 !important;
+}
+.label-input {
+    display: flex;
+    align-items: center;
+    margin: 8px;
+    background-color: #ecf0f1;
+}
+.label-input p{
+    background-color: whitesmoke;
+    color: whitesmoke;
+    height: 20px;
+    height: 56px;
+}
+.icon-modify {
+    color: #7f8c8d;
+    padding: 0 5px;
+}
+
+form select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+label{
+    display: flex;
+    margin-bottom: 7px;
+}
+
+#modal-cadastro form label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.password {
+    color: #34495e;
+    font-size: 14px;
+    margin: 15px 0;
+    text-align: center;
+}
+.logo-login{
+    width: 150px;
+}
+.form-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.login-content.none, .sign-content.none{
+    display: none;
+}
+.btn-second.dif{
+    margin-top: 19px;
+}
+.title-secondary.dift{
+    margin-bottom: 11px;
+    margin-top: 13px;
+}
+.title-secondary.dif{
+    margin-top: 33px;
+}
+#gSignInWrapper{
+    opacity: 0;
 }

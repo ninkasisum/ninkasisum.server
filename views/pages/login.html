@@ -105,43 +105,86 @@
             <div class="container">
 
                 <div class="content first-content">
-                    <div class="first-column">
-                        <h2 class="title title-primary">Bem-vindo!</h2>
-                        <p class="description description-primary">Faça o login e comece sua jornada com a gente</p>
-                    </div>
-
                     <div class="second-column">
                         <header>
-                            <img src="/assets/logo-frame.png" alt="">
+                            <img src="/assets/ninka-login.png" alt="" class="logo-login">
+                            <div class="content-type">
+                                <h3 class="active" id="login">Login</h3>
+                                <h3 id="sign-up">Sign-up</h3>
+                            </div>
                         </header>
 
-                        <div class="login">
-                            <h2 class="title title-secondary">Fazer Login</h2>
-                            <p class="description description-secondary">Sincronize com sua conta para logar</p>
-                            <script type="text/javascript"
-                                src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
+                        <div class="login-content" id="login-content">
+                            <h2 class="title title-secondary dif">Fazer Login</h2>
+                            <p class="description description-secondary">Entre com seus dados para logar</p>
 
-                            <div id="gSignInWrapper">
-                                <div id="customBtn" class="customGPlusSignIn">
-                                    <i class="fab fa-google"></i>
-                                    <span class="buttonText">Google</span>
+                            <div class="form-content">
+                                <form class="form">
+                                    <label class="label-input" for="">
+                                        <i class="far fa-envelope icon-modify"></i>
+                                        <input type="email" placeholder="Email">
+                                    </label>
+                                    <label class="label-input" for="">
+                                        <i class="fas fa-lock icon-modify"></i>
+                                        <input type="password" placeholder="Password">
+                                    </label>
+                                    <a class="password" href="#">esqueceu sua senha?</a>
+                                    <button class="btn btn-second">sign in</button>
+                                </form>
+
+                                <script type="text/javascript"
+                                    src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
+
+                                <div id="gSignInWrapper">
+                                    <div id="customBtn" class="customGPlusSignIn">
+                                        <i class="fab fa-google"></i>
+                                        <span class="buttonText">Google</span>
+                                    </div>
                                 </div>
+                                <div id="name"></div>
+                                <div class="botão de login do fb" data-size="médio" tipo de botão de dados="login_with"
+                                    layout de dados="padrão" data-auto-logout-link=link "falso" data-use-continue
+                                    -as="true" data-width=""> </div>
                             </div>
-                            <div id="name"></div>
-                            <div class="botão de login do fb" data-size="médio" tipo de botão de dados="login_with"
-                                layout de dados="padrão" data-auto-logout-link=link "falso" data-use-continue -as="true"
-                                data-width=""> </div>
-
                         </div>
-
+                        <div class="sign-content none" id="sign-content">
+                            <h2 class="title title-secondary dift">Cadastro</h2>
+                            <p class="description description-secondary">Cadastre os dados da sua empresa</p>                                        
+                            
+                            <div class="form-content">
+                                <form class="form">    
+                                    <label class="label-input" for="">
+                                        <i class="fas fa-building icon-modify"></i>
+                                        <input type="text" placeholder="Nome">
+                                    </label>      
+                                    <label class="label-input" for="">
+                                        <i class="far fa-id-card icon-modify"></i>
+                                        <input type="text" placeholder="CNPJ" data-js="cnpj">
+                                    </label>  
+                                    <label class="label-input" for="">
+                                        <i class="far fa-envelope icon-modify"></i>
+                                        <input type="email" placeholder="Email">
+                                    </label>                            
+                                    <label class="label-input" for="">
+                                        <i class="fas fa-lock icon-modify"></i>
+                                        <input type="password" placeholder="Password">
+                                    </label>                                                             
+                                    <button class="btn btn-second dif">sign-up</button>
+                                </form>                        
+                            </div>
+                        </div>
+                    </div>
+                    <div class="first-column">
+                        <h2 class="title title-primary">Bem-vindo!</h2>
+                        <p class="description description-primary">Faça o cadastro de sua empresa e comece sua jornada
+                            com a gente</p>
                     </div>
                 </div>
-                <!--first-content-->
             </div>
-        </div>
 
-    </div>
-    <script src="scripts/common.js"></script>
-    <script>startApp()</script>
+        </div>
+        <script src="scripts/login.js"></script>
+        <script>startApp()</script>
 </body>
+
 </html>

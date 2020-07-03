@@ -128,6 +128,7 @@ nav{
 .user-card img{
     width: 134px;
     height: 131px;
+    border-radius: 50%;
 }
 .user-card h3{
     color: black;
@@ -345,8 +346,8 @@ nav{
 }
 .post h2{
     font-family: Roboto;
-    margin: 0;
-    margin-bottom: 15px;
+    margin: 15px 50px;
+    margin-top: 0;
     font-style: normal;
     font-weight: 300;
     font-size: 15px;
