@@ -232,7 +232,7 @@ nav{
 }
 .shop-content{
     display: flex;
-    
+    background-color: #E4E0E0;    
 }
 .shop-cards{
     flex: 4;
