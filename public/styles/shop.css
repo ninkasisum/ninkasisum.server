@@ -247,13 +247,14 @@ nav{
     background-color: white;
     height: 200px;
     border-radius: 15px;
-    width: 90%;
+    width: 85%;
+    margin-bottom: 20px;
 }
 .tamanho-filter{
     background-color: white;
     height: 200px;
     border-radius: 15px;
-    width: 90%;
+    width: 85%;
 }
 .filter-content{
     height: 75px;
