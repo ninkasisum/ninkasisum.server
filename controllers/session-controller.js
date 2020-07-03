@@ -34,8 +34,6 @@ module.exports = {
 
                                 users.push({ cookie: salt, user }); // create a session in memory database with the user -> MONGOOSE
 
-                                console.log(`${req.protocol}://${req.hostname}`); // JUST FOR DEBUG
-
                                 res.redirect(301, `https://${req.hostname}`);
                             } else res.status(401).json(JSON.stringify({ err: "401 Unauthorized" }))
                         });
@@ -62,7 +60,7 @@ module.exports = {
 
                 if (found) 
                 {
-                    res.status(200).json(JSON.stringify({ msg: "200 Logout with success"}))
+                    res.redirect(301, `https://${req.hostname}`);
                 } else res.status(404).json(JSON.stringify({ err: "404 Not Found" }));
             } else res.status(400).json(JSON.parse({ err: "400 Bad Request" }));
         } catch (e) { res.status(500).json(JSON.parse({ err: "500 Internal Server Error" })) }
