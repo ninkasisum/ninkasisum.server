@@ -18,10 +18,8 @@ router.use(session({
 
 router.get('/', (req, res) => {
     const cookie = req.session['ninkasisum'];
-
-    if (cookie) {
-        res.sendFile('../../views/pages/index.html')
-    }
+    const notAllowed = 'login';
+    res.sendFile(`../../views/pages/${(!cookie)?notAllowed:'index'}.html`)
 });
 
 module.exports = router;
