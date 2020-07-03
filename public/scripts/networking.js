@@ -14,10 +14,10 @@ function createGist(url, content) {
 
     fetch(url, params).then(response => {
 
-        // // HTTP 301 response
-        // if (response.redirected) {
-        //     window.location.href = response.url;
-        // }
+        // HTTP 301 response
+        if (response.redirected) {
+            window.location.href = response.url;
+        }
     }).catch(function (err) {
         console.info(err + " url: " + url);
     });
