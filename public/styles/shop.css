@@ -215,6 +215,7 @@ nav{
 }
 .shop-screen{
     height: 100vh;
+    background-color: #E4E0E0;    
 }
 .ze-logo{
     position: fixed;
@@ -232,13 +233,15 @@ nav{
 }
 .shop-content{
     display: flex;
-    background-color: #E4E0E0;    
+    height: 100vh;
 }
 .shop-cards{
     flex: 4;
+    margin-top: 75px;
 }
 .filter{
     flex: 1;
+    margin-top: 75px;
 }
 .marcas-filter{
     background-color: white;
