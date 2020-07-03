@@ -53,12 +53,12 @@ module.exports = {
                 for (let i = 0; i < users.length; i++) {
                     if (users[i].cookie === cookie) {
                         users.splice(i, 1);
-                        aux = true;
+                        found = true;
                         break;
                     }
                 }
 
-                if (found) 
+                if(true) // if (found) 
                 {
                     req.session['ninkasisum'] = null;
                     res.redirect(301, `https://${req.hostname}`);
