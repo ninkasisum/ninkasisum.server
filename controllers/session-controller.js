@@ -34,7 +34,9 @@ module.exports = {
 
                                 users.push({ cookie: salt, user }); // create a session in memory database with the user -> MONGOOSE
 
-                                res.redirect('/');
+                                console.log(`${req.protocol}://${req.hostname}`); // JUST FOR DEBUG
+
+                                res.redirect(301, `${req.protocol}://${req.hostname}`);
                             } else res.status(401).json(JSON.stringify({ err: "401 Unauthorized" }))
                         });
                     });
