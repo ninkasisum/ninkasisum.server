@@ -42,4 +42,11 @@ document.querySelectorAll('input').forEach(($input) => {
         e.target.value = masks[field](e.target.value)
 
     }, false)
-}) 
+});
+
+document.getElementById('btn-login').addEventListener('click', () => {
+    createGist(`${window.location.origin}/api/login`, {
+        usr: document.getElementById('usr').value,
+        psw: document.getElementById('psw').value
+    })
+})

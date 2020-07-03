@@ -1,14 +1,13 @@
-function createGist(url, opts) {
+function createGist(url, content) {
     const params = {
         method: 'POST'
     };
 
-    if(opts){
-        params.body = JSON.stringify(opts);
+    if(content){
+        params.body = JSON.stringify(content);
 
         params.headers = new Headers();
         params.headers.append('Content-Type', 'application/json');
-        params.headers.append("Content-Length", params.body.length.toString());
 
         params.credentials = 'include'
     } 

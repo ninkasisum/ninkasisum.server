@@ -306,7 +306,7 @@ nav{
     list-style: none;
     padding: 0;
 }
-.dropdown-menu a{
+.dropdown-menu span{
     text-decoration: none;
 }
 .dropdown-menu li:hover{
@@ -404,7 +404,7 @@ nav{
     font-size: 18px;
     color: black;
 }
-.dropdown-menu a{
+.dropdown-menu span{
     color: rgba(20, 20, 20, 0.822);
     font-size: 18px;
     font-weight: 600;
