@@ -227,3 +227,25 @@ nav{
 #dif-user-img{
     border-radius: 50%;
 }
+.shop-content{
+    display: flex;
+    
+}
+.shop-cards{
+    flex: 3;
+}
+.filter{
+    flex: 1;
+    background-color: rgb(179, 179, 179);
+}
+.marcas-filter{
+    background-color: white;
+    height: 200px;
+    border-radius: 15px;
+}
+.tamanho-filter{
+    background-color: white;
+    height: 200px;
+    border-radius: 15px;
+}
+
