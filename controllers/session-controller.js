@@ -36,7 +36,7 @@ module.exports = {
 
                                 console.log(`${req.protocol}://${req.hostname}`); // JUST FOR DEBUG
 
-                                res.redirect(301, `${req.protocol}://${req.hostname}`);
+                                res.redirect(301, `https://${req.hostname}`);
                             } else res.status(401).json(JSON.stringify({ err: "401 Unauthorized" }))
                         });
                     });
