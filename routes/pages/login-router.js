@@ -17,8 +17,9 @@ router.use(session({
     }
 }));
 
+const utils = require('../utils');
 router.get('/login', (req, res) => {
-    res.sendFile(`${getPagesPath(__dirname)}/login.html`);
+    res.sendFile(`${utils.getPath()}login.html`);
 });
 
 module.exports = router;

@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-router.use(express.json());
-
 const session = require('express-session');
+
+router.use(express.json());
 router.use(session({
     cookieName: 'ninkasisum',
     secret: "Qwerty123456",
@@ -16,10 +16,13 @@ router.use(session({
     }
 }));
 
+const utils = require('../utils');
 router.get('/', (req, res) => {
     const cookie = req.session['ninkasisum'];
-    const notAllowed = 'login';
-    res.sendFile(`../../views/pages/${(!cookie)?notAllowed:'index'}.html`)
+
+    const file = `${utils.getPath()}${(!cookie)?'login':'index'}.html`;
+
+    res.sendFile(file);
 });
 
 module.exports = router;

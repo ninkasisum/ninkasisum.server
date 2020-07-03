@@ -16,21 +16,13 @@ router.use(session({
     }
 }));
 
+const utils = require('../utils');
 router.get('/shop', (req, res) => {
     const cookie = req.session['ninkasisum'];
 
-    if (cookie) {
-        let splitedDirname = __dirname.split('/');
-        splitedDirname.pop();
-        splitedDirname.pop();
-        splitedDirname.push('views');
-        splitedDirname.push('pages');
-        const pagesPath = splitedDirname.join('/');
+    const file = `${utils.getPath()}${(!cookie)?'login':'shop'}.html`;
 
-        console.log(pagesPath);
-
-        res.sendFile(`${pagesPath}/shop.html`)
-    }
+    res.sendFile(file);
 });
 
 module.exports = router;
