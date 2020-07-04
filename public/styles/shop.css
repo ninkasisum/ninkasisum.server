@@ -260,6 +260,10 @@ nav{
     flex-direction: column;
     margin-top: 10px;
 }
+.marcas-filter::-webkit-scrollbar{
+    -webkit-appearance: none;
+    width: 7px;
+}
 .tamanho-filter{
     background-color: white;
     height: 600px;
