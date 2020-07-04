@@ -328,3 +328,6 @@ nav{
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
 }
+.tamanho-filter span{
+    margin-bottom: 19px;
+}
