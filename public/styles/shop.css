@@ -356,6 +356,18 @@ nav{
 .beer-logo{
     width: 150px;
 }
+.beer-logo img{
+    border-radius: 50%;
+}
 .inform h3, h4{
     font-family: "Roboto", 'sans-serif';
+    text-align: center;
+}
+.inform h3{
+    font: 20px;
+    color: rgb(19, 19, 19);
+}
+.inform h4{
+    font: 18px;
+    color: #FF7A00;
 }
