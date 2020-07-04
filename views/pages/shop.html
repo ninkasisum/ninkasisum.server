@@ -69,13 +69,41 @@
 
           <div class="checkbox" for="">
             <script>
-              var divNova = document.createElement("div");
-              var conteudoNovo = document.createTextNode("Olá, cumprimentos!");
-              divNova.appendChild(conteudoNovo); //adiciona o nó de texto à nova div criada 
-
-              // adiciona o novo elemento criado e seu conteúdo ao DOM 
-              var divAtual = document.getElementById("div1");
-              document.body.insertBefore(divNova, divAtual); 
+              const marcas = [
+                "Adriática",
+                "Antarctica",
+                "Becks",
+                "Bohemia",
+                "Brahma",
+                "Budweiser",
+                "Caracu",
+                "Cervejaria Colorado",
+                "Corona",
+                "Franziskaner",
+                "Goose Island",
+                "Hertog Jan",
+                "Hoegaarden",
+                "Leffe",
+                "Legítima",
+                "Löwenbräu",
+                "Magnífica do Maranhão",
+                "Norteña",
+                "Nossa",
+                "Original",
+                "Patagonia",
+                "Polar",
+                "Quilmes",
+                "Serramalte",
+                "Serrana",
+                "Skol",
+                "Stella Artois",
+                "Três Fidalgas",
+                "Wäls"
+              ]
+              marcas.forEach((marca) => {
+                var input = document.createElement(input);
+                var textinput = document.createTextNode(marca);
+              })
             </script>
             <!--<input type="checkbox" id="adriatica" name="Adriática">
             <label for="acriatica">Adriática</label>-->
