@@ -1,37 +1,30 @@
 const mysql = require('../services/mysql-connection')
-const bcrypt = require('bcrypt');
+const bcrypt = require('../utils/bcrypt');
+
+const create = 'INSERT INTO users (name, cnpj, email, password) VALUES ( ?, ?, ?, ?)';
+const select = 'SELECT * FROM users WHERE email = ?';
 
 module.exports = {
     async create(req, res) {
-        try {
-            let { name, cnpj, usr, psw } = req.body;
-            bcrypt.genSalt(10, (err, salt) => {
-                bcrypt.hash(psw, salt, function (err, hash) {
-                    psw = hash;
-                });
-            });
+        const { name, cnpj, usr, psw } = req.body;
 
+        const con = await mysql.build();
+        con.connect(() => {
+            con.query(select, [usr], async (err, results) => {
+                if (results.length == 0)
+                {
+                    const hash = await bcrypt.hash(psw);
 
-            const con = await mysql.build();
-            con.connect((err) => {
-                if (err)
-                    throw err;
-    
-                // I KNOW THIS IS VULNERABLE TO SQL INJECTION YOUR DUMB PSEUDO HACKER
-                // I JUST HAVE A PROJECT TO DELIVERY MAN
-                // LEAVE ME ALONE!
-                var sql = `INSERT INTO users (name, cnpj, email, password) VALUES ( ?, ?, ?, ?)`;
-                con.query(sql, [name, cnpj, usr, psw] , (err, result) => {
-                    if (err)
-                        throw err;
-    
-                    res.status(201).send();
-                });
-            });  
-        } catch(e) { return false; }
+                    con.query(create, [name, cnpj, usr, hash], () => {
+                        res.status(201).send();
+                    });
+
+                } else res.status(406).send();
+            })
+        });
     },
     async update() {
-        
+
     },
     async delete() {
 
