@@ -2,7 +2,7 @@ async function load() {
     const user = await loadUserData(); 
     
     const userName = document.getElementById('user-name')
-    const textNome = document.createTextNode(user.name);
+    const textNome = document.createTextNode(user.name.split(" ")[0]);
 
     userName.appendChild(textNome)
 }
