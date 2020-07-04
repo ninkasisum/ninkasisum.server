@@ -16,10 +16,10 @@ router.use(session({
  }));
 
 
-router.get('/api/user', userController.find)
-router.post('/api/user/create', userController.create)
-router.put('/api/user/update', userController.update)
-router.delete('/api/user/delete', userController.delete)
-router.get('/api/user/list', userController.list)
+router.post('/api/user', userController.api.find)
+router.post('/api/user/create', userController.api.create)
+router.put('/api/user/update', userController.api.update)
+router.delete('/api/user/delete', userController.api.delete)
+router.get('/api/user/list', userController.api.list)
 
 module.exports = router;
