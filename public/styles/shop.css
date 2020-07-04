@@ -356,3 +356,6 @@ nav{
 .beer-logo{
     width: 150px;
 }
+.inform h3, h4{
+    font-family: "Roboto", 'sans-serif';
+}
