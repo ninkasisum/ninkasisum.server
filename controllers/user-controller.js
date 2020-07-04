@@ -13,7 +13,7 @@ module.exports = {
             con.query(select, [usr], async (err, results) => {
                 if (results.length == 0)
                 {
-                    hash = await bcrypt.hash(psw);
+                    const hash = await bcrypt.hash(psw);
 
                     con.query(create, [name, cnpj, usr, hash], () => {
                         res.status(201).send();
