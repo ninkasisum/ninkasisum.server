@@ -302,6 +302,9 @@ nav{
 .checkbox{
     overflow-y: auto;
 }
+.checkbox::-webkit-scrollbar-button{
+    display: none;
+}
 .label-marcas{
     margin-left: 5px;
 }
