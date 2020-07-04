@@ -20,8 +20,8 @@ module.exports = {
                 // I KNOW THIS IS VULNERABLE TO SQL INJECTION YOUR DUMB PSEUDO HACKER
                 // I JUST HAVE A PROJECT TO DELIVERY MAN
                 // LEAVE ME ALONE!
-                var sql = `INSERT INTO users (name, cnpj, email, password) VALUES ( '${name}', '${cnpj}', '${usr}', '${psw}')`;
-                con.query(sql, (err, result) => {
+                var sql = `INSERT INTO users (name, cnpj, email, password) VALUES ( ?, ?, ?, ?)`;
+                con.query(sql, [name, cnpj, usr, psw] , (err, result) => {
                     if (err)
                         throw err;
     

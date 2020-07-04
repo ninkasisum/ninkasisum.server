@@ -45,8 +45,17 @@ document.querySelectorAll('input').forEach(($input) => {
 });
 
 document.getElementById('btn-login').addEventListener('click', () => {
-    createGist(`${window.location.origin}/api/login`, {
-        usr: document.getElementById('usr').value,
-        psw: document.getElementById('psw').value
-    })
+    const usr = document.getElementById('usr').value;
+    const psw = document.getElementById('psw').value;
+
+    createGist(`${window.location.origin}/api/login`, { usr, psw });
+})
+
+document.getElementById('btn-register').addEventListener('click',  () => {
+    const name = document.getElementById('rname').value;
+    const cnpj = document.getElementById('rcnpj').value;
+    const usr  = document.getElementById('ruser').value;
+    const psw  = document.getElementById('rpsw').value;
+
+    createGist(`${window.location.origin}/api/user/create`, { name, cnpj, usr, psw });
 })
