@@ -276,6 +276,16 @@ nav{
     border-radius: 3px;
     border: 1px solid grey;
 }
+.label-input input{
+    border: none;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 165px;
+}
+.label-input i{
+    padding-left: 0px;
+    padding-right: 0px;
+}
 .fa-search{
     color: #7f8c8d;
     padding: 0 5px;
