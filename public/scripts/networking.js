@@ -28,28 +28,11 @@ function createGist(url, content) {
     });
 }
 
-function loadUserData(config){
-    let user;
-    
-    fetch(`${window.location.origin}/api/user`, {method: 'GET'}).then((response)=> {
-        response.json().then(data => {
-            const user = JSON.parse(data).user;
-
-            const keys = Object.keys(config);
-            keys.forEach((key) => {
-                const element  = document.getElementById(key);
-                const prop = config[key].prop;
-                const path = config[key].path;
-
-                let value = user;
-                path.forEach((p) => {
-                    value = value[p];
-                })
-
-                element[prop] = value;
-            })
-        })
-    }).catch((err)=>{console.log(JSON.stringify(err))})
+function loadUserData(){
+    fetch(`${window.location.origin}/api/user`, {method: 'POST'})
+    .then((response)=> {
+        console.log(response)
+    })
 }
 
 // const userName = document.getElementById('user-name')
