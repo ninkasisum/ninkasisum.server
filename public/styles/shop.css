@@ -248,7 +248,7 @@ nav{
     align-items: center;
     background-color: #f3f3f3;
     border-radius: 8px;
-    height: 440px;
+    height: 600px;
 }
 .marcas-filter{
     background-color: white;
@@ -262,7 +262,7 @@ nav{
 }
 .tamanho-filter{
     background-color: white;
-    height: 350px;
+    height: 200px;
     border-radius: 8px;
     width: 93%;
     margin-bottom: 20px;
