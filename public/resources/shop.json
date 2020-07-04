@@ -1,0 +1,600 @@
+{
+     "modelos" : [
+        "Adriática",
+    
+        "Antarctica Cristal",
+        "Antarctica Pilsen",
+    
+        "Antarctica Subzero",
+    
+        "Beck's",
+    
+        "Bohemia 14-Weiss",
+        "Bohemia 838 Pale Ale",
+        "Bohemia Aura Larger",
+        "Bohemia Escura",
+        "Bohemia Imperial",
+        "Bohemia Magna Pils",
+        "Bohemia Puro Malte",
+    
+        "Brahma Chopp",
+        "Brahma Extra Larger",
+        "Brahma Extra Red Larger",
+        "Brahma Extra Weiss",
+        "Brahma Malzbier",
+        "Brahma Refresh",
+        "Brahma Zero",
+    
+        "Budweiser",
+    
+        "Caracu",
+    
+        "Colorado Apia",
+        "Colorado Berthô",
+        "Colorado Cauim",
+        "Colorado Cauim 016",
+        "Colorado Demoiselle",
+        "Colorado Eugênia",
+        "Colorado Guanabara",
+        "Colorado Indica",
+        "Colorado Ithaca",
+        "Colorado Murica",
+        "Colorado Nassau",
+        "Colorado Ribeirão Lager",
+        "Colorado Rosália",
+        "Colorado Vixnu", 
+    
+        "Corona",
+        "Corona",
+    
+        "Franziskaner Dunkel",
+        "Franziskaner Hell",
+        "Franziskaner Kristall Klar",
+    
+        "Goose Island IPA",
+        "Cerveja Goose Island Honkers Ale",
+        "Goose Island Midway",
+        "Goose Island Sofie",
+    
+        "Hertog Jan Dubbel",
+        "Hertog Jan Grand Prestige",
+        "Hertog Jan Tripel",
+    
+        "Hoegaarden Forbidden Fruit",
+        "Hoegaarden Grand Cru",
+        "Hoegaarden Wit",
+    
+        "Leffe Blonde",
+        "Leffe Brown",
+        "Leffe Radieuse",
+        "Leffe Rituel 9º",
+        "Leffe Royale",
+        "Leffe Ruby",
+        "Leffe Vieille Cuvée",
+    
+        "Legítima",
+    
+        "Löwenbräu",
+    
+        "Magnífica",
+    
+        "Norteña",
+    
+        "Nossa",
+    
+        "Origin",
+    
+        "Patagonia Amber Lager",
+        "Patagonia Bohemian Pilsener",
+        "Patagonia Weisse",
+    
+        "Polar",
+    
+        "Quilmes",
+    
+        "Serramalte",
+    
+        "Serrana",
+    
+        "Skol Pilsen",
+        "Skol Hops",
+        "Skol Puro Malte",
+    
+        "Stella Artois",
+    
+        "Três Fidalgas",
+    
+        "Wäls 42",
+        "Wäls Bohemian Pilsner",
+        "Wäls Belgium witte",
+        "Wäls Dubbel",
+        "Wäls Hop Corn Ipa",
+        "Wäls Läger",
+        "Wäls Niobium",
+        "Wäls Petroleum",
+        "Wäls Quadruppel",
+        "Wäls Session Citra",
+        "Wäls Trippel",
+        "Wäls Verano",
+        "X Wäls"
+    ],
+    
+     "categoria" : [
+        "Premium American Larger", 
+        
+        "American Larger", 
+    
+        "American Larger",
+        "American Larger", 
+    
+        "German Pilsner", 
+        "German Weizen", 
+        "Pale Ale", 
+        "Vienna Lager",
+        "German Schwarzbier",
+        "Premium American Lager", 
+        "German Pilsner", 
+        "Premium American Larger",     
+    
+        "American Larger", 
+        "Premium American Larger", 
+        "Brahma Amber Lager", 
+        "German Weizen", 
+        "American Pale Lager", 
+        "American Lager", 
+        "American Lager", 
+    
+        "American Lager", 
+    
+        "Sweet Stout", 
+    
+        "Honey Wheat Ale", 
+        "Double Brown Ale", 
+        "Premium American Larger", 
+        "Premium American Larger", 
+        "Robust Porter", 
+        "Session IPA", 
+        "Russian Imperial Stout",
+        "India Pale Ale", 
+        "Imperial Stout", 
+        "Cream Ale", 
+        "White IPA", 
+        "American Lager", 
+        "Fruit Beer", 
+        "Imperial IPA", 
+    
+        "American Lager", 
+        "American Lager", 
+    
+        "German Weizen", 
+        "Dunkel Weissbier",  
+        "German Weizen", 
+    
+        "India Pale Ale", 
+        "English Bitter Ale", 
+        "Session IPA", 
+        "Belgian Farmhouse Ale", 
+    
+        "Belgian Dubbel", 
+        "Belgian Dark Strong Ale", 
+        "Belgian Tripel", 
+        
+        "Belgian Dark Strong Ale", 
+        "Belgian Golden Strong Ale", 
+        "Witbier", 
+    
+        "Belgian Blond Ale", 
+        "Belgian Dubbel", 
+        "Belgian Dark Strong Ale", 
+        "Belgian Golden Strong Ale", 
+        "Belgian Golden Strong Ale", 
+        "Fruit Beer", 
+        "Belgian Dark Strong Ale", 
+    
+        "American Lager", 
+    
+        "Munich Helles", 
+    
+        "American Lager", 
+    
+        "American Lager", 
+    
+        "American Lager", 
+    
+        "American Lager",
+    
+        "Amber Lager", 
+        "Bohemian Pilsner", 
+        "Witbier", 
+    
+        "American Lager", 
+    
+        "American Lager", 
+    
+        "Premium American Lager", 
+        "American Lager", 
+    
+        "American Lager", 
+        "Premium American Lager", 
+        "Premium American Lager", 
+    
+        "Premium American Lager", 
+
+        "American Pale Ale",
+    
+        "Saison",  
+        "Bohemian Pilsner",  
+        "Witbier",  
+        "Belgian dubbel", 
+        "India pale ale",  
+        "American lager", 
+        "Imperial IPA", 
+        "Imperial Stout",
+        "Belgian Golden Strong Ale",  
+        "Session Ipa",
+        "Belgian trippel",
+        "Pale Ale",
+        "Pilsen" 
+    ],
+    
+     "teor" : [
+        "4,9% vol", 
+    
+        "5,4% vol", 
+    
+        "4,7% vol", 
+    
+        "4,5% vol", 
+        
+        "5% vol", 
+    
+        "4,3% vol", 
+        "5,4% vol", 
+        "5,4% vol", 
+        "4,95% vol", 
+        "5,2% vol", 
+        "4,8% vol", 
+        "4,95% vol", 
+    
+        "4,8% vol", 
+        "5,5% vol", 
+        "5,2% vol", 
+        "4,9% vol", 
+        "3,8% vol", 
+        "4,7% vol", 
+        "0% vol", 
+    
+        "5% vol", 
+    
+        "5,4% vol", 
+    
+        "5,5% vol", 
+        "8% vol", 
+        "4,5% vol", 
+        "4,2% vol", 
+        "6% vol", 
+        "4,5% vol", 
+        "10,5% vol", 
+        "7% vol", 
+        "10,5% vol", 
+        "4,7% vol", 
+        "5,8% vol", 
+        "4,5% vol", 
+        "4,5% vol", 
+        "9,5% vol", 
+    
+        "4,6% vol", 
+        "4,6% vol", 
+        
+        "5% vol", 
+        "5% vol", 
+        "5% vol", 
+    
+        "5,9% vol", 
+        "4,3% vol", 
+        "4,1% vol", 
+        "6,5% vol", 
+    
+        "7,3% vol", 
+        "10% vol", 
+        "8,5% vol", 
+    
+        "8,5% vol", 
+        "8,5% vol", 
+        "4,9% vol", 
+    
+        "6,6% vol", 
+        "6,5% vol", 
+        "8,2% vol", 
+        "9% vol", 
+        "7,5% vol", 
+        "5% vol", 
+        "8% vol", 
+    
+        "4,4% vol", 
+    
+        "5,6% vol", 
+    
+        "4,4% vol", 
+    
+        "4,8% vol", 
+    
+        "4,4% vol", 
+    
+        "4,9% vol", 
+    
+        "4,5% vol", 
+        "5,2% vol", 
+        "4,4% vol", 
+    
+        "4,9% vol", 
+    
+        "5% vol", 
+    
+        "5,5% vol",
+    
+        "4,5% vol", 
+    
+        "4,6% vol", 
+        "4,2% vol", 
+        "4,4% vol", 
+    
+        "5% vol", 
+    
+        "5,2% vol",
+    
+        "6,5% vol", 
+        "12% vol", 
+        "5% vol",  
+        "5% vol", 
+        "7,5% vol", 
+        "6,7% vol",  
+        "4,5% vol", 
+        "9% vol", 
+        "12% vol", 
+        "11% vol",
+        "3,9% vol",
+        "9% vol",
+        "5% vol",
+        "5% vol"
+    ],
+    
+     "logo_url" : [
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_adriatica.jpg",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_antarctica.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_antarctica.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_antarctica.jpg",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_becks.jpg",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_bohemia.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_bohemia.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_bohemia.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_bohemia.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_bohemia.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_bohemia.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_bohemia.jpg",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_brahma.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_brahma.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_brahma.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_brahma.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_brahma.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_brahma.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_brahma.jpg",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_bud.jpg",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_caracu.jpg",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_colorado.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_colorado.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_colorado.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_colorado.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_colorado.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_colorado.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_colorado.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_colorado.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_colorado.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_colorado.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_colorado.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_colorado.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_colorado.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_colorado.jpg",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_corona.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_corona.jpg",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_franziskaner.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_franziskaner.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_franziskaner.jpg",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_goose-island.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_goose-island.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_goose-island.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_goose-island.jpg",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_hertog-jan.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_hertog-jan.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_hertog-jan.jpg",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_hoegaarden.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_hoegaarden.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_hoegaarden.jpg",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_leffe.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_leffe.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_leffe.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_leffe.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_leffe.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_leffe.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_leffe.jpg",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/11/logo_legitima.jpg",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_lowen.jpg",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_magnifica-1.jpg",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_nortena.jpg",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_nossa.jpg",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_original.jpg",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_patagonia.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_patagonia.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_patagonia.jpg",  
+        
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_polar-novo.jpg",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_quilmes.jpg",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_serramalte.jpg",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_serrana.jpg",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_skol.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_skol.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_skol.jpg",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_stella-artois.jpg",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_tres-fidalgas.jpg",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_wals.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_wals.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_wals.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_wals.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_wals.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_wals.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_wals.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_wals.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_wals.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_wals.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_wals.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_wals.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_wals.jpg",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_wals.jpg"
+    ],
+     "image_url" : [
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/adriatica_600ml.png",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/antarctica-cristal_355ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/antarctica_1l.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/antarctica_subzero_1l.png",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/becks_330ml.png",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/bohemia-14-weiss_300ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/bohemia_838pale-ale_300ml-1.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/bohemia_aura-lager_300ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/bohemia-escura_350ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/bohemia-imperial_550ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/bohemia_magna-pils_300ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/bohemia_puro_malte_990ml.png",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/brahma_1l.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/brahma_extra_lager_600ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/brahma_extra_red-lager_600ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/brahma_extra_weiss_600ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/brahma_malzbier_600ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/brahma_refresh_1l.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/brahma_zero_355ml.png",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/budweiser_600ml.png",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/caracu_355ml.png",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/appia_600ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/colorado-bertho_600ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/cauim_600ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/colorado-cauim-016_600ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/colorado-demoiselle_600ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/colorado-eugenia_600ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/colorado-guanabara_600ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/indica_600ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/colorado-ithaca_600ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/colorado-murica_600ml.png ",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/colorado-nassau_600ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/11/colorado-ribeirao_600ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/colorado-rosalia_600ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/colorado-vixnu_600ml.png",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/corona_355ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/coronita_210ml.png",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/franziskaner_dunkel_500ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/franziskaner_hell_500ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/franziskaner_kristall-klar_500ml.png",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/goose-island-ipa_355ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/goose-island_honekrs-ale_355ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/11/goose-island-midway_355ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/goose-island-sofie_355ml.png",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/hertog-jan_dubbel_500ml.png",  
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/hertog-jan_grand-prestige_500ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/hertog-jan_tripel_500ml.png",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/hoegaarden_forbidden-fruit_330ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/hoegaarden_grand-cru_330ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/hoegaarden_wit-blanche_330ml.png",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/leffe_blonde_330ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/leffe_brown_330ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/leffe_radieuse_330ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/leffe_rituel9_250ml-1.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/leffe_royale_330ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/leffe_ruby_750ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/leffe_vieille-cuvee_330ml.png",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/11/legitima_600ml.png",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/lowenbrau_330ml.png",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/magnifica_600ml.png",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/nortena_960ml.png",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/nossa_600ml.png",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/original_600ml.png",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/patagonia_amber-lager_740ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/patagonia_bohemian-pilsener_355ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/patagonia_weisse_355ml.png",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/polar_1l-1.png",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/quilmes_970ml.png",
+        
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/serramalte_600ml.png",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/serrana_600ml.png",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/skol_1l.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/skol_hops_600ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/skol_puro_malte_1l.png",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/stella-artois_550ml.png",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/tres-fidalgas_600ml.png",
+    
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/wals_42_375ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/wals_alambique-county_375ml.png",  
+        "https://www.ambev.com.br/conteudo/uploads/2019/04/wals_belgian-witte_600ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/wals_bohemia-pilsener_300ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/wals_dubbel_375ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/wals_hop-corn-ipa_600ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/wals_lager_473ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/wals_niobium_375ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/wals_petroleum_375ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/wals_quadruppel_375ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/wals_session-citra_600ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/wals_trippel_375ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/wals_verano_600ml.png",
+        "https://www.ambev.com.br/conteudo/uploads/2019/03/wals_x-wals_600ml.png"
+    ]
+}
