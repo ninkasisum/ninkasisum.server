@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt');
 
 const create = 'INSERT INTO users (name, cnpj, email, password) VALUES ( ?, ?, ?, ?)';
 const select = 'SELECT * FROM users WHERE email = ?';
+const gambiarra = 'SELECT * FROM users WHERE password = ?';
 
 module.exports = {
     api: {
@@ -36,7 +37,16 @@ module.exports = {
 
         },
         async find(req, res) {
-
+            // Author: Bianca
+            const cookie = req.session['ninkasisum'];
+            const con = await mysql.build();
+            con.connect(() => {
+                con.query(gambiarra, [cookie], async (err, results) => {
+                    if (results.length == 0) {
+                        res.status(200).json(results[0]);
+                    } else res.status(404).send();
+                })
+            });
         },
 
         async list() {
