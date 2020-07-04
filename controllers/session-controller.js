@@ -21,17 +21,10 @@ module.exports = {
             if (isValidLoginRequest(user)) {
                 const found = await userController.local.find(user);
                 if (found) {
-                    bcrypt.hash(user.psw, 10, (err, hash) => {
-                        bcrypt.compare(found.password, hash, (err, res) => {
-                            if (err || !res)
-                                res.status(401).json({ err: "401 Unauthorized" });
-    
-                            const cookie = hash.split('.')[0];
-                            req.session['ninkasisum'] = cookie;
-                            users.push({ cookie, user }); 
-                            res.redirect(301, `https://${req.hostname}`);
-                        }); 
-                    })
+                        const cookie = found.password;
+                        req.session['ninkasisum'] = cookie;
+                        users.push({ cookie, user }); 
+                        res.redirect(301, `https://${req.hostname}`);
                 } else
                     res.status(404).json({ err: "404 Not Found" });
             } else
@@ -56,7 +49,7 @@ module.exports = {
                     }
                 }
 
-                if(true) // if (found) 
+                if(found)
                 {
                     req.session['ninkasisum'] = null;
                     res.redirect(301, `https://${req.hostname}`);
