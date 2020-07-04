@@ -67,7 +67,7 @@
             <i class="fas fa-search"></i>
           </label>
 
-          <div class="checkbox" for="" id="checkbox">
+          <div class="checkbox" for="" id="checkbox-marca">
             <script>
               const marcas = [
                 "Adriática",
@@ -113,7 +113,7 @@
                 label.setAttribute("for", marca);
                 const textlabel = document.createTextNode(marca);
 
-                const checkbox = document.getElementById("checkbox")
+                const checkbox = document.getElementById("checkbox-marca")
 
                 label.appendChild(textlabel);
                 div.appendChild(input)
@@ -126,7 +126,7 @@
           </div>
         </div>
         <div class="tamanho-filter">
-          <div class="checkbox" for="" id="checkbox">
+          <div class="checkbox" for="" id="checkbox-tamanho">
           <script>
             const tamanhos = [
             '1l', 
@@ -163,7 +163,7 @@
                 label.setAttribute("for", tamanho);
                 const textlabel = document.createTextNode(tamanho);
 
-                const checkbox = document.getElementById("checkbox")
+                const checkbox = document.getElementById("checkbox-tamanho")
 
                 label.appendChild(textlabel);
                 div.appendChild(input)
