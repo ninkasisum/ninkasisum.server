@@ -31,7 +31,7 @@ function createGist(url, content) {
 async function loadUserData() {
     return await new Promise((resolve, reject) => {
         fetch(`${window.location.origin}/api/user`, { method: 'POST' })
-            .then(response => response.json())
+            .then(response => response.body.json())
             .then(resolve)
     })
 }
