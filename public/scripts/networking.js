@@ -1,5 +1,3 @@
-const { response } = require("express");
-
 function createGist(url, content) {
     const params = {
         method: 'POST'
