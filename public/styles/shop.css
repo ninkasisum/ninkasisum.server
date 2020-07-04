@@ -262,12 +262,12 @@ nav{
 }
 .tamanho-filter{
     background-color: white;
-    height: 600px;
+    height: 350px;
     border-radius: 8px;
     width: 93%;
     margin-bottom: 20px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     margin-top: 10px;
 }
 .filter-content{
@@ -314,7 +314,7 @@ nav{
     box-shadow: 0 0 1px rgba(255,255,255,.5);
     background-color: rgba(0,0,0,.5);
 }
-.label-marcas , .label-tamanhos{
+.label-marcas, .label-tamanhos{
     margin-left: 5px;
 }
 .label-marcas label, .label-tamanhos label{
