@@ -96,6 +96,12 @@ const modelos = [
     "Corona",
 
     "Franziskaner Dunkel",
+    "Franziskaner Hell",
+    "Franziskaner Kristall Klar",
+
+    "Goose Island IPA",
+    "Cerveja Goose Island Honkers Ale",
+
 
 ]
 
@@ -148,8 +154,12 @@ const categoria = [
     "American Lager", //Corona
     "American Lager", //Corona
 
-    "German Weizen" //Frank
+    "German Weizen", //Frank
+    "Dunkel Weissbier", //Frank 
+    "German Weizen", //Frank
 
+    "India Pale Ale", //Goose
+    "English Bitter Ale", //Goose
 ]
 
 const teor = [
@@ -202,6 +212,14 @@ const teor = [
     "4,6% vol", //Corona
     
     "5% vol", //Frank
+    "5% vol", //Frank
+    "5% vol", //Frank
+
+    "5,9% vol", //Goose
+    "4,3% vol", //Goose
+
+
+
 
 ]
 
@@ -256,6 +274,12 @@ const logo_url = [
     "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_franziskaner.jpg",
     "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_franziskaner.jpg",
 
+    "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_goose-island.jpg",
+    "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_goose-island.jpg",
+    "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_goose-island.jpg",
+    "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_goose-island.jpg",
+
+
 ]
 const image_url = [
     "https://www.ambev.com.br/conteudo/uploads/2019/03/adriatica_600ml.png",
@@ -305,5 +329,10 @@ const image_url = [
     "https://www.ambev.com.br/conteudo/uploads/2019/03/coronita_210ml.png",
 
     "https://www.ambev.com.br/conteudo/uploads/2019/03/franziskaner_dunkel_500ml.png",
+    "https://www.ambev.com.br/conteudo/uploads/2019/03/franziskaner_hell_500ml.png",
+    "https://www.ambev.com.br/conteudo/uploads/2019/03/franziskaner_kristall-klar_500ml.png",
+
+    "https://www.ambev.com.br/conteudo/uploads/2019/03/goose-island-ipa_355ml.png",
+    "https://www.ambev.com.br/conteudo/uploads/2019/03/goose-island_honekrs-ale_355ml.png",
 
 ]
