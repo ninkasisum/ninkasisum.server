@@ -69,10 +69,13 @@
 
           <div class="checkbox" for="">
             <script>
-              marcas.forEach((marca) => {
-                document.createElement(input)
-                document.createTextNode(input);
-              })
+              var divNova = document.createElement("div");
+              var conteudoNovo = document.createTextNode("Olá, cumprimentos!");
+              divNova.appendChild(conteudoNovo); //adiciona o nó de texto à nova div criada 
+
+              // adiciona o novo elemento criado e seu conteúdo ao DOM 
+              var divAtual = document.getElementById("div1");
+              document.body.insertBefore(divNova, divAtual); 
             </script>
             <!--<input type="checkbox" id="adriatica" name="Adriática">
             <label for="acriatica">Adriática</label>-->
