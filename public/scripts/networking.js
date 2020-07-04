@@ -18,6 +18,11 @@ function createGist(url, content) {
         if (response.redirected) {
             window.location.href = response.url;
         }
+
+        // HTTP 404 response
+        if (response.status === 404) {
+            alert('email ou senha incorretos');
+        }
     }).catch(function (err) {
         console.info(err + " url: " + url);
     });
