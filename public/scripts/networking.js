@@ -3,14 +3,14 @@ function createGist(url, content) {
         method: 'POST'
     };
 
-    if(content){
+    if (content) {
         params.body = JSON.stringify(content);
 
         params.headers = new Headers();
         params.headers.append('Content-Type', 'application/json');
 
         params.credentials = 'include'
-    } 
+    }
 
     fetch(url, params).then(response => {
 
@@ -21,26 +21,17 @@ function createGist(url, content) {
 
         // HTTP 404 response
         if (response.status === 404) {
-            alert('email ou senha incorretos');
+            alert('Email ou Senha incorretos!');
         }
     }).catch(function (err) {
         console.info(err + " url: " + url);
     });
 }
 
-function loadUserData(){
-    fetch(`${window.location.origin}/api/user`, {method: 'POST'})
-    .then(response => response.json())
-    .then(user => {
-        console.log(user);
+async function loadUserData() {
+    return await new Promise((resolve, reject) => {
+        fetch(`${window.location.origin}/api/user`, { method: 'POST' })
+            .then(response => response.body.json())
+            .then(resolve)
     })
 }
-
-// const userName = document.getElementById('user-name')
-// userName.innerText = user['Qt']['zW']
-// const userPhoto = document.getElementById('user-photo')
-// userPhoto.src =  user['Qt']['cL']
-// const difUserName = document.getElementById('dif-user-name')
-// difUserName.innerText = user['Qt']['zW']
-// const difUserImg = document.getElementById('dif-user-img')
-// difUserImg.src =  user['Qt']['cL']

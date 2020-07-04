@@ -1,24 +1,10 @@
-function load() {
-    const config = {
-        "user-name": {
-            prop: 'innerText',
-            path: ['Qt', 'zW']
-        },
-        "user-photo": {
-            prop: 'src',
-            path: ['Qt', 'cL']
-        },
-        "dif-user-name": {
-            prop: 'innerText',
-            path: ['Qt', 'zW']
-        },
-        "dif-user-img": {
-            prop: 'src',
-            path: ['Qt', 'cL']
-        }
-    }
+async function load() {
+    const user = await loadUserData(); 
+    
+    const userName = document.getElementById('user-name')
+    const textNome = document.createTextNode(user.name);
 
-    loadUserData(config);
+    userName.appendChild(textNome)
 }
 
 //likezinho show mlk
@@ -37,21 +23,3 @@ like.addEventListener('click', () => {
         button_like = false
     }
 })
-
-//resize textarea
-var text = document.getElementById('mensagem');
-var textArea = document.getElementById('mensagem-area')
-
-function resize() {
-    text.style.height = 'auto';
-    textArea.style.height = 'auto';
-    text.style.height = text.scrollHeight + 'px';
-    textArea.style.height = (text.scrollHeight + 100) +'px';
-}
-
-['change', 'cut', 'paste', 'drop', 'keydown'].forEach((e) => {
-    text.addEventListener(e, resize)
-})
-
-text.focus();
-text.select();
