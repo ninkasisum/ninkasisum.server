@@ -35,14 +35,14 @@ const masks = {
     }
 }
 
-document.querySelector('input').forEach(($input) => {
+/*document.querySelectorAll('input').forEach(($input) => {
     const field = $input.dataset.js
 
     $input.addEventListener('input', (e) => {
         e.target.value = masks[field](e.target.value)
 
     }, false)
-});
+});*/
 
 document.getElementById('btn-login').addEventListener('click', () => {
     const usr = document.getElementById('usr').value;
