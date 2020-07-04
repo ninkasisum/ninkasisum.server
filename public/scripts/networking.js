@@ -30,8 +30,9 @@ function createGist(url, content) {
 
 function loadUserData(){
     fetch(`${window.location.origin}/api/user`, {method: 'POST'})
-    .then((response)=> {
-        console.log(response)
+    .then(response => response.json())
+    .then(user => {
+        console.log(user);
     })
 }
 
