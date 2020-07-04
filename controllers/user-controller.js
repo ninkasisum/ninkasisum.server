@@ -56,7 +56,7 @@ module.exports = {
                             user.password = user.password.toString('utf8');
                             const same = await bcrypt.compare(psw, user.password);
                             resolve(((same)? user: false));
-                        }
+                        } else resolve(false);
                     })
                 });
             })
