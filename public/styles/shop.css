@@ -260,7 +260,7 @@ nav{
     flex-direction: column;
     margin-top: 10px;
 }
-.marcas-filter::-webkit-scrollbar{
+.checkbox::-webkit-scrollbar{
     -webkit-appearance: none;
     width: 7px;
 }
