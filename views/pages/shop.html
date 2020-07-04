@@ -101,6 +101,9 @@
                 "Wäls"
               ]
               marcas.forEach((marca) => {
+                const div = document.createElement("div");
+                div.setAttribute("class", "label-input")
+
                 const input = document.createElement("input");  
                 input.setAttribute("type", "checkbox");
                 input.setAttribute("id", marca);
@@ -110,11 +113,10 @@
                 label.setAttribute("for", marca);
                 const textlabel = document.createTextNode(marca);
 
-                const checkbox = document.getElementById("checkbox");
                 
                 label.appendChild(textlabel);
-                checkbox.appendChild(input)
-                checkbox.appendChild(label);               
+                div.appendChild(input)
+                div.appendChild(label);               
               })
             </script>
             <!--<input type="checkbox" id="adriatica" name="Adriática">
