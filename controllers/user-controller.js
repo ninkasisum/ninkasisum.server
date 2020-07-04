@@ -7,14 +7,14 @@ module.exports = {
     async create(req, res) {
         const { name, cnpj, usr, psw } = req.body;
 
-        hash = bcrypt.hash(psw);
+        hash = await bcrypt.hash(psw);
 
-        await mysql.build()
-            .connect(() => {
-                con.query(create, [name, cnpj, usr, hash], () => {
-                    res.status(201).send();
-                });
+        const con = await mysql.build();
+        con.connect(() => {
+            con.query(create, [name, cnpj, usr, hash], () => {
+                res.status(201).send();
             });
+        });
     },
     async update() {
 

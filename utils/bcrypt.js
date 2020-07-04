@@ -2,10 +2,13 @@ const bcrypt = require('bcrypt');
 
 module.exports = {
     hash: async (psw) => {
-        bcrypt.genSalt(10, (err, salt) => {
-            bcrypt.hash(psw, salt, function (err, hash) {
-                return hash;
-            });
+        return await new Promise((resolve, reject) => {
+            bcrypt.hash(psw, 10, (err, hash) => {
+                if (err)
+                    reject(err);
+
+                resolve(hash);
+            })
         });
     }
 }
