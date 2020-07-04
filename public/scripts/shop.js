@@ -48,7 +48,7 @@ const marcas = [
 
 /*marcas.forEach((marca) =>{
     document.createElement(input)
-})*/
+})
 
 function adcElemento () { 
     // cria um novo elemento div 
@@ -60,4 +60,4 @@ function adcElemento () {
     // adiciona o novo elemento criado e seu conteúdo ao DOM 
     var divAtual = document.getElementById("div1"); 
     document.body.insertBefore(divNova, divAtual); 
-  }
+}*/

@@ -61,18 +61,24 @@
     </nav>
     <div class="shop-content">
       <div class="filter">
-          <div class="marcas-filter">
-            <label class="label-input" for="">  
-              <input type="text">
-              <i class="fas fa-search"></i>
-            </label> 
-            
-            <div class="checkbox" for="">
-              <input type="checkbox" id="adriatica" name="Adriática">
-              <label for="acriatica">Adriática</label>
-            </div>          
+        <div class="marcas-filter">
+          <label class="label-input" for="">
+            <input type="text">
+            <i class="fas fa-search"></i>
+          </label>
+
+          <div class="checkbox" for="">
+            <script>
+              marcas.forEach((marca) => {
+                document.createElement(input)
+                document.createTextNode(input);
+              })
+            </script>
+            <!--<input type="checkbox" id="adriatica" name="Adriática">
+            <label for="acriatica">Adriática</label>-->
           </div>
-          <div class="tamanho-filter"></div>          
+        </div>
+        <div class="tamanho-filter"></div>
       </div>
       <div class="shop-cards"></div>
     </div>
@@ -81,4 +87,5 @@
   <script src="scripts/shop.js"></script>
   <script src="scripts/common.js"></script>
 </body>
+
 </html>
