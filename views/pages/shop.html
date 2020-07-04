@@ -113,10 +113,12 @@
                 label.setAttribute("for", marca);
                 const textlabel = document.createTextNode(marca);
 
+                const checkbox = document.getElementById("checkbox")
                 
                 label.appendChild(textlabel);
                 div.appendChild(input)
-                div.appendChild(label);               
+                div.appendChild(label);  
+                checkbox.appendChild(div)
               })
             </script>
             <!--<input type="checkbox" id="adriatica" name="Adriática">
