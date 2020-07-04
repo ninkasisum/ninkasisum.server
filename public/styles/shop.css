@@ -271,7 +271,10 @@ nav{
     display: flex;
     align-items: center;
     margin: 8px;
-    background-color: #ecf0f1;
+    height: 30px;
+    width: 70%;
+    border-radius: 3px;
+    border: 1px solid grey;
 }
 .fa-search{
     color: #7f8c8d;
