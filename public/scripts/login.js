@@ -35,7 +35,7 @@ const masks = {
     }
 }
 
-document.querySelectorAll('input').forEach(($input) => {
+document.querySelector('input').forEach(($input) => {
     const field = $input.dataset.js
 
     $input.addEventListener('input', (e) => {
