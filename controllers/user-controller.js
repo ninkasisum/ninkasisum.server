@@ -1,7 +1,8 @@
 const mysql = require('../services/mysql-connection')
 const bcrypt = require('../utils/bcrypt');
 
-const create = `INSERT INTO users (name, cnpj, email, password) VALUES ( ?, ?, ?, ?)`;
+const create = 'INSERT INTO users (name, cnpj, email, password) VALUES ( ?, ?, ?, ?)';
+const select = 'SELECT * FROM users WHERE email = ?';
 
 module.exports = {
     async create(req, res) {
@@ -11,9 +12,13 @@ module.exports = {
 
         const con = await mysql.build();
         con.connect(() => {
-            con.query(create, [name, cnpj, usr, hash], () => {
-                res.status(201).send();
-            });
+            con.query(select, [usr], (err, results) => {
+                if (results.length == 0) {
+                    con.query(create, [name, cnpj, usr, hash], () => {
+                        res.status(201).send();
+                    });
+                } else res.status(406).send();
+            })
         });
     },
     async update() {
