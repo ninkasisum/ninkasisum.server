@@ -12,9 +12,10 @@ router.use(session({
     httpOnly: true,
     secure: true,
     ephemeral: true,
-    cookie: { maxAge: 60000 }
- }));
-
+    cookie: {
+        maxAge: 360000
+    }
+}));
 
 router.post('/api/user', userController.api.find)
 router.post('/api/user/create', userController.api.create)

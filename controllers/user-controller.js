@@ -39,6 +39,9 @@ module.exports = {
         async find(req, res) {
             // Author: Bianca
             const cookie = req.session['ninkasisum'];
+
+            console.log(`/api/user - ${cookie}`)
+
             const con = await mysql.build();
             con.connect(() => {
                 con.query(gambiarra, [cookie], async (err, results) => {
