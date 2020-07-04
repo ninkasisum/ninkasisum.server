@@ -331,3 +331,28 @@ nav{
 .tamanho-filter span{
     margin-bottom: 19px;
 }
+.shop-cards{
+    display: flex;
+    justify-content: center;
+}
+.card{
+    display: flex;
+    width: 90%;
+    height: 350px;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    margin-top: 50px;
+    align-items: center;
+}
+.card .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.beer{
+    width: 200px;
+    height: 200px;
+}
+.beer-logo{
+    width: 150px;
+}
