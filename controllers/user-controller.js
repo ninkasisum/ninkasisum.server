@@ -45,7 +45,7 @@ module.exports = {
             const con = await mysql.build();
             con.connect(() => {
                 con.query(gambiarra, [cookie], async (err, results) => {
-                    if (results.length == 0) {
+                    if (results.length == 1) {
                         res.status(200).json(results[0]);
                     } else res.status(404).send();
                 })
