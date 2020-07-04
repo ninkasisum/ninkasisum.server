@@ -51,7 +51,7 @@ module.exports = {
                         delete user.password;
                         delete user.id;
 
-                        res.status(200).json();
+                        res.status(200).json(user);
                     } else res.status(404).send();
                 })
             });
