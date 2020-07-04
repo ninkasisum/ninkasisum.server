@@ -1,24 +1,10 @@
-function load() {
-    const config = {
-        "user-name": {
-            prop: 'innerText',
-            path: ['Qt', 'zW']
-        },
-        "user-photo": {
-            prop: 'src',
-            path: ['Qt', 'cL']
-        },
-        "dif-user-name": {
-            prop: 'innerText',
-            path: ['Qt', 'zW']
-        },
-        "dif-user-img": {
-            prop: 'src',
-            path: ['Qt', 'cL']
-        }
-    }
+async function load() {
+    const user = await loadUserData(); 
+    
+    const userName = document.getElementById('user-name')
+    const textNome = document.createTextNode(user);
 
-    loadUserData(config);
+    userName.appendChild(textNome)
 }
 
 //likezinho show mlk
