@@ -28,12 +28,13 @@ async function jsonLoadResource(name) {
 
 function filterinput() {
     const input = document.getElementById("input-ft")
-    
-    input.addEventListener('input', (e) => {      
-        const divsMarcas = document.querySelector(".label-marcas")
-        for(let divmarca in divsMarcas){
-           // divmarca.style.height = 0;
 
+    input.addEventListener('input', (e) => {
+        const divsMarcas = document.querySelector(".label-marcas")
+        for (let divmarca in divsMarcas) {
+            if (divmarca.value.search(input.value) === -1) {
+                divmarca.style.height = 0;
+            }
         }
     })
 }
