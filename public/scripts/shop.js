@@ -16,6 +16,7 @@ function load() {
     jsonLoadResource("shop").then((json) => {
         data.shop = json;
     })
+    filterinput()
 }
 
 async function jsonLoadResource(name) {
