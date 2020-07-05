@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt');
 const create = 'INSERT INTO users (name, cnpj, email, password) VALUES ( ?, ?, ?, ?)';
 const select = 'SELECT * FROM users WHERE email = ?';
 const gambiarra = 'SELECT * FROM users WHERE password = ?';
+const sqldelete = 'DELETE FROM users WHERE id = ?';
 
 module.exports = {
     api: {
@@ -34,13 +35,26 @@ module.exports = {
 
         },
         async delete() {
-
+            const cookie = req.session['ninkasisum'];
+            const con = await mysql.build();
+            con.connect(() => {
+                con.query(gambiarra, [cookie], async (err, results) => {                    
+                    if (results.length === 1) {
+                        const id = results[0]['id'];
+                        con.query(sqldelete, [id], async (err, results) => {
+                            if (!err)
+                            {
+                                req.session['ninkasisum'] = null;
+                                res.status(200).send();
+                            } else res.status(500).send();
+                        })
+                    } else res.status(401).send();
+                });
+            });
         },
         async find(req, res) {
             // Author: Bianca
             const cookie = req.session['ninkasisum'];
-
-            console.log(`/api/user - ${cookie}`)
 
             const con = await mysql.build();
             con.connect(() => {
