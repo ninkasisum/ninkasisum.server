@@ -1,5 +1,5 @@
 function load() {
-    loadUserData(config);
+    loadUserData();
     jsonLoadResource("shop").then(loadCards);
     filterinput()
 }
