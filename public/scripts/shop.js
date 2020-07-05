@@ -128,6 +128,8 @@ function addEventListenerToFilterCards() {
                     }
                 })
             }
+
+            document.querySelector('.dif').style.display = 'none'; // work around because is to late
         })
     })
 }
