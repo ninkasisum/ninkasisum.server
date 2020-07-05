@@ -31,7 +31,7 @@ function filterinput() {
     const input = document.getElementById("input-ft")
 
     input.addEventListener('input', (e) => {
-        const divsMarcas = document.querySelector(".label-marcas")
+        const divsMarcas = document.querySelectorAll(".label-marcas")
         for (let divmarca in divsMarcas) {
             if (divmarca.value.search(input.value) === -1) {
                 divmarca.style.height = 0;
