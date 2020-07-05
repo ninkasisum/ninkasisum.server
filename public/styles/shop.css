@@ -337,7 +337,7 @@ nav{
 }
 .card{
     display: flex;
-    width: 90%;
+    width: 80%;
     height: 350px;
     background-color: whitesmoke;
     border-radius: 15px;
@@ -373,6 +373,28 @@ nav{
     color: rgb(19, 19, 19);
 }
 .inform h4{
-    font-size: 25px;
+    font-size: 20px;
     color: #FF7A00;
+}
+.content button{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(131, 6, 6);
+    font-size: 15px;
+    font-weight: normal;
+    color: white;
+    float: right;
+    border: none;
+    outline: none;
+    z-index: 11;
+    position: relative;
+    margin: 1% 14%;
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+.content button i{
+    font-size: 20px;
+    padding-left: 10px;
+    z-index: 12;
+    position: relative;
+    color: rgb(255, 255, 255);
 }
