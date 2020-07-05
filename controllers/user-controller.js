@@ -53,8 +53,10 @@ module.exports = {
                             con.query(sqldelete, [results[0]['id']], async(err, results) => {
                                 con.end();
 
-                                if (!err)
-                                    res.status(200).send();
+                                if (!err) {
+                                    req.session['ninkasisum'] = null;
+                                    res.redirect(301, `https://${req.hostname}`);
+                                }
 
                                 else res.status(500).send();
                             });
