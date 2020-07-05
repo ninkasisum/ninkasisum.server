@@ -46,7 +46,7 @@ async function deleteAccount() {
 
 document.getElementById('delete-account')
     .addEventListener('click', async () => {
-        const success = await deleteAccount;
+        const success = await deleteAccount();
 
         if (success) {
             window.location.reload();
