@@ -18,53 +18,175 @@
 </head>
 
 <body onload="load()">
-  <div class="shop-screen">
-    <nav>
-      <div class="logo">
-        <img src="/assets/ninka-logo.png" alt="Ninkasi logo">
+  <nav>
+    <div class="logo">
+      <img src="/assets/ninka-logo.png" alt="Ninkasi logo">
+    </div>
+
+    <ul class="menu">
+      <li><a href="/" class="feed" id="feed" alt="Feed"><i class="fas fa-home"></i><span
+            class="tooltiptext">Feed</span></a>
+        <div class="line" id="line#feed"></div>
+      </li>
+      <li><a href="" class="notificacao" alt="Notificações" id="notificacao"><i class="fas fa-bell"></i><span
+            class="tooltiptext">Notificações</span></a>
+        <div class="line" id="line#notificacao"></div>
+      </li>
+      <li><a href="/shop" class="shop" alt="Shop" id="shop"><i class="fas fa-shopping-cart"></i><span
+            class="tooltiptext">Shop</span></a>
+        <div class="line" id="line#shop"></div>
+      </li>
+    </ul>
+
+    <div class="user">
+      <div class="dropdown">
+        <i class="fas fa-caret-down"></i>
+        <div class="dropdown-content">
+          <ul class="dropdown-menu">
+            <li><span alt="Configurações" id="delete-account"><i class="fas fa-cog"></i>Deletar Conta</span></li>
+            <li><span alt="Sair" id="logout"><i class="fas fa-sign-out-alt"></i>Sair</span></li>
+          </ul>
+        </div>
       </div>
 
-      <ul class="menu">
-        <li><a href="/" class="feed" id="feed" alt="Feed"><i class="fas fa-home"></i><span
-              class="tooltiptext">Feed</span></a>
-          <div class="line" id="line#feed"></div>
-        </li>
-        <li><a href="" class="perfil" alt="Perfil" id="perfil"><i class="fas fa-user-alt"></i><span
-              class="tooltiptext">Perfil</span></a>
-          <div class="line" id="line#perfil"></div>
-        </li>
-        <li><a href="" class="notificacao" alt="Notificações" id="notificacao"><i class="fas fa-bell"></i><span
-              class="tooltiptext">Notificações</span></a>
-          <div class="line" id="line#notificacao"></div>
-        </li>
-        <li><a href="/shop" class="shop" alt="Shop" id="shop"><i class="fas fa-shopping-cart"></i><span
-              class="tooltiptext">Shop</span></a>
-          <div class="line" id="line#shop"></div>
-        </li>
-      </ul>
+    </div>
+  </nav>
+  <div class="shop-screen">
+    <div class="shop-content">
+      <div class="filter">
+        <div class="marcas-filter">
+          <span>Marca</span>
 
-      <div class="user">
-        <img src="" id="dif-user-img" alt="Foto do usuário">
-        <h3 id="dif-user-name"></h3>
-        <div class="dropdown">
-          <i class="fas fa-caret-down"></i>
-          <div class="dropdown-content">
-            <ul class="dropdown-menu">
-              <li><a href="" alt="Adicionar Amigos"><i class="fas fa-users"></i>Adicionar Amigos</a></li>
-              <li><a href="" alt="Configurações"><i class="fas fa-cog"></i>Configurações</a></li>
-              <li><a href="" alt="Sair" id="logout"><i class="fas fa-sign-out-alt"></i>Sair</a></li>
-            </ul>
+          <label class="label-input" for="">
+            <input type="text" id="input-ft">
+            <i class="fas fa-search"></i>
+          </label>
+
+          <div class="checkbox" for="" id="checkbox-marca">
+            <script>
+              const marcas = [
+                "Adriática",
+                "Antarctica",
+                "Beck's",
+                "Bohemia",
+                "Brahma",
+                "Budweiser",
+                "Caracu",
+                "Colorado",
+                "Corona",
+                "Franziskaner",
+                "Goose Island",
+                "Hertog Jan",
+                "Hoegaarden",
+                "Leffe",
+                "Legítima",
+                "Löwenbräu",
+                "Magnífica do Maranhão",
+                "Norteña",
+                "Nossa",
+                "Original",
+                "Patagonia",
+                "Polar",
+                "Quilmes",
+                "Serramalte",
+                "Serrana",
+                "Skol",
+                "Stella Artois",
+                "Três Fidalgas",
+                "Wäls"
+              ]
+              marcas.forEach((marca) => {
+                const div = document.createElement("div");
+                div.setAttribute("class", "label-marcas")
+
+                const input = document.createElement("input");
+                input.setAttribute("type", "checkbox");
+                input.setAttribute("id", marca);
+                input.setAttribute("name", marca);
+                input.setAttribute("class", "filter-checkbox")
+
+                const label = document.createElement("label");
+                label.setAttribute("for", marca);
+                label.setAttribute("class", "filter-data")
+                const textlabel = document.createTextNode(marca);
+
+                const checkbox = document.getElementById("checkbox-marca")
+
+                label.appendChild(textlabel);
+                div.appendChild(input)
+                div.appendChild(label);
+                checkbox.appendChild(div)
+              })
+            </script>
+            <!--<input type="checkbox" id="adriatica" name="Adriática">
+            <label for="acriatica">Adriática</label>-->
           </div>
         </div>
+        <div class="tamanho-filter">
+          <span>Tamanho</span>
+          <div class="checkbox" for="" id="checkbox-tamanho">
+            <script>
+              const tamanhos = [
+                '1L',
+                '990ml',
+                '970ml',
+                '960ml',
+                '750ml',
+                '740ml',
+                '600ml',
+                '550ml',
+                '500ml',
+                '473ml',
+                '410ml',
+                '375ml',
+                '355ml',
+                '350ml',
+                '343ml',
+                '330ml',
+                '310ml',
+                '300ml',
+                '275ml',
+                '269ml']
+              tamanhos.forEach((tamanho) => {
+                const div = document.createElement("div");
+                div.setAttribute("class", "label-tamanhos")
 
+                const input = document.createElement("input");
+                input.setAttribute("type", "checkbox");
+                input.setAttribute("id", tamanho);
+                input.setAttribute("name", tamanho);
+
+                const label = document.createElement("label");
+                label.setAttribute("for", tamanho);
+                const textlabel = document.createTextNode(tamanho);
+
+                const checkbox = document.getElementById("checkbox-tamanho")
+
+                label.appendChild(textlabel);
+                div.appendChild(input)
+                div.appendChild(label);
+                checkbox.appendChild(div)
+              })
+            </script>
+
+          </div>         
+        </div>
+        <div class="varejo-options">
+          <span>Opções de Varejo</span>
+
+          <div class="logo-options">
+            <a href="https://www.ze.delivery/" alt="Zé Delivery"><img src="https://www.ambev.com.br/conteudo/themes/ambev-institucional/dist/img/brands/image-ze-delivery.png" alt=""></a>
+            <a href="https://www.emporiodacerveja.com.br/" alt="Empório da Cerveja"><img src="https://www.ambev.com.br/conteudo/themes/ambev-institucional/dist/img/brands/image-emporio-cerveja.png" alt=""></a>
+          </div>
+        </div>
       </div>
-    </nav>
-    <div class="shop-content">
-      <div class="filter"></div>
+      <div class="shop-cards">
+        <div class="card dif"></div>
+      </div>
     </div>
-    <div class="ze-logo"><a href="https://www.ze.delivery/"><img src="/assets/image-ze-delivery.png" alt=""></a></div>
   </div>
-  <script src="scripts/shop.js"></script>
-  <script src="scripts/common.js"></script>
+    <script src="scripts/shop.js"></script>
+    <script src="scripts/common.js"></script>
 </body>
+
 </html>

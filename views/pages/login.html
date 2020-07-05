@@ -43,7 +43,7 @@
                             <p class="description description-secondary">Entre com seus dados para logar</p>
 
                             <div class="form-content" style= "margin-bottom: 45px">
-                                <form class="form">
+                                <div class="form">
                                     <label class="label-input" for="">
                                         <i class="far fa-envelope icon-modify"></i>
                                         <input type="email" placeholder="Email" id="usr">
@@ -54,7 +54,7 @@
                                     </label>
                                     <a class="password" href="#">esqueceu sua senha?</a>
                                     <button class="btn btn-second" id="btn-login">sign in</button>
-                                </form>                  
+                                </div>                  
                             </div>
                         </div>
                         <div class="sign-content none" id="sign-content">
@@ -62,32 +62,31 @@
                             <p class="description description-secondary">Cadastre os dados da sua empresa</p>                                        
                             
                             <div class="form-content">
-                                <form class="form">    
+                                <div class="form">    
                                     <label class="label-input" for="">
                                         <i class="fas fa-building icon-modify"></i>
-                                        <input type="text" placeholder="Nome">
+                                        <input type="text" placeholder="Nome" id="rname">
                                     </label>      
                                     <label class="label-input" for="">
                                         <i class="far fa-id-card icon-modify"></i>
-                                        <input type="text" placeholder="CNPJ" data-js="cnpj">
+                                        <input type="text" placeholder="CNPJ" data-js="cnpj" id="rcnpj">
                                     </label>  
                                     <label class="label-input" for="">
                                         <i class="far fa-envelope icon-modify"></i>
-                                        <input type="email" placeholder="Email">
+                                        <input type="email" placeholder="Email" id="ruser">
                                     </label>                            
                                     <label class="label-input" for="">
                                         <i class="fas fa-lock icon-modify"></i>
-                                        <input type="password" placeholder="Password">
+                                        <input type="password" placeholder="Password" id="rpsw">
                                     </label>                                                             
-                                    <button class="btn btn-second dif">sign-up</button>
-                                </form>                        
+                                    <button class="btn btn-second dif" id="btn-register">sign-up</button>                       
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="first-column">
                         <h2 class="title title-primary">Bem-vindo!</h2>
-                        <p class="description description-primary">Faça o cadastro de sua empresa e comece sua jornada
-                            com a gente</p>
+                        <p class="description description-primary">Faça o cadastro de sua empresa e comece sua jornada com a gente</p>
                     </div>
                 </div>
             </div>
@@ -95,7 +94,6 @@
         </div>
     </div>    
         <script src="scripts/login.js"></script>
-        <script>startApp()</script>
 </body>
 
 </html>

@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    background-color: #E4E0E0;
 }
 nav{
     display: flex;
@@ -9,6 +10,7 @@ nav{
     width: 100vw;
     height: 75px;
     position: fixed;
+    z-index: 2;
 }
 .menu{
     position: fixed;
@@ -117,7 +119,7 @@ nav{
     font-size: 18px;
     color: black;
 }
-.dropdown-menu a{
+.dropdown-menu span{
     color: rgba(20, 20, 20, 0.822);
     font-size: 18px;
     font-weight: 600;
@@ -207,23 +209,262 @@ nav{
     list-style: none;
     padding: 0;
 }
-.dropdown-menu a{
+.dropdown-menu span{
     text-decoration: none;
 }
 .dropdown-menu li:hover{
     padding: 6px;
 }
-.ze-logo{
+.shop-screen{
+    height: 100vh;
+    background-color: #E4E0E0;    
+}
+.carrinho{
     position: fixed;
     bottom: 30px;
     right: 40px;
     transition: 400ms;
     cursor: pointer;
 }
-.ze-logo:hover{
+.carrinho:hover{
     transform: translate(-3px, -5px);
 }
 
 #dif-user-img{
     border-radius: 50%;
+}
+.shop-content{
+    display: flex;
+    height: 100vh;
+}
+
+.filter{
+    flex: 1;
+    margin-top: 130px;
+    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+}
+.marcas-filter{
+    background-color: white;
+    height: 350px;
+    border-radius: 8px;
+    width: 93%;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.tamanho-filter, .varejo-options{
+    background-color: white;
+    height: 215px;
+    border-radius: 8px;
+    width: 93%;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.varejo-options{
+    margin-bottom: 10px;
+}
+.filter-content{
+    height: 75px;
+}
+.label-input {
+    display: flex;
+    align-items: center;
+    margin: 8px;
+    height: 30px;
+    width: 90%;
+    border-radius: 3px;
+    border: 1px solid grey;
+}
+.label-input input{
+    border: none;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 160px;
+    height: 25px;
+    outline: none;
+    font-size: 16px;
+}
+.label-input i{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.fa-search{
+    color: #7f8c8d;
+    padding: 0 5px;
+}
+.checkbox{
+    overflow-y: auto;
+}
+.checkbox::-webkit-scrollbar{
+    -webkit-appearance: none;
+    width: 7px;
+}
+.checkbox::-webkit-scrollbar-button{
+    display: none;
+}
+.checkbox::-webkit-scrollbar-thumb{
+    border-radius: 4px;
+    box-shadow: 0 0 1px rgba(255,255,255,.5);
+    background-color: rgba(0,0,0,.5);
+}
+.label-marcas, .label-tamanhos{
+    margin-left: 5px;
+}
+.label-marcas label, .label-tamanhos label{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+.tamanho-filter span, .marcas-filter span, .varejo-options span{
+    font-size: 20px;
+    margin: 5%;
+    margin-left: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+.tamanho-filter span{
+    margin-bottom: 19px;
+}
+.shop-cards{
+    display: flex;
+    flex: 6;
+    margin-top: 75px;
+    flex-direction: column;
+    align-items: center;
+}
+.card{
+    display: flex;
+    width: 80%;
+    height: 350px;
+    background-color: #f3f3f3;
+    border-radius: 15px;
+    margin-top: 20px;
+    align-items: center;
+    position: relative;
+}
+.card .content{
+    position: relative;
+    left: 30%;
+    transform: translateX(-40%);
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.beer{
+    width: 200px;
+    height: 200px;
+}
+.beer-logo{
+    width: 150px;
+    margin-left: 50px;
+    margin-bottom: 200px;
+    margin-top: 20px;
+    display: flex;
+}
+.beer-logo img{
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;  
+}
+.inform{
+    margin-top: 70px;
+}
+.inform h3, h4, h2{
+    font-family: "Roboto", 'sans-serif';
+    text-align: center;
+}
+.inform h3{
+    font-size: 23px;
+    color: rgb(19, 19, 19);
+    margin-bottom: 0;
+}
+.inform h4{
+    font-size: 19px;
+    color: #FF7A00;
+    margin-top: 15px;
+}
+.shop-cards h2{
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    margin-top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.content button{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(97, 0, 0);
+    font-size: 14px;
+    color: white;
+    border: none;
+    outline: none;
+    position: relative;
+    margin-top: 200px;
+    margin-left: 80px;
+    height: 45px;
+    width: 190px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition-duration: 800ms;
+}
+.content button i{
+    font-size: 20px;
+    padding-left: 10px;
+    z-index: 12;
+    position: relative;
+    color: rgb(255, 255, 255);
+}
+.content button:hover{
+    transform: translateY(-2px);
+}
+.button-card{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 130px;
+    width: 250px;
+}
+.dif-button{
+    background-color: #02460f!important;
+    margin-top: 15px!important;
+}
+.carrinho-card{
+    background-color: white;
+    height: 350px;
+    border-radius: 8px;
+    width: 250px;
+    margin-top: 130px;
+    margin-right: 70px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 130px;
+}
+.carrinho-card .header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 10px 0 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: rgb(141, 3, 3);
+}
+.carrinho-card .header span{
+    margin-top: 10px;
+}
+.logo-options{
+    display: flex;
+    align-items: center;
+}
+.logo-options img{
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
 }

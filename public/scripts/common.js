@@ -11,7 +11,7 @@ window.addEventListener('load', () => {
 })
 //adicionando classe
 function addClassActive(id) {
-    ['#feed', '#perfil', '#shop'].forEach((e) => {
+    ['#feed', '#shop'].forEach((e) => {
         const element = document.querySelector(e)
         const line = document.getElementById(`line${e}`)
         if (e == id) {
@@ -31,3 +31,18 @@ const logout = document.getElementById('logout')
 logout.addEventListener("click", () => {
     createGist(`${window.location.origin}/api/logout`)
 })
+
+async function deleteAccount() {
+    return await new Promise((resolve, reject) => {
+        fetch(`${window.location.origin}/api/user/delete`, { method: 'DELETE' }).then(resolve);
+    });
+}
+
+document.getElementById('delete-account')
+    .addEventListener('click', async () => {
+        const response = await deleteAccount();
+
+        if (response.redirected) {
+            window.location.href = response.url;
+        } else alert('Erro ao deletar a conta');
+    });
