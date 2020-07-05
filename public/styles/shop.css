@@ -389,10 +389,12 @@ nav{
     margin-top: 15px;
 }
 .shop-cards h2{
+    position: absolute;
     font-family: 'Roboto', sans-serif;
     font-size: 40px;
-    margin-left: 300px;
     margin-top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .content button{
     font-family: 'Roboto', sans-serif;
