@@ -34,13 +34,7 @@ logout.addEventListener("click", () => {
 
 async function deleteAccount() {
     return await new Promise((resolve, reject) => {
-        fetch(`${window.location.origin}/api/user/delete`, {
-            method: 'DELETE'
-        }).then((response) => {
-            if (response.ok)
-                resolve(response);
-            else reject(`There was an error while trying to delete account [${response.status}]`);
-        })
+        fetch(`${window.location.origin}/api/user/delete`, { method: 'DELETE' }).then(resolve);
     });
 }
 

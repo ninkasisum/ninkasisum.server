@@ -36,7 +36,7 @@ module.exports = {
         async update() {
 
         },
-        async delete() {
+        async delete(req, res) {
             try {
                 const cookie = req.session['ninkasisum'];
                 const con = await mysql.build();
@@ -51,7 +51,9 @@ module.exports = {
                         } else res.status(401).send();
                     })
                 });
-            } catch (e) { } finally { con.end(); }
+            } catch (e) {
+                res.status(500).send();
+            } finally { con.end(); }
         },
         async find(req, res) {
             try {
