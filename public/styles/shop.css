@@ -402,6 +402,7 @@ nav{
 }
 .button-card{
     display: flex;
+    flex-direction: column;
 }
 .dif-button{
     background-color: #04881E;
