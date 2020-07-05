@@ -119,7 +119,7 @@
         "X Wäls"
     ],
     
-     "categoria" : [
+     "categorias" : [
         "Premium American Larger", 
         
         "American Larger", 
@@ -237,7 +237,7 @@
         "Pilsen" 
     ],
     
-     "teor" : [
+     "teores" : [
         "4,9% vol", 
     
         "5,4% vol", 
@@ -359,7 +359,7 @@
         "5% vol"
     ],
     
-     "logo_url" : [
+     "logo_urls" : [
         "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_adriatica.jpg",
     
         "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_antarctica.jpg",
@@ -478,7 +478,7 @@
         "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_wals.jpg",
         "https://www.ambev.com.br/conteudo/uploads/2019/03/logo_wals.jpg"
     ],
-     "image_url" : [
+     "image_urls" : [
         "https://www.ambev.com.br/conteudo/uploads/2019/03/adriatica_600ml.png",
     
         "https://www.ambev.com.br/conteudo/uploads/2019/03/antarctica-cristal_355ml.png",
