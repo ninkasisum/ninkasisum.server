@@ -60,13 +60,13 @@
       <div class="filter">
         <div class="marcas-filter">
           <span>Marca</span>
-          
+
           <label class="label-input" for="">
             <input type="text" id="input-ft">
             <i class="fas fa-search"></i>
           </label>
-          
-          <div class="checkbox" for="" id="checkbox-marca">   
+
+          <div class="checkbox" for="" id="checkbox-marca">
             <script>
               const marcas = [
                 "Adriática",
@@ -125,32 +125,32 @@
             <label for="acriatica">Adriática</label>-->
           </div>
         </div>
-        <div class="tamanho-filter">       
+        <div class="tamanho-filter">
           <span>Tamanho</span>
           <div class="checkbox" for="" id="checkbox-tamanho">
-          <script>
-            const tamanhos = [
-            '1L', 
-            '990ml', 
-            '970ml', 
-            '960ml', 
-            '750ml', 
-            '740ml', 
-            '600ml', 
-            '550ml', 
-            '500ml', 
-            '473ml', 
-            '410ml', 
-            '375ml', 
-            '355ml', 
-            '350ml', 
-            '343ml', 
-            '330ml', 
-            '310ml', 
-            '300ml', 
-            '275ml', 
-            '269ml']
-            tamanhos.forEach((tamanho) => {
+            <script>
+              const tamanhos = [
+                '1L',
+                '990ml',
+                '970ml',
+                '960ml',
+                '750ml',
+                '740ml',
+                '600ml',
+                '550ml',
+                '500ml',
+                '473ml',
+                '410ml',
+                '375ml',
+                '355ml',
+                '350ml',
+                '343ml',
+                '330ml',
+                '310ml',
+                '300ml',
+                '275ml',
+                '269ml']
+              tamanhos.forEach((tamanho) => {
                 const div = document.createElement("div");
                 div.setAttribute("class", "label-tamanhos")
 
@@ -170,33 +170,12 @@
                 div.appendChild(label);
                 checkbox.appendChild(div)
               })
-          </script>
+            </script>
 
-          </div>
-        </div>       
-      </div>
-      <div class="shop-cards">
-        <div class="card">
-          <div class="beer-logo">
-            <img src="https://www.ambev.com.br/conteudo/uploads/2019/03/logo_wals.jpg" alt="">
-          </div>
-          <div class="content">
-            <img src="https://www.ambev.com.br/conteudo/uploads/2019/03/wals_42_375ml.png" class="beer" alt="">
-            <div class="inform">
-              <h3>Categoria</h3>
-              <h4>Premium American Lager</h4>
-
-              <h3>Teor Alcoólico</h3>
-              <h4>4,9% vol</h4>
-              
-            </div>
-            <div class="button-card">
-              <button>Adicionar ao Carrinho<i class="fas fa-shopping-basket"></i></button>
-              <button class="dif-button">COMPRAR AGORA</i></button>
-            </div>           
           </div>
         </div>
       </div>
+      <div class="shop-cards"></div>
 
       <div class="carrinho-card">
         <div class="header">

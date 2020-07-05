@@ -235,10 +235,7 @@ nav{
     display: flex;
     height: 100vh;
 }
-.shop-cards{
-    flex: 6;
-    margin-top: 75px;
-}
+
 .filter{
     flex: 1;
     margin-top: 130px;
@@ -334,6 +331,9 @@ nav{
 .shop-cards{
     display: flex;
     justify-content: center;
+    flex: 6;
+    margin-top: 75px;
+    flex-direction: column;
 }
 .card{
     display: flex;
@@ -432,9 +432,12 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 10px;
+    border-radius: 10px 10px 0 0;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 600;
     background-color: rgb(141, 3, 3);
+}
+.carrinho-card .header span{
+    margin-top: 10px;
 }
