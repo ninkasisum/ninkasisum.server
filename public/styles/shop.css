@@ -218,12 +218,14 @@ nav{
     background-color: #E4E0E0;    
 }
 .ze-logo{
-    transition: all .5s;
-    border: 10px solid transparent;
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    transition: 400ms;
+    cursor: pointer;
 }
 .ze-logo:hover{
-    border: 10px solid #1f3d33;
-    border-radius: 50%;
+    transform: translate(-3px, -5px);
 }
 
 #dif-user-img{
