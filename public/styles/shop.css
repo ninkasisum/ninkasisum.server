@@ -242,7 +242,7 @@ nav{
 .filter{
     flex: 1;
     margin-top: 130px;
-    margin-left: 240px;
+    margin-left: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -286,7 +286,7 @@ nav{
     border: none;
     padding-left: 0px;
     padding-right: 0px;
-    width: 175px;
+    width: 140px;
     height: 25px;
     outline: none;
     font-size: 16px;
@@ -341,7 +341,7 @@ nav{
     height: 350px;
     background-color: #f3f3f3;
     border-radius: 15px;
-    margin-top: 50px;
+    margin-top: 55px;
     align-items: center;
 }
 .card .content{
@@ -371,12 +371,12 @@ nav{
     text-align: center;
 }
 .inform h3{
-    font-size: 30px;
+    font-size: 23px;
     color: rgb(19, 19, 19);
     margin-bottom: 0;
 }
 .inform h4{
-    font-size: 20px;
+    font-size: 19px;
     color: #FF7A00;
     margin-top: 15px;
 }
@@ -389,8 +389,8 @@ nav{
     outline: none;
     position: relative;
     margin-top: 200px;
-    margin-left: 50px;
-    height: 50px;
+    margin-left: 80px;
+    height: 45px;
     width: 190px;
     border-radius: 10px;
     cursor: pointer;
@@ -415,7 +415,7 @@ nav{
 .dif-button{
     background-color: #02460f!important;
     margin-top: 15px!important;
-    margin-left: 100px!important;
+    margin-left: 50px!important;
 }
 .carrinho-card{
     background-color: white;
@@ -423,8 +423,7 @@ nav{
     border-radius: 8px;
     width: 250px;
     margin-top: 130px;
-    margin-bottom: px;
-    margin-right: 50px;
+    margin-right: 70px;
     display: flex;
     flex-direction: column;
     margin-top: 130px;
