@@ -128,8 +128,18 @@ function addEventListenerToFilterCards() {
                 cards.forEach((card) => {
                     const product = card.getAttribute('data-modelo');
                     if (product) {
-                        const model = product.split(' ')[0];
-                        card.style.display = (models.includes(model))?'flex':'none';
+                        const model = product.split(' ')[0]; // ["Goose Island"] "Goose Island".includes("Goose")
+                        let display = 'none';
+                        // (models.includes(model))?'flex':'none';
+
+                        for(let i = 0; i < models.length; i++) {
+                            if (models[i].includes(model)){
+                                display = 'flex';
+                                break;
+                            }
+                        }
+                        
+                        card.style.display = display;
                     }
                 })
             } else cards.forEach((card) => card.style.display = 'flex');
