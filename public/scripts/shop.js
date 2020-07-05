@@ -116,7 +116,7 @@ function addEventListenerToFilterCards() {
             const models = [];
             filters.forEach((filter) => {
                 if (filter.previousSibling.checked)
-                    models.push(filter);
+                    models.push(filter.innerText);
             })
         
             if (models.length > 0) {
