@@ -332,7 +332,9 @@ nav{
 }
 .post-author h3{
     color: rgba(0, 0, 0, 0.904);
-    margin-right: 3px;
+    margin-right: 5px;
+    margin-top: 30px;
+    margin-left: 5px;
 }
 .post-author h4{
     color: rgba(0, 0, 0, 0.76);

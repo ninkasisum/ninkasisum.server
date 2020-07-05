@@ -133,3 +133,13 @@ function addEventListenerToFilterCards() {
         })
     })
 }
+
+function addCarrinho(){
+    const button = document.getElementsByClassName('button-card');   
+    const valor=0;
+    
+    button.addEventListener('click', ()=>{
+        valor+= 53.5
+        console.log(valor);
+    })
+}
