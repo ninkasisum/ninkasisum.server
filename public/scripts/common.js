@@ -31,3 +31,24 @@ const logout = document.getElementById('logout')
 logout.addEventListener("click", () => {
     createGist(`${window.location.origin}/api/logout`)
 })
+
+async function deleteAccount() {
+    return await new Promise((resolve, reject) => {
+        fetch(`${window.location.origin}/api/user/delete`, {
+            method: 'DELETE'
+        }).then((response) => {
+            if (response.ok)
+                resolve(response);
+            else reject(`There was an error while trying to delete account [${response.status}]`);
+        })
+    });
+}
+
+document.getElementById('delete-account')
+    .addEventListener('click', async () => {
+        const success = await deleteAccount;
+
+        if (success) {
+            window.location.reload();
+        } else alert('Erro ao deletar a conta');
+    });
