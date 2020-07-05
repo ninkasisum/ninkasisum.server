@@ -217,14 +217,14 @@ nav{
     height: 100vh;
     background-color: #E4E0E0;    
 }
-.ze-logo{
+.carrinho{
     position: fixed;
     bottom: 30px;
     right: 40px;
     transition: 400ms;
     cursor: pointer;
 }
-.ze-logo:hover{
+.carrinho:hover{
     transform: translate(-3px, -5px);
 }
 
@@ -242,7 +242,7 @@ nav{
 .filter{
     flex: 1;
     margin-top: 130px;
-    margin-left: 240px;
+    margin-left: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -286,7 +286,7 @@ nav{
     border: none;
     padding-left: 0px;
     padding-right: 0px;
-    width: 175px;
+    width: 140px;
     height: 25px;
     outline: none;
     font-size: 16px;
@@ -339,9 +339,9 @@ nav{
     display: flex;
     width: 80%;
     height: 350px;
-    background-color: whitesmoke;
+    background-color: #f3f3f3;
     border-radius: 15px;
-    margin-top: 50px;
+    margin-top: 55px;
     align-items: center;
 }
 .card .content{
@@ -353,43 +353,48 @@ nav{
     align-items: center;
 }
 .beer{
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
 }
 .beer-logo{
     width: 150px;
-    margin-left: 100px;
+    margin-left: 50px;
     margin-bottom: 150px;
 }
 .beer-logo img{
     border-radius: 50%;
+    width: 120px;
+    height: 120px;
 }
 .inform h3, h4{
     font-family: "Roboto", 'sans-serif';
     text-align: center;
 }
 .inform h3{
-    font-size: 30px;
+    font-size: 23px;
     color: rgb(19, 19, 19);
+    margin-bottom: 0;
 }
 .inform h4{
-    font-size: 20px;
+    font-size: 19px;
     color: #FF7A00;
+    margin-top: 15px;
 }
 .content button{
     font-family: 'Roboto', sans-serif;
-    background-color: rgb(131, 6, 6);
-    font-size: 15px;
-    font-weight: normal;
+    background-color: rgb(97, 0, 0);
+    font-size: 14px;
     color: white;
-    float: right;
     border: none;
     outline: none;
-    z-index: 11;
     position: relative;
-    margin: 1% 14%;
-    padding: 20px 30px;
+    margin-top: 200px;
+    margin-left: 80px;
+    height: 45px;
+    width: 190px;
     border-radius: 10px;
+    cursor: pointer;
+    transition-duration: 800ms;
 }
 .content button i{
     font-size: 20px;
@@ -397,4 +402,29 @@ nav{
     z-index: 12;
     position: relative;
     color: rgb(255, 255, 255);
+}
+.content button:hover{
+    transform: translateY(-2px);
+}
+.button-card{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 130px;
+    width: 250px;
+}
+.dif-button{
+    background-color: #02460f!important;
+    margin-top: 15px!important;
+    margin-left: 50px!important;
+}
+.carrinho-card{
+    background-color: white;
+    height: 350px;
+    border-radius: 8px;
+    width: 250px;
+    margin-top: 130px;
+    margin-right: 70px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 130px;
 }
