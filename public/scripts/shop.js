@@ -30,6 +30,7 @@ function filterinput() {
 
 function loadCards(data) {
     const { modelos, categorias, teores, logo_urls, image_urls } = data;
+    const shopCards = document.getElementsByClassName('shop-cards')[0];
 
     for (let i = 0; i < modelos.length; i++)
     {
@@ -108,5 +109,7 @@ function loadCards(data) {
 
         card.appendChild(content);
         // end create content
+
+        shopCards.appendChild(card);
     }
 }
