@@ -32,7 +32,7 @@ like.addEventListener('click', () => {
     }
 })
 
-const comment = document.getElementsByClassName('.fa-comment-alt')
-comment.addEventListener('click', ()=>{
+const comment = document.getElementsById('comentar')
+comment.addEventListener('click', () =>{
     alert('Em manutenção :(');
 })
