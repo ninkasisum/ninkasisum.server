@@ -1,8 +1,8 @@
 function load() {
     loadUserData();
     jsonLoadResource("shop").then(loadCards);
-    filterCards();
-    filterinput()
+    addEventListenerToFilterCards();
+    addEventListenerToFilterinput()
 }
 
 async function jsonLoadResource(name) {
@@ -13,7 +13,7 @@ async function jsonLoadResource(name) {
     });
 }
 
-function filterinput() {
+function addEventListenerToFilterinput() {
     const input = document.getElementById("input-ft");
     input.addEventListener('input', (e) => {
         document.querySelectorAll(".filter-data").forEach((label) => {
@@ -108,21 +108,24 @@ function loadCards(data) {
     }
 }
 
-function filterCards() {
-    const filters = document.querySelectorAll('.filter-data');
-    const cards = document.querySelectorAll('.card');
-    const models = [];
-    filters.forEach((filter) => {
-        if (filter.previousSibling.checked)
-            models.push(filter);
-    })
-
-    if (models.length > 0) {
-        cards.forEach((card) => {
-            const product = card.getAttribute('data-modelo');
-            const model = product.split(' ')[0];
-            if (!models.includes(model))
-                card.style.display = 'none';
+function addEventListenerToFilterCards() {
+    document.querySelectorAll('.filter-checkbox').forEach((checkbox) => {
+        checkbox.addEventListener('onclick', () => {
+            const filters = document.querySelectorAll('.filter-data');
+            const cards = document.querySelectorAll('.card');
+            const models = [];
+            filters.forEach((filter) => {
+                if (filter.previousSibling.checked)
+                    models.push(filter);
+            })
+        
+            if (models.length > 0) {
+                cards.forEach((card) => {
+                    const product = card.getAttribute('data-modelo');
+                    const model = product.split(' ')[0];
+                    card.style.display = (models.includes(model))?'block':'none';
+                })
+            }
         })
-    }
+    })
 }
