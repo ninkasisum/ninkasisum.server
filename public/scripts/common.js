@@ -40,9 +40,9 @@ async function deleteAccount() {
 
 document.getElementById('delete-account')
     .addEventListener('click', async () => {
-        const success = await deleteAccount();
+        const response = await deleteAccount();
 
-        if (success) {
-            window.location.reload();
+        if (response.redirected) {
+            window.location.href = response.url;
         } else alert('Erro ao deletar a conta');
     });

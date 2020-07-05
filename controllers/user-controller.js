@@ -23,15 +23,22 @@ module.exports = {
                             bcrypt.hash(psw, 10, (err, hash) => {
                                 if (err)
                                     res.status(500).send();
+                                    
 
                                 con.query(create, [name, ccnpj, usr, hash], () => {
+                                    con.end();
                                     res.status(201).send();
                                 });
                             });
-                        } else res.status(406).send();
+                        } else {
+                            con.end();
+                            res.status(406).send();
+                        }
                     })
                 });
-            } catch (e) {} finally { con.end(); }
+            } catch (e) {
+                res.status(500).send();
+            } finally { con.end(); }
         },
         async update() {
 
@@ -44,11 +51,19 @@ module.exports = {
                     con.query(gambiarra, [cookie], async (err, results) => {
                         if (results.length == 1) {
                             con.query(sqldelete, [results[0]['id']], async(err, results) => {
-                                if (!err)
-                                    res.status(200).send();
+                                con.end();
+
+                                if (!err) {
+                                    req.session['ninkasisum'] = null;
+                                    res.redirect(301, `https://${req.hostname}`);
+                                }
+
                                 else res.status(500).send();
                             });
-                        } else res.status(401).send();
+                        } else {
+                            con.end();
+                            res.status(401).send();
+                        }
                     })
                 });
             } catch (e) {
@@ -62,6 +77,8 @@ module.exports = {
                 const con = await mysql.build();
                 con.connect(() => {
                     con.query(gambiarra, [cookie], async (err, results) => {
+                        con.end();
+
                         if (results.length == 1) {
                             const user = results[0];
 
@@ -72,7 +89,9 @@ module.exports = {
                         } else res.status(404).send();
                     })
                 });
-            } catch (e) { } finally { con.end(); }
+            } catch (e) {
+                res.status(500).send();
+             } finally { con.end(); }
         },
 
         async list() {
@@ -86,6 +105,7 @@ module.exports = {
                 const con = await mysql.build();
                 con.connect(() => {
                     con.query(select, [usr], async (err, results) => {
+                        con.end();
 
                         if (results.length == 1) {
                             let user = results[0];
