@@ -2,7 +2,11 @@ function load() {
     loadUserData();
     jsonLoadResource("shop").then(loadCards);
     addEventListenerToFilterCards();
-    addEventListenerToFilterinput()
+    addEventListenerToFilterinput();
+
+    addCarrinho();
+    comprarAgora();
+
 }
 
 async function jsonLoadResource(name) {
@@ -87,6 +91,7 @@ function loadCards(data) {
         buttons.setAttribute('class', 'button-card');
 
         const buttonAdd = document.createElement('button');
+        buttonAdd.setAttribute('class', 'button-add')
         buttonAdd.appendChild(document.createTextNode('Adicionar ao Carrinho'));
 
         const icon = document.createElement('i');
@@ -132,4 +137,22 @@ function addEventListenerToFilterCards() {
             document.querySelector('.dif').style.display = 'none'; // work around because is to late
         })
     })
+}
+
+function addCarrinho(){
+    const valor = 0;
+    const buttons = document.querySelectorAll('.button-add').forEach((button) =>{
+        button.addEventListener('click', ()=>{
+            valor+= 53.5
+            console.log(valor);
+        })
+    });        
+}
+
+function comprarAgora(){
+    const buttons = document.querySelectorAll('.button-add').forEach((button) =>{
+        button.addEventListener('click', ()=>{
+            console.log('Cliquei no botão de Comprar Agora')
+        })
+    });  
 }

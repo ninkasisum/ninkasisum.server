@@ -259,7 +259,7 @@ nav{
     flex-direction: column;
     margin-top: 10px;
 }
-.tamanho-filter{
+.tamanho-filter, .varejo-options{
     background-color: white;
     height: 215px;
     border-radius: 8px;
@@ -320,7 +320,7 @@ nav{
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
 }
-.tamanho-filter span, .marcas-filter span{
+.tamanho-filter span, .marcas-filter span, .varejo-options span{
     font-size: 20px;
     margin: 5%;
     margin-left: 5px;
@@ -345,6 +345,7 @@ nav{
     border-radius: 15px;
     margin-top: 20px;
     align-items: center;
+    position: relative;
 }
 .card .content{
     position: relative;
@@ -389,10 +390,12 @@ nav{
     margin-top: 15px;
 }
 .shop-cards h2{
+    position: absolute;
     font-family: 'Roboto', sans-serif;
     font-size: 40px;
-    margin-left: 300px;
     margin-top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .content button{
     font-family: 'Roboto', sans-serif;
