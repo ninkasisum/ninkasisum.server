@@ -32,11 +32,11 @@ function filterinput() {
 
     input.addEventListener('input', (e) => {
         document.querySelectorAll(".filter-data").forEach((label)=>{
-            if (label.innerHTML.toLowerCase().search(input.value.toLowerCase()) === -1) {
-                label.parentElement.style.display = "none";
+            if (label.innerHTML.toLowerCase().search(input.value.toLowerCase()) === 0) {
+                label.parentElement.style.display = "block";               
             }
             else{
-                label.parentElement.style.display = "block";
+                label.parentElement.style.display = "none";
             }
         })
 
