@@ -9,66 +9,68 @@ const sqldelete = 'DELETE FROM users WHERE id = ?';
 module.exports = {
     api: {
         async create(req, res) {
-            const { name, cnpj, usr, psw } = req.body;
+            try {
+                const { name, cnpj, usr, psw } = req.body;
 
-            const ccnpj = cnpj.replace('.', '')
-                                    .replace('/', '')
-                                    .replace('-', '');
+                const ccnpj = cnpj.replace('.', '')
+                    .replace('/', '')
+                    .replace('-', '');
 
-            const con = await mysql.build();
-            con.connect(() => {
-                con.query(select, [usr], async (err, results) => {
-                    if (results.length == 0) {
-                        bcrypt.hash(psw, 10, (err, hash) => {
-                            if(err)
-                                res.status(500).send();
+                const con = await mysql.build();
+                con.connect(() => {
+                    con.query(select, [usr], async (err, results) => {
+                        if (results.length == 0) {
+                            bcrypt.hash(psw, 10, (err, hash) => {
+                                if (err)
+                                    res.status(500).send();
 
-                            con.query(create, [name, ccnpj, usr, hash], () => {
-                                res.status(201).send();
+                                con.query(create, [name, ccnpj, usr, hash], () => {
+                                    res.status(201).send();
+                                });
                             });
-                        });
-                    } else res.status(406).send();
-                })
-            });
+                        } else res.status(406).send();
+                    })
+                });
+            } catch (e) {} finally { con.end(); }
         },
         async update() {
 
         },
         async delete() {
-            const cookie = req.session['ninkasisum'];
-            const con = await mysql.build();
-            con.connect(() => {
-                con.query(gambiarra, [cookie], async (err, results) => {                    
-                    if (results.length === 1) {
-                        const id = results[0]['id'];
-                        con.query(sqldelete, [id], async (err, results) => {
-                            if (!err)
-                            {
-                                req.session['ninkasisum'] = null;
-                                res.status(200).send();
-                            } else res.status(500).send();
-                        })
-                    } else res.status(401).send();
+            try {
+                const cookie = req.session['ninkasisum'];
+                const con = await mysql.build();
+                con.connect(() => {
+                    con.query(gambiarra, [cookie], async (err, results) => {
+                        if (results.length == 1) {
+                            con.query(sqldelete, [results[0]['id']], async(err, results) => {
+                                if (!err)
+                                    res.status(200).send();
+                                else res.status(500).send();
+                            });
+                        } else res.status(401).send();
+                    })
                 });
-            });
+            } catch (e) { } finally { con.end(); }
         },
         async find(req, res) {
-            // Author: Bianca
-            const cookie = req.session['ninkasisum'];
+            try {
+                const cookie = req.session['ninkasisum'];
 
-            const con = await mysql.build();
-            con.connect(() => {
-                con.query(gambiarra, [cookie], async (err, results) => {
-                    if (results.length == 1) {
-                        const user = results[0];
+                const con = await mysql.build();
+                con.connect(() => {
+                    con.query(gambiarra, [cookie], async (err, results) => {
+                        if (results.length == 1) {
+                            const user = results[0];
 
-                        delete user.password;
-                        delete user.id;
+                            delete user.password;
+                            delete user.id;
 
-                        res.status(200).json(user);
-                    } else res.status(404).send();
-                })
-            });
+                            res.status(200).json(user);
+                        } else res.status(404).send();
+                    })
+                });
+            } catch (e) { } finally { con.end(); }
         },
 
         async list() {
@@ -82,12 +84,12 @@ module.exports = {
                 const con = await mysql.build();
                 con.connect(() => {
                     con.query(select, [usr], async (err, results) => {
-    
+
                         if (results.length == 1) {
                             let user = results[0];
                             user.password = user.password.toString('utf8');
                             const same = await bcrypt.compare(psw, user.password);
-                            resolve(((same)? user: false));
+                            resolve(((same) ? user : false));
                         } else resolve(false);
                     })
                 });
