@@ -87,6 +87,7 @@ function loadCards(data) {
         buttons.setAttribute('class', 'button-card');
 
         const buttonAdd = document.createElement('button');
+        buttonAdd.setAttribute('class', 'button-add')
         buttonAdd.appendChild(document.createTextNode('Adicionar ao Carrinho'));
 
         const icon = document.createElement('i');
@@ -135,11 +136,19 @@ function addEventListenerToFilterCards() {
 }
 
 function addCarrinho(){
-    const button = document.getElementsByClassName('button-card');   
+    const button = document.getElementsByClassName('button-add');   
     const valor=0;
     
     button.addEventListener('click', ()=>{
         valor+= 53.5
         console.log(valor);
+    })
+}
+
+function comprarAgora(){
+    const button = document.getElementsByClassName('dif-button')
+
+    button.addEventListener('click', ()=>{
+        console.log('Cliquei no botão de Comprar Agora')
     })
 }
