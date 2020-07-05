@@ -345,6 +345,7 @@ nav{
     border-radius: 15px;
     margin-top: 20px;
     align-items: center;
+    position: relative;
 }
 .card .content{
     position: relative;
