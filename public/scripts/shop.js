@@ -13,7 +13,7 @@ function load() {
     }
 
     loadUserData(config);
-    jsonLoadResource("shop").then((json)=>{
+    jsonLoadResource("shop").then((json) => {
         data.shop = json;
     })
 }
@@ -24,4 +24,16 @@ async function jsonLoadResource(name) {
             .then(response => response.json())
             .then(resolve);
     });
+}
+
+function filterinput() {
+    const input = document.getElementById("input-ft")
+    
+    input.addEventListener('input', (e) => {      
+        const divsMarcas = document.querySelector(".label-marcas")
+        for(let divmarca in divsMarcas){
+           // divmarca.style.height = 0;
+
+        }
+    })
 }
