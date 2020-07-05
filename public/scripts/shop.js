@@ -140,19 +140,19 @@ function addEventListenerToFilterCards() {
 }
 
 function addCarrinho(){
-    const button = document.getElementsByClassName('button-add');   
-    const valor=0;
-    
-    button.addEventListener('click', ()=>{
-        valor+= 53.5
-        console.log(valor);
-    })
+    const valor = 0;
+    const buttons = document.getElementsByClassName('button-add').forEach((button) =>{
+        button.addEventListener('click', ()=>{
+            valor+= 53.5
+            console.log(valor);
+        })
+    });        
 }
 
 function comprarAgora(){
-    const button = document.getElementsByClassName('dif-button')
-
-    button.addEventListener('click', ()=>{
-        console.log('Cliquei no botão de Comprar Agora')
-    })
+    const buttons = document.getElementsByClassName('button-add').forEach((button) =>{
+        button.addEventListener('click', ()=>{
+            console.log('Cliquei no botão de Comprar Agora')
+        })
+    });  
 }
