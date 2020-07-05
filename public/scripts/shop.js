@@ -1,12 +1,12 @@
 function load() {
     loadUserData();
-    jsonLoadResource("shop").then(loadCards);
+    jsonLoadResource("shop").then((data)=>{
+        loadCards(data);
+        addCarrinho();
+        comprarAgora();
+    });
     addEventListenerToFilterCards();
     addEventListenerToFilterinput();
-
-    addCarrinho();
-    comprarAgora();
-
 }
 
 async function jsonLoadResource(name) {
@@ -150,7 +150,8 @@ function addEventListenerToFilterCards() {
 }
 function addCarrinho(){
     const valor = 0;
-    const buttons = document.querySelectorAll('.button-add').forEach((button) =>{
+    
+    document.querySelectorAll('.button-add').forEach((button) =>{
         button.addEventListener('click', ()=>{
             valor+= 53.5;
             console.log(valor);
@@ -158,7 +159,7 @@ function addCarrinho(){
     });
 }
 function comprarAgora(){
-    const buttons = document.querySelectorAll('.button-add').forEach((button) =>{
+    document.querySelectorAll('.button-add').forEach((button) =>{
         button.addEventListener('click', ()=>{
             console.log('Cliquei no botão de Comprar Agora')
         })
