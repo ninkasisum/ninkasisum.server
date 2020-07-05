@@ -35,6 +35,9 @@ function filterinput() {
             if (label.innerHTML.search(input.value) === -1) {
                 label.parentElement.style.display = "none";
             }
+            else{
+                label.parentElement.style.display = "block";
+            }
         })
 
     })
