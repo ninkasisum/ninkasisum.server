@@ -377,7 +377,7 @@ nav{
 .content button{
     font-family: 'Roboto', sans-serif;
     background-color: rgb(131, 6, 6);
-    font-size: 15px;
+    font-size: 14px;
     font-weight: normal;
     color: white;
     float: right;
@@ -385,9 +385,10 @@ nav{
     outline: none;
     z-index: 11;
     position: relative;
-    margin: 1% 14%;
-    padding: 20px 30px;
+    height: 40px;
+    width: 190px;
     border-radius: 10px;
+    cursor: pointer;
 }
 .content button i{
     font-size: 20px;
