@@ -1,4 +1,5 @@
 const bcrypt = require('bcrypt');
+const userController = require('./user-controller');
 const users = [];
 
 function isValidLoginRequest(body) {
@@ -18,29 +19,19 @@ module.exports = {
         const user = req.body;
         try {
             if (isValidLoginRequest(user)) {
-                // query in database service the user -> POSTGREE
-                const found = user; // PARA TESTES POR FAVOR EXCLUA ANTES DE SUBIR
-
+                const found = await userController.local.find(user);
                 if (found) {
-                    bcrypt.genSalt(10, function (err, salt) {
-                        bcrypt.hash(user.psw, salt, function (err, hash) {
-
-                            found.psw = hash; // PARA TESTES POR FAVOR EXCLUA ANTES DE SUBIR
-
-                            if (bcrypt.compare(found.psw, hash)) {
-
-                                
-                                req.session['ninkasisum'] = salt;
-
-                                users.push({ cookie: salt, user }); // create a session in memory database with the user -> MONGOOSE
-
-                                res.redirect(301, `https://${req.hostname}`);
-                            } else res.status(401).json(JSON.stringify({ err: "401 Unauthorized" }))
-                        });
-                    });
-                } else res.status(404).json(JSON.stringify({ err: "404 Not Found" }));
-            } else res.status(400).json(JSON.parse({ err: "400 Bad Request" }));
-        } catch (e) { res.status(500).json(JSON.parse({ err: "500 Internal Server Error" })) }
+                        const cookie = found.password;
+                        req.session['ninkasisum'] = cookie;
+                        users.push({ cookie, user }); 
+                        res.redirect(301, `https://${req.hostname}`);
+                } else
+                    res.status(404).json({ err: "404 Not Found" });
+            } else
+                res.status(400).json({ err: "400 Bad Request" });
+        } catch (e) {
+            res.status(500).json({ err: "500 Internal Server Error" });
+        }
     },
 
     async logout(req, res) {
@@ -58,12 +49,12 @@ module.exports = {
                     }
                 }
 
-                if(true) // if (found) 
+                if(found)
                 {
                     req.session['ninkasisum'] = null;
                     res.redirect(301, `https://${req.hostname}`);
-                } else res.status(404).json(JSON.stringify({ err: "404 Not Found" }));
-            } else res.status(400).json(JSON.parse({ err: "400 Bad Request" }));
-        } catch (e) { res.status(500).json(JSON.parse({ err: "500 Internal Server Error" })) }
+                } else res.status(404).json({ err: "404 Not Found" });
+            } else res.status(400).json({ err: "400 Bad Request" });
+        } catch (e) { res.status(500).json({ err: "500 Internal Server Error" }) }
     }
 };

@@ -13,7 +13,7 @@ router.use(session({
     secure: true,
     ephemeral: true,
     cookie: {
-        maxAge: 60000
+        maxAge: 360000
     }
 }));
 
