@@ -127,7 +127,7 @@ function addEventListenerToFilterCards() {
                         card.style.display = (models.includes(model))?'flex':'none';
                     }
                 })
-            }
+            } else cards.forEach((card) => card.style.display = 'flex');
 
             document.querySelector('.dif').style.display = 'none'; // work around because is to late
         })
