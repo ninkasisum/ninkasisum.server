@@ -32,7 +32,7 @@ function filterinput() {
 
     input.addEventListener('input', (e) => {
         document.querySelectorAll(".filter-data").forEach((label)=>{
-            if (label.value.search(input.value) === -1) {
+            if (label.innerHTML.search(input.value) === -1) {
                 label.style.height = 0;
             }
         })
