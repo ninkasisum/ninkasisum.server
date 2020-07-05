@@ -1,6 +1,7 @@
 function load() {
     loadUserData();
     jsonLoadResource("shop").then(loadCards);
+    filterCards();
     filterinput()
 }
 
@@ -13,8 +14,7 @@ async function jsonLoadResource(name) {
 }
 
 function filterinput() {
-    const input = document.getElementById("input-ft")
-
+    const input = document.getElementById("input-ft");
     input.addEventListener('input', (e) => {
         document.querySelectorAll(".filter-data").forEach((label) => {
             if (label.innerHTML.toLowerCase().search(input.value.toLowerCase()) === 0) {
@@ -32,12 +32,10 @@ function loadCards(data) {
     const { modelos, categorias, teores, logo_urls, image_urls } = data;
     const shopCards = document.getElementsByClassName('shop-cards')[0];
 
-    for (let i = 0; i < modelos.length; i++)
-    {
+    for (let i = 0; i < modelos.length; i++) {
         const card = document.createElement('div');
         card.setAttribute('class', 'card');
 
-        // create logo
         const logo = document.createElement('div');
         logo.setAttribute('class', 'beer-logo');
 
@@ -46,9 +44,7 @@ function loadCards(data) {
 
         logo.appendChild(imgLogo);
         card.appendChild(logo);
-        // end create logo
 
-        // create content
         const content = document.createElement('div');
         content.setAttribute('class', 'content');
 
@@ -56,14 +52,11 @@ function loadCards(data) {
         modelo.appendChild(document.createTextNode(modelos[i]));
         logo.appendChild(modelo);
 
-        // create img
         const imgContent = document.createElement('img');
         imgContent.setAttribute('src', image_urls[i]);
         imgContent.setAttribute('class', 'beer');
         content.appendChild(imgContent);
-        // end create img
 
-        // create info
         const info = document.createElement('div');
         info.setAttribute('class', 'inform');
 
@@ -89,9 +82,7 @@ function loadCards(data) {
         info.appendChild(teorAlcoolico.text);
 
         content.appendChild(info);
-        // end create info
 
-        // create buttons
         const buttons = document.createElement('div');
         buttons.setAttribute('class', 'button-card');
 
@@ -101,7 +92,7 @@ function loadCards(data) {
         const icon = document.createElement('i');
         icon.setAttribute('class', 'fas fa-shopping-basket');
         buttonAdd.appendChild(icon);
-        
+
         const buttonBuy = document.createElement('button');
         buttonBuy.setAttribute('class', 'dif-button');
         buttonBuy.appendChild(document.createTextNode('COMPRAR AGORA'));
@@ -109,11 +100,29 @@ function loadCards(data) {
         buttons.appendChild(buttonAdd);
         buttons.appendChild(buttonBuy);
         content.appendChild(buttons);
-        // end create buttons
 
         card.appendChild(content);
-        // end create content
-
         shopCards.appendChild(card);
+
+        card.setAttribute('data-modelo', modelos[i]); // temp gambi
+    }
+}
+
+function filterCards() {
+    const filters = document.querySelectorAll('.filter-data');
+    const cards = document.querySelectorAll('.card');
+    const models = [];
+    filters.forEach((filter) => {
+        if (filter.previousSibling.checked)
+            models.push(filter);
+    })
+
+    if (models.length > 0) {
+        cards.forEach((card) => {
+            const product = card.getAttribute('data-modelo');
+            const model = product.split(' ')[0];
+            if (!models.includes(model))
+                card.style.display = 'none';
+        })
     }
 }
