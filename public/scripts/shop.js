@@ -2,7 +2,11 @@ function load() {
     loadUserData();
     jsonLoadResource("shop").then(loadCards);
     addEventListenerToFilterCards();
-    addEventListenerToFilterinput()
+    addEventListenerToFilterinput();
+
+    addCarrinho();
+    comprarAgora();
+
 }
 
 async function jsonLoadResource(name) {
