@@ -247,7 +247,6 @@ nav{
     align-items: center;
     background-color: #f3f3f3;
     border-radius: 8px;
-    height: 600px;
 }
 .marcas-filter{
     background-color: white;
@@ -264,10 +263,13 @@ nav{
     height: 215px;
     border-radius: 8px;
     width: 93%;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     display: flex;
     flex-direction: column;
     margin-top: 10px;
+}
+.varejo-options{
+    margin-bottom: 10px;
 }
 .filter-content{
     height: 75px;
@@ -456,4 +458,7 @@ nav{
 }
 .carrinho-card .header span{
     margin-top: 10px;
+}
+.logo-options{
+    display: flex;
 }
