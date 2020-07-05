@@ -400,6 +400,9 @@ nav{
     position: relative;
     color: rgb(255, 255, 255);
 }
+.content button:hover{
+    transform: translateY(-3px);
+}
 .button-card{
     display: flex;
     flex-direction: column;
@@ -409,17 +412,4 @@ nav{
     background-color: #02460f!important;
     margin-top: 15px!important;
     margin-left: 100px!important;
-}
-.fa-shopping-basket{
-    color: whitesmoke;
-    background-color: rgba(167, 3, 3, 0.945);
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    font-size: 30px;
-    text-align: center;
-
-    margin: 0;
-    position: fixed;
-    z-index: 10;
 }
