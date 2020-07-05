@@ -122,8 +122,10 @@ function addEventListenerToFilterCards() {
             if (models.length > 0) {
                 cards.forEach((card) => {
                     const product = card.getAttribute('data-modelo');
-                    const model = product.split(' ')[0];
-                    card.style.display = (models.includes(model))?'block':'none';
+                    if (product) {
+                        const model = product.split(' ')[0];
+                        card.style.display = (models.includes(model))?'block':'none';
+                    }
                 })
             }
         })
