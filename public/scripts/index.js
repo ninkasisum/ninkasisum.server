@@ -19,7 +19,7 @@ like.addEventListener('click', () => {
         like.classList.add('fas')
         button_like = true
 
-        if(count=0){
+        if(count===0){
             document.getElementsByClassName('.user-class').createTextNode("Pontos: 10");
             count++;
         }
