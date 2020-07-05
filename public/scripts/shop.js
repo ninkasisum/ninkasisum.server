@@ -33,7 +33,7 @@ function filterinput() {
     input.addEventListener('input', (e) => {
         document.querySelectorAll(".filter-data").forEach((label)=>{
             if (label.innerHTML.search(input.value) === -1) {
-                label.style.height = 0;
+                label.parentElement.style.display = "none";
             }
         })
 
