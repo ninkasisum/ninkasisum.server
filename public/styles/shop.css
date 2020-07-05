@@ -9,6 +9,7 @@ nav{
     width: 100vw;
     height: 75px;
     position: fixed;
+    z-index: 2;
 }
 .menu{
     position: fixed;
