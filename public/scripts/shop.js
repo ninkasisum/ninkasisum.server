@@ -31,10 +31,10 @@ function filterinput() {
     const input = document.getElementById("input-ft")
 
     input.addEventListener('input', (e) => {
-        const divsMarcas = document.querySelectorAll(".label-marcas")
-        for (let divmarca in divsMarcas) {
-            if (divmarca.value.search(input.value) === -1) {
-                divmarca.style.height = 0;
+        const labelsMarcas = document.querySelectorAll(".filter-data")
+        for (let labelmarca in labelsMarcas) {
+            if (labelmarca.value.search(input.value) === -1) {
+                labelmarca.style.height = 0;
             }
         }
     })
