@@ -353,16 +353,18 @@ nav{
     align-items: center;
 }
 .beer{
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
 }
 .beer-logo{
     width: 150px;
-    margin-left: 100px;
+    margin-left: 50px;
     margin-bottom: 150px;
 }
 .beer-logo img{
     border-radius: 50%;
+    width: 120px;
+    height: 120px;
 }
 .inform h3, h4{
     font-family: "Roboto", 'sans-serif';
@@ -387,7 +389,7 @@ nav{
     outline: none;
     position: relative;
     margin-top: 200px;
-    margin-left: 100px;
+    margin-left: 50px;
     height: 50px;
     width: 190px;
     border-radius: 10px;
@@ -408,6 +410,7 @@ nav{
     display: flex;
     flex-direction: column;
     margin-bottom: 130px;
+    width: 250px;
 }
 .dif-button{
     background-color: #02460f!important;
@@ -418,9 +421,11 @@ nav{
     background-color: white;
     height: 350px;
     border-radius: 8px;
-    width: 93%;
-    margin-bottom: 5px;
+    width: 250px;
+    margin-top: 130px;
+    margin-bottom: px;
+    margin-right: 50px;
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
+    margin-top: 130px;
 }
