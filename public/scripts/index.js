@@ -20,9 +20,9 @@ like.addEventListener('click', () => {
         button_like = true
 
         if(count===0){
-            const like = document.getElementById('user-class')
+            const like = document.getElementById('user-pontos')
             like.innerText = "Pontos: 10";
-            count++;
+            count=1;
         }
     }
     else {
