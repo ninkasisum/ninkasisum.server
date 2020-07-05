@@ -32,7 +32,7 @@ function filterinput() {
 
     input.addEventListener('input', (e) => {
         document.querySelectorAll(".filter-data").forEach((label)=>{
-            if (label.innerHTML.search(input.value) === -1) {
+            if (label.innerHTML.toLowerCase().search(input.value.toLowerCase()) === -1) {
                 label.parentElement.style.display = "none";
             }
             else{
