@@ -20,7 +20,7 @@ like.addEventListener('click', () => {
         button_like = true
 
         if(count===0){
-            document.getElementsByClassName('.user-class').createTextNode("Pontos: 10");
+            document.getElementsByClassName('.user-class').innerText("Pontos: 10");
             count++;
         }
     }

@@ -148,17 +148,15 @@ function addEventListenerToFilterCards() {
         })
     })
 }
-
 function addCarrinho(){
     const valor = 0;
     const buttons = document.querySelectorAll('.button-add').forEach((button) =>{
         button.addEventListener('click', ()=>{
-            valor+= 53.5
+            valor+= 53.5;
             console.log(valor);
         })
-    });        
+    });
 }
-
 function comprarAgora(){
     const buttons = document.querySelectorAll('.button-add').forEach((button) =>{
         button.addEventListener('click', ()=>{

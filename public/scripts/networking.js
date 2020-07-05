@@ -23,6 +23,10 @@ function createGist(url, content) {
         if (response.status === 404) {
             alert('Email ou Senha incorretos!');
         }
+
+        if (response.status == 201){
+            alert('Cadastro realizado com sucesso! Faça login para se conectar');
+        }
     }).catch(function (err) {
         console.info(err + " url: " + url);
     });
