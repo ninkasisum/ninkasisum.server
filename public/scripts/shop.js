@@ -156,7 +156,7 @@ function addCarrinho(){
     });
 }
 function comprarAgora(){
-    const valor = 0;
+    let valor = 0;
     document.querySelectorAll('.button-add').forEach((button) =>{
         button.addEventListener('click', ()=>{
             valor += 53.5;
