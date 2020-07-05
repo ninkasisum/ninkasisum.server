@@ -31,11 +31,11 @@ function filterinput() {
     const input = document.getElementById("input-ft")
 
     input.addEventListener('input', (e) => {
-        const labelsMarcas = document.querySelectorAll(".filter-data")
-        for (let labelmarca in labelsMarcas) {
-            if (labelmarca.value.search(input.value) === -1) {
-                labelmarca.style.height = 0;
+        document.querySelectorAll(".filter-data").forEach((label)=>{
+            if (label.value.search(input.value) === -1) {
+                label.style.height = 0;
             }
-        }
+        })
+
     })
 }
