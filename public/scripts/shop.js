@@ -148,9 +148,7 @@ function addEventListenerToFilterCards() {
         })
     })
 }
-function addCarrinho(){
-    const valor = 0;
-    
+function addCarrinho(){ 
     document.querySelectorAll('.dif-button').forEach((button) =>{
         button.addEventListener('click', ()=>{
             console.log('Cliquei no botão de Comprar Agora')
@@ -158,6 +156,7 @@ function addCarrinho(){
     });
 }
 function comprarAgora(){
+    const valor = 0;
     document.querySelectorAll('.button-add').forEach((button) =>{
         button.addEventListener('click', ()=>{
             valor += 53.5;
