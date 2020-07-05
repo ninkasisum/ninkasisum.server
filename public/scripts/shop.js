@@ -110,7 +110,7 @@ function loadCards(data) {
 
 function addEventListenerToFilterCards() {
     document.querySelectorAll('.filter-checkbox').forEach((checkbox) => {
-        checkbox.addEventListener('onclick', () => {
+        checkbox.addEventListener('click', () => {
             const filters = document.querySelectorAll('.filter-data');
             const cards = document.querySelectorAll('.card');
             const models = [];
