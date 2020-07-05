@@ -331,10 +331,10 @@ nav{
 }
 .shop-cards{
     display: flex;
-    justify-content: center;
     flex: 6;
     margin-top: 75px;
     flex-direction: column;
+    align-items: center;
 }
 .card{
     display: flex;
@@ -362,11 +362,12 @@ nav{
     width: 150px;
     margin-left: 50px;
     margin-bottom: 200px;
+    margin-top: 20px;
 }
 .beer-logo img{
     border-radius: 50%;
     width: 120px;
-    height: 120px;
+    height: 120px;  
 }
 .inform h3, h4{
     font-family: "Roboto", 'sans-serif';

@@ -52,6 +52,10 @@ function loadCards(data) {
         const content = document.createElement('div');
         content.setAttribute('class', 'content');
 
+        const modelo = document.createElement('h2');
+        modelo.appendChild(document.createTextNode(modelos[i]));
+        content.appendChild(modelo);
+
         // create img
         const imgContent = document.createElement('img');
         imgContent.setAttribute('src', image_urls[i]);
