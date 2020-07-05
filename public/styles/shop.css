@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    background-color: #E4E0E0;
 }
 nav{
     display: flex;
@@ -342,7 +343,7 @@ nav{
     height: 350px;
     background-color: #f3f3f3;
     border-radius: 15px;
-    margin-top: 55px;
+    margin-top: 20px;
     align-items: center;
 }
 .card .content{
