@@ -10,7 +10,7 @@ async function load() {
 //likezinho show mlk
 const like = document.querySelector('.fa-heart')
 var button_like = false
-const count = 0
+let count = 0
 
 
 like.addEventListener('click', () => {
@@ -21,6 +21,7 @@ like.addEventListener('click', () => {
 
         if(count=0){
             document.getElementsByClassName('.user-class').createTextNode("Pontos: 10");
+            count++;
         }
     }
     else {
