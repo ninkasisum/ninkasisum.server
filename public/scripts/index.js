@@ -32,7 +32,7 @@ like.addEventListener('click', () => {
     }
 })
 
-const comment = document.getElementsById('comentar')
+const comment = document.getElementById('comentar')
 comment.addEventListener('click', () =>{
     alert('Em manutenção :(');
 })
