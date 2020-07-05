@@ -11,7 +11,7 @@ window.addEventListener('load', () => {
 })
 //adicionando classe
 function addClassActive(id) {
-    ['#feed', '#perfil', '#shop'].forEach((e) => {
+    ['#feed', '#shop'].forEach((e) => {
         const element = document.querySelector(e)
         const line = document.getElementById(`line${e}`)
         if (e == id) {

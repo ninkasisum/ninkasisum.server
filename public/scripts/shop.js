@@ -141,7 +141,7 @@ function addEventListenerToFilterCards() {
 
 function addCarrinho(){
     const valor = 0;
-    const buttons = document.getElementsByClassName('button-add').forEach((button) =>{
+    const buttons = document.querySelectorAll('.button-add').forEach((button) =>{
         button.addEventListener('click', ()=>{
             valor+= 53.5
             console.log(valor);
@@ -150,7 +150,7 @@ function addCarrinho(){
 }
 
 function comprarAgora(){
-    const buttons = document.getElementsByClassName('button-add').forEach((button) =>{
+    const buttons = document.querySelectorAll('.button-add').forEach((button) =>{
         button.addEventListener('click', ()=>{
             console.log('Cliquei no botão de Comprar Agora')
         })
