@@ -111,10 +111,10 @@ function loadCards(data) {
 function filterCards() {
     const filters = document.querySelectorAll('.filter-data');
     const cards = document.querySelectorAll('.card');
-    const accumulator = [];
+    const models = [];
     filters.forEach((filter) => {
         if (filter.previousSibling.checked)
-            accumulator.push(filter);
+            models.push(filter);
     })
 
     if (models.length > 0) {
