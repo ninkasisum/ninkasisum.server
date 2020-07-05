@@ -151,17 +151,17 @@ function addEventListenerToFilterCards() {
 function addCarrinho(){
     const valor = 0;
     
-    document.querySelectorAll('.button-add').forEach((button) =>{
+    document.querySelectorAll('.dif-button').forEach((button) =>{
         button.addEventListener('click', ()=>{
-            valor+= 53.5;
-            console.log(valor);
+            console.log('Cliquei no botão de Comprar Agora')
         })
     });
 }
 function comprarAgora(){
     document.querySelectorAll('.button-add').forEach((button) =>{
         button.addEventListener('click', ()=>{
-            console.log('Cliquei no botão de Comprar Agora')
+            valor += 53.5;
+            console.log(valor);          
         })
     });  
 }
