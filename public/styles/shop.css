@@ -217,14 +217,14 @@ nav{
     height: 100vh;
     background-color: #E4E0E0;    
 }
-.ze-logo{
+.carrinho{
     position: fixed;
     bottom: 30px;
     right: 40px;
     transition: 400ms;
     cursor: pointer;
 }
-.ze-logo:hover{
+.carrinho:hover{
     transform: translate(-3px, -5px);
 }
 
@@ -409,4 +409,17 @@ nav{
     background-color: #02460f!important;
     margin-top: 15px!important;
     margin-left: 100px!important;
+}
+.fa-shopping-basket{
+    color: whitesmoke;
+    background-color: rgba(167, 3, 3, 0.945);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    text-align: center;
+
+    margin: 0;
+    position: fixed;
+    z-index: 10;
 }
