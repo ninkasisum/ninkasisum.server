@@ -9,6 +9,7 @@ nav{
     width: 100vw;
     height: 75px;
     position: fixed;
+    z-index: 2;
 }
 .menu{
     position: fixed;
@@ -235,10 +236,7 @@ nav{
     display: flex;
     height: 100vh;
 }
-.shop-cards{
-    flex: 6;
-    margin-top: 75px;
-}
+
 .filter{
     flex: 1;
     margin-top: 130px;
@@ -333,7 +331,10 @@ nav{
 }
 .shop-cards{
     display: flex;
-    justify-content: center;
+    flex: 6;
+    margin-top: 75px;
+    flex-direction: column;
+    align-items: center;
 }
 .card{
     display: flex;
@@ -354,20 +355,25 @@ nav{
     align-items: center;
 }
 .beer{
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
 }
 .beer-logo{
     width: 150px;
     margin-left: 50px;
     margin-bottom: 200px;
+    margin-top: 20px;
+    display: flex;
 }
 .beer-logo img{
     border-radius: 50%;
     width: 120px;
-    height: 120px;
+    height: 120px;  
 }
-.inform h3, h4{
+.inform{
+    margin-top: 70px;
+}
+.inform h3, h4, h2{
     font-family: "Roboto", 'sans-serif';
     text-align: center;
 }
@@ -380,6 +386,12 @@ nav{
     font-size: 19px;
     color: #FF7A00;
     margin-top: 15px;
+}
+.shop-cards h2{
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    margin-left: 300px;
+    margin-top: 0;
 }
 .content button{
     font-family: 'Roboto', sans-serif;
@@ -432,9 +444,12 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 10px;
+    border-radius: 10px 10px 0 0;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 600;
     background-color: rgb(141, 3, 3);
+}
+.carrinho-card .header span{
+    margin-top: 10px;
 }

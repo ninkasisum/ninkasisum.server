@@ -1,5 +1,3 @@
-const { model } = require("mongoose");
-
 function load() {
     loadUserData();
     jsonLoadResource("shop").then(loadCards);
@@ -49,6 +47,10 @@ function loadCards(data) {
 
         const content = document.createElement('div');
         content.setAttribute('class', 'content');
+
+        const modelo = document.createElement('h2');
+        modelo.appendChild(document.createTextNode(modelos[i]));
+        logo.appendChild(modelo);
 
         const imgContent = document.createElement('img');
         imgContent.setAttribute('src', image_urls[i]);
