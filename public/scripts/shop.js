@@ -54,7 +54,7 @@ function loadCards(data) {
 
         const modelo = document.createElement('h2');
         modelo.appendChild(document.createTextNode(modelos[i]));
-        content.appendChild(modelo);
+        logo.appendChild(modelo);
 
         // create img
         const imgContent = document.createElement('img');

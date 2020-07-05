@@ -355,21 +355,25 @@ nav{
     align-items: center;
 }
 .beer{
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
 }
 .beer-logo{
     width: 150px;
     margin-left: 50px;
     margin-bottom: 200px;
     margin-top: 20px;
+    display: flex;
 }
 .beer-logo img{
     border-radius: 50%;
     width: 120px;
     height: 120px;  
 }
-.inform h3, h4{
+.inform{
+    margin-top: 70px;
+}
+.inform h3, h4, h2{
     font-family: "Roboto", 'sans-serif';
     text-align: center;
 }
@@ -382,6 +386,12 @@ nav{
     font-size: 19px;
     color: #FF7A00;
     margin-top: 15px;
+}
+.shop-cards h2{
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    margin-left: 300px;
+    margin-top: 0;
 }
 .content button{
     font-family: 'Roboto', sans-serif;
