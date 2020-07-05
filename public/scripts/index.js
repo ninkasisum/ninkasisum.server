@@ -31,3 +31,8 @@ like.addEventListener('click', () => {
         button_like = false
     }
 })
+
+const comment = document.getElementsByClassName('.fa-comment-alt')
+comment.addEventListener('click', ()=>{
+    alert('Em manutenção :(');
+})
