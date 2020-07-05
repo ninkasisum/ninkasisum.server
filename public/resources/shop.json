@@ -4,7 +4,6 @@
     
         "Antarctica Cristal",
         "Antarctica Pilsen",
-    
         "Antarctica Subzero",
     
         "Beck's",
@@ -45,7 +44,7 @@
         "Colorado Vixnu", 
     
         "Corona",
-        "Corona",
+        "Coronita",
     
         "Franziskaner Dunkel",
         "Franziskaner Hell",
@@ -82,7 +81,7 @@
     
         "Nossa",
     
-        "Origin",
+        "Original",
     
         "Patagonia Amber Lager",
         "Patagonia Bohemian Pilsener",
@@ -105,11 +104,12 @@
         "Três Fidalgas",
     
         "Wäls 42",
+        "Wäls Alambique County",
+        "Wäls Belgium Witte",
         "Wäls Bohemian Pilsner",
-        "Wäls Belgium witte",
         "Wäls Dubbel",
         "Wäls Hop Corn Ipa",
-        "Wäls Läger",
+        "Wäls Lager",
         "Wäls Niobium",
         "Wäls Petroleum",
         "Wäls Quadruppel",
@@ -123,11 +123,11 @@
         "Premium American Larger", 
         
         "American Larger", 
-    
         "American Larger",
         "American Larger", 
-    
+
         "German Pilsner", 
+
         "German Weizen", 
         "Pale Ale", 
         "Vienna Lager",
@@ -138,7 +138,7 @@
     
         "American Larger", 
         "Premium American Larger", 
-        "Brahma Amber Lager", 
+        "Amber Lager", 
         "German Weizen", 
         "American Pale Lager", 
         "American Lager", 
@@ -223,6 +223,7 @@
         "American Pale Ale",
     
         "Saison",  
+        "Belgian Strong Ale",
         "Bohemian Pilsner",  
         "Witbier",  
         "Belgian dubbel", 
@@ -240,10 +241,8 @@
      "teores" : [
         "4,9% vol", 
     
-        "5,4% vol", 
-    
-        "4,7% vol", 
-    
+        "5,4% vol",   
+        "4,7% vol",   
         "4,5% vol", 
         
         "5% vol", 
