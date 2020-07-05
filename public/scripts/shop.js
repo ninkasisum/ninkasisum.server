@@ -43,7 +43,7 @@ function loadCards(data) {
         const imgLogo = document.createElement('img');
         imgLogo.setAttribute('src', logo_urls[i]);
 
-        logo.appendChild(img);
+        logo.appendChild(imgLogo);
         card.appendChild(logo);
         // end create logo
 
