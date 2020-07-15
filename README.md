@@ -38,6 +38,9 @@ Back End
 ## 🎨 Layout
 > O [layout](https://www.figma.com/file/eWYNAJKv9wt8FiOhHTB5xV/Mega-Hack-Project?node-id=0%3A1) da aplicação está disponível no Figma:
 
+## :hammer: Hospedagem
+> [Heroku](https://ninkasisum.herokuapp.com/)
+
 ## 🤖 Equipe
 - [Bianca](https://github.com/bkkater)
 - [Isaddora](https://www.linkedin.com/in/isadorafreitas)
