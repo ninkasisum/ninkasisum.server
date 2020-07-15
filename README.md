@@ -36,10 +36,10 @@ Back End
 > Desta forma, sendo molde para implementação dentro dos padrões e tecnologias adotadas pela Ambev.
 
 ## 🎨 Layout
-> O [layout](https://www.figma.com/file/eWYNAJKv9wt8FiOhHTB5xV/Mega-Hack-Project?node-id=0%3A1) da aplicação está disponível no Figma:
+- [Figma](https://www.figma.com/file/eWYNAJKv9wt8FiOhHTB5xV/Mega-Hack-Project?node-id=0%3A1
 
 ## :hammer: Hospedagem
-> [Heroku](https://ninkasisum.herokuapp.com/)
+- [Heroku](https://ninkasisum.herokuapp.com/)
 
 ## 🤖 Equipe
 - [Bianca](https://github.com/bkkater)
