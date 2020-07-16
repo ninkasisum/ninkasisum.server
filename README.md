@@ -36,7 +36,7 @@ Back End
 > Desta forma, sendo molde para implementação dentro dos padrões e tecnologias adotadas pela Ambev.
 
 ## 🎨 Layout
-- [Figma](https://www.figma.com/file/eWYNAJKv9wt8FiOhHTB5xV/Mega-Hack-Project?node-id=0%3A1
+- [Figma](https://www.figma.com/file/eWYNAJKv9wt8FiOhHTB5xV/Mega-Hack-Project?node-id=0%3A1)
 
 ## :hammer: Hospedagem
 - [Heroku](https://ninkasisum.herokuapp.com/)
